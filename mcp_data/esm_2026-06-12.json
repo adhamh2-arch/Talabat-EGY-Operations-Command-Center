@@ -1,0 +1,29 @@
+{
+  "agent": "ESM Agent",
+  "cities": ["Suez", "Assiut", "Hurghada"],
+  "run_date": "2026-06-12",
+  "query_timestamp": "2026-06-13T09:00:00+02:00",
+  "source": "Looker MCP - Order_PU.Orders",
+  "data": [
+    {"city": "Hurghada", "vendor": "Tmart, Masaken El Nagda", "orders": 1136, "gmv_lc": 534153.57, "aov_lc": 470.21},
+    {"city": "Assiut", "vendor": "talabat mart, El Weleideya", "orders": 1112, "gmv_lc": 393610.33, "aov_lc": 353.97},
+    {"city": "Suez", "vendor": "talabat mart, El Suez", "orders": 1059, "gmv_lc": 300216.39, "aov_lc": 283.49},
+    {"city": "Suez", "vendor": "B.LABAN, Suez University", "orders": 297, "gmv_lc": 72519.39, "aov_lc": 244.17},
+    {"city": "Hurghada", "vendor": "B.LABAN, Sheraton", "orders": 288, "gmv_lc": 78581.99, "aov_lc": 272.85},
+    {"city": "Suez", "vendor": "Awlad Hanafi Market, Al Salam 1", "orders": 259, "gmv_lc": 54221.58, "aov_lc": 209.35},
+    {"city": "Suez", "vendor": "AL ALAMIA, Al Salam 1", "orders": 240, "gmv_lc": 29858.29, "aov_lc": 124.41},
+    {"city": "Hurghada", "vendor": "Abou Aya, Sheraton Road", "orders": 228, "gmv_lc": 36687.68, "aov_lc": 160.91},
+    {"city": "Hurghada", "vendor": "Buffalo Burger, Hurghada TGO", "orders": 188, "gmv_lc": 75586.45, "aov_lc": 402.06},
+    {"city": "Hurghada", "vendor": "Bazooka, Hurghada Sheraton", "orders": 178, "gmv_lc": 81964.92, "aov_lc": 460.48},
+    {"city": "Suez", "vendor": "Bazooka, Suez TGO", "orders": 158, "gmv_lc": 60369.16, "aov_lc": 382.08},
+    {"city": "Assiut", "vendor": "B.LABAN, El Gomhorya St.", "orders": 143, "gmv_lc": 35732.33, "aov_lc": 249.88},
+    {"city": "Hurghada", "vendor": "Khataam, El Kothar", "orders": 140, "gmv_lc": 24920.84, "aov_lc": 178.01},
+    {"city": "Suez", "vendor": "Emarati Hyper, Othman Ebn Afaan", "orders": 140, "gmv_lc": 29724.05, "aov_lc": 212.31},
+    {"city": "Hurghada", "vendor": "Koshary El Tahrir, Al Dahar", "orders": 126, "gmv_lc": 19423.23, "aov_lc": 154.15},
+    {"city": "Hurghada", "vendor": "mzag, sheraton", "orders": 126, "gmv_lc": 27848.76, "aov_lc": 221.02},
+    {"city": "Hurghada", "vendor": "El Haya Market, El Kothar", "orders": 119, "gmv_lc": 39319.13, "aov_lc": 330.41},
+    {"city": "Assiut", "vendor": "Koshary Hekaya, Fryal", "orders": 119, "gmv_lc": 15602.23, "aov_lc": 131.11},
+    {"city": "Hurghada", "vendor": "Metro Market, HURGHADA2 M033", "orders": 118, "gmv_lc": 76147.94, "aov_lc": 645.32},
+    {"city": "Hurghada", "vendor": "Koshary Askandrany, El Nasr", "orders": 102, "gmv_lc": 17306.88, "aov_lc": 169.68}
+  ]
+}

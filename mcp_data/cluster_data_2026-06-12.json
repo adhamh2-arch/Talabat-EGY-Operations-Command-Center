@@ -1,0 +1,115 @@
+{
+  "run_date": "2026-06-12",
+  "comparison_date": "2026-06-11",
+  "source": "Looker MCP - Order_PU.Orders (failed_orders_count only, NO net_failed)",
+  "today": {
+    "city_performance": [
+      {"city": "Alexandria", "cluster": "alex", "all_orders": 56829, "failed_orders": 7646, "successful_orders": 49183, "gmv_lc": 19151927.50, "lost_gmv_lc": 3335770.74, "vendor_fail_rate": 0.007757, "partial_refund_lc": 73663.04, "partial_refund_orders": 717},
+      {"city": "North Coast 24", "cluster": "alex", "all_orders": 350, "failed_orders": 68, "successful_orders": 282, "gmv_lc": 252579.69, "lost_gmv_lc": 56149.27, "vendor_fail_rate": 0.086538, "partial_refund_lc": 300.00, "partial_refund_orders": 2},
+      {"city": "Mansoura", "cluster": "delta", "all_orders": 19137, "failed_orders": 1839, "successful_orders": 17298, "gmv_lc": 6057456.49, "lost_gmv_lc": 727998.71, "vendor_fail_rate": 0.005063, "partial_refund_lc": 20558.64, "partial_refund_orders": 235},
+      {"city": "Tanta", "cluster": "delta", "all_orders": 9244, "failed_orders": 914, "successful_orders": 8330, "gmv_lc": 2654523.07, "lost_gmv_lc": 336222.64, "vendor_fail_rate": 0.008018, "partial_refund_lc": 8413.45, "partial_refund_orders": 105},
+      {"city": "Talkha", "cluster": "delta", "all_orders": 1231, "failed_orders": 87, "successful_orders": 1144, "gmv_lc": 414560.54, "lost_gmv_lc": 37549.65, "vendor_fail_rate": 0.003445, "partial_refund_lc": 1183.02, "partial_refund_orders": 16},
+      {"city": "Zagazig", "cluster": "delta", "all_orders": 7647, "failed_orders": 682, "successful_orders": 6965, "gmv_lc": 2207666.73, "lost_gmv_lc": 227206.92, "vendor_fail_rate": 0.008212, "partial_refund_lc": 8411.60, "partial_refund_orders": 96},
+      {"city": "Al Mahallah Al Kubra", "cluster": "delta", "all_orders": 2109, "failed_orders": 556, "successful_orders": 1553, "gmv_lc": 482949.40, "lost_gmv_lc": 268859.18, "vendor_fail_rate": 0.005718, "partial_refund_lc": 1406.83, "partial_refund_orders": 22},
+      {"city": "Banha", "cluster": "delta", "all_orders": 680, "failed_orders": 65, "successful_orders": 615, "gmv_lc": 224042.33, "lost_gmv_lc": 29885.70, "vendor_fail_rate": 0.011076, "partial_refund_lc": 201.95, "partial_refund_orders": 2},
+      {"city": "Shebeen El Koom", "cluster": "delta", "all_orders": 1231, "failed_orders": 139, "successful_orders": 1092, "gmv_lc": 304889.13, "lost_gmv_lc": 34724.76, "vendor_fail_rate": 0.012590, "partial_refund_lc": 334.30, "partial_refund_orders": 7},
+      {"city": "Kafr El Sheikh", "cluster": "delta", "all_orders": 327, "failed_orders": 49, "successful_orders": 278, "gmv_lc": 74229.47, "lost_gmv_lc": 12262.77, "vendor_fail_rate": 0.037288, "partial_refund_lc": 107.20, "partial_refund_orders": 3},
+      {"city": "Hurghada", "cluster": "canal", "all_orders": 6433, "failed_orders": 633, "successful_orders": 5800, "gmv_lc": 2214241.58, "lost_gmv_lc": 268694.14, "vendor_fail_rate": 0.007435, "partial_refund_lc": 10735.15, "partial_refund_orders": 114},
+      {"city": "Suez", "cluster": "canal", "all_orders": 5349, "failed_orders": 429, "successful_orders": 4920, "gmv_lc": 1226346.55, "lost_gmv_lc": 110275.95, "vendor_fail_rate": 0.009796, "partial_refund_lc": 1906.70, "partial_refund_orders": 37},
+      {"city": "Port Said", "cluster": "canal", "all_orders": 6398, "failed_orders": 652, "successful_orders": 5746, "gmv_lc": 1852580.62, "lost_gmv_lc": 236518.50, "vendor_fail_rate": 0.008223, "partial_refund_lc": 6741.25, "partial_refund_orders": 108},
+      {"city": "Ismailia", "cluster": "canal", "all_orders": 4794, "failed_orders": 451, "successful_orders": 4343, "gmv_lc": 1479056.16, "lost_gmv_lc": 152166.07, "vendor_fail_rate": 0.006106, "partial_refund_lc": 6228.34, "partial_refund_orders": 59},
+      {"city": "Port Saeed", "cluster": "canal", "all_orders": 1, "failed_orders": 1, "successful_orders": 0, "gmv_lc": 0, "lost_gmv_lc": 156.00, "vendor_fail_rate": 0, "partial_refund_lc": 0, "partial_refund_orders": 0},
+      {"city": "Assiut", "cluster": "upper_egypt", "all_orders": 3569, "failed_orders": 349, "successful_orders": 3220, "gmv_lc": 942215.77, "lost_gmv_lc": 108292.43, "vendor_fail_rate": 0.009454, "partial_refund_lc": 2225.77, "partial_refund_orders": 29},
+      {"city": "Beni Suef.", "cluster": "upper_egypt", "all_orders": 1202, "failed_orders": 134, "successful_orders": 1068, "gmv_lc": 255373.78, "lost_gmv_lc": 31810.47, "vendor_fail_rate": 0.009217, "partial_refund_lc": 731.70, "partial_refund_orders": 11},
+      {"city": "Minya", "cluster": "upper_egypt", "all_orders": 1223, "failed_orders": 105, "successful_orders": 1118, "gmv_lc": 279296.38, "lost_gmv_lc": 32143.54, "vendor_fail_rate": 0.005240, "partial_refund_lc": 1227.60, "partial_refund_orders": 17},
+      {"city": "Damanhour", "cluster": "upper_egypt", "all_orders": 782, "failed_orders": 81, "successful_orders": 701, "gmv_lc": 199865.93, "lost_gmv_lc": 25424.23, "vendor_fail_rate": 0.011173, "partial_refund_lc": 235.00, "partial_refund_orders": 3},
+      {"city": "Damietta New", "cluster": "upper_egypt", "all_orders": 3968, "failed_orders": 357, "successful_orders": 3611, "gmv_lc": 1081597.75, "lost_gmv_lc": 135946.05, "vendor_fail_rate": 0.010864, "partial_refund_lc": 8368.09, "partial_refund_orders": 35}
+    ]
+  },
+  "yesterday": {
+    "city_performance": [
+      {"city": "Alexandria", "cluster": "alex", "all_orders": 54119, "failed_orders": 5207, "gmv_lc": 18749559.02, "lost_gmv_lc": 2521411.21, "vendor_fail_rate": 0.008399},
+      {"city": "North Coast 24", "cluster": "alex", "all_orders": 191, "failed_orders": 35, "gmv_lc": 171985.93, "lost_gmv_lc": 33942.64, "vendor_fail_rate": 0.075581},
+      {"city": "Mansoura", "cluster": "delta", "all_orders": 18119, "failed_orders": 1323, "gmv_lc": 5748804.30, "lost_gmv_lc": 571241.69, "vendor_fail_rate": 0.004696},
+      {"city": "Tanta", "cluster": "delta", "all_orders": 8842, "failed_orders": 657, "gmv_lc": 2528978.92, "lost_gmv_lc": 281917.28, "vendor_fail_rate": 0.008776},
+      {"city": "Talkha", "cluster": "delta", "all_orders": 1174, "failed_orders": 69, "gmv_lc": 397385.73, "lost_gmv_lc": 21119.59, "vendor_fail_rate": 0.007124},
+      {"city": "Zagazig", "cluster": "delta", "all_orders": 7381, "failed_orders": 673, "gmv_lc": 2109909.80, "lost_gmv_lc": 257042.53, "vendor_fail_rate": 0.007474},
+      {"city": "Al Mahallah Al Kubra", "cluster": "delta", "all_orders": 2093, "failed_orders": 707, "gmv_lc": 421045.18, "lost_gmv_lc": 382005.82, "vendor_fail_rate": 0.009866},
+      {"city": "Shebeen El Koom", "cluster": "delta", "all_orders": 1030, "failed_orders": 72, "gmv_lc": 270929.82, "lost_gmv_lc": 21758.01, "vendor_fail_rate": 0.012220},
+      {"city": "Banha", "cluster": "delta", "all_orders": 609, "failed_orders": 79, "gmv_lc": 183023.12, "lost_gmv_lc": 47230.74, "vendor_fail_rate": 0.017606},
+      {"city": "Kafr El Sheikh", "cluster": "delta", "all_orders": 334, "failed_orders": 55, "gmv_lc": 67191.37, "lost_gmv_lc": 17176.94, "vendor_fail_rate": 0.031142},
+      {"city": "Hurghada", "cluster": "canal", "all_orders": 6296, "failed_orders": 570, "gmv_lc": 2177328.59, "lost_gmv_lc": 230853.52, "vendor_fail_rate": 0.006004},
+      {"city": "Suez", "cluster": "canal", "all_orders": 4879, "failed_orders": 317, "gmv_lc": 1119253.98, "lost_gmv_lc": 81285.39, "vendor_fail_rate": 0.007558},
+      {"city": "Port Said", "cluster": "canal", "all_orders": 5841, "failed_orders": 451, "gmv_lc": 1708694.51, "lost_gmv_lc": 151301.01, "vendor_fail_rate": 0.008406},
+      {"city": "Ismailia", "cluster": "canal", "all_orders": 4512, "failed_orders": 358, "gmv_lc": 1389370.16, "lost_gmv_lc": 129185.34, "vendor_fail_rate": 0.006869},
+      {"city": "Port Saeed", "cluster": "canal", "all_orders": 1, "failed_orders": 0, "gmv_lc": 171.00, "lost_gmv_lc": 0, "vendor_fail_rate": 0},
+      {"city": "Assiut", "cluster": "upper_egypt", "all_orders": 3441, "failed_orders": 237, "gmv_lc": 922618.68, "lost_gmv_lc": 82180.68, "vendor_fail_rate": 0.006462},
+      {"city": "Beni Suef.", "cluster": "upper_egypt", "all_orders": 1113, "failed_orders": 120, "gmv_lc": 230352.07, "lost_gmv_lc": 26721.61, "vendor_fail_rate": 0.016716},
+      {"city": "Minya", "cluster": "upper_egypt", "all_orders": 1224, "failed_orders": 83, "gmv_lc": 275675.99, "lost_gmv_lc": 26571.71, "vendor_fail_rate": 0.010363},
+      {"city": "Damanhour", "cluster": "upper_egypt", "all_orders": 731, "failed_orders": 82, "gmv_lc": 186456.31, "lost_gmv_lc": 25385.28, "vendor_fail_rate": 0.014993},
+      {"city": "Damietta New", "cluster": "upper_egypt", "all_orders": 3877, "failed_orders": 310, "gmv_lc": 1034487.36, "lost_gmv_lc": 138861.59, "vendor_fail_rate": 0.017989}
+    ]
+  },
+  "top_offenders": {
+    "alex": [
+      {"city": "Alexandria", "vendor": "talabat mart, Ibrahimia", "all_orders": 3070, "failed_orders": 345, "lost_gmv_lc": 182246.12, "fail_rate": 0.001807},
+      {"city": "Alexandria", "vendor": "talabat mart, Miami - Arab Academy", "all_orders": 3033, "failed_orders": 354, "lost_gmv_lc": 174079.83, "fail_rate": 0.001829},
+      {"city": "Alexandria", "vendor": "Tmart, Fleming - Koliyat Tarbya 2", "all_orders": 2968, "failed_orders": 283, "lost_gmv_lc": 105789.13, "fail_rate": 0.002930},
+      {"city": "Alexandria", "vendor": "talabat mart, Semouha", "all_orders": 2823, "failed_orders": 322, "lost_gmv_lc": 174980.31, "fail_rate": 0.002771},
+      {"city": "Alexandria", "vendor": "talabat mart, Agamy - Hanuvile", "all_orders": 705, "failed_orders": 88, "lost_gmv_lc": 38556.67, "fail_rate": 0.003067},
+      {"city": "Alexandria", "vendor": "GAD, Victor Emanouil", "all_orders": 490, "failed_orders": 37, "lost_gmv_lc": 7644.71, "fail_rate": 0.002193},
+      {"city": "Alexandria", "vendor": "Beit Elkhalil Market, Moharam Bek", "all_orders": 368, "failed_orders": 89, "lost_gmv_lc": 52160.65, "fail_rate": 0},
+      {"city": "Alexandria", "vendor": "abo younes, Sidi Besher Bahary", "all_orders": 310, "failed_orders": 42, "lost_gmv_lc": 13618.55, "fail_rate": 0.003704},
+      {"city": "Alexandria", "vendor": "El Makhbaz El Lebnany El Asly, Semouha TGO", "all_orders": 306, "failed_orders": 85, "lost_gmv_lc": 23351.21, "fail_rate": 0.013333},
+      {"city": "Alexandria", "vendor": "Burger King Semouha", "all_orders": 291, "failed_orders": 131, "lost_gmv_lc": 90443.07, "fail_rate": 0.018405}
+    ],
+    "delta": [
+      {"city": "Tanta", "vendor": "talabat mart, El Helw Street", "all_orders": 2551, "failed_orders": 242, "lost_gmv_lc": 116026.83, "fail_rate": 0.001711},
+      {"city": "Zagazig", "vendor": "talabat mart, Hay Thany Zagazig", "all_orders": 2442, "failed_orders": 186, "lost_gmv_lc": 66298.45, "fail_rate": 0.002637},
+      {"city": "Mansoura", "vendor": "talabat mart, El Magzar", "all_orders": 2351, "failed_orders": 260, "lost_gmv_lc": 111126.04, "fail_rate": 0.001418},
+      {"city": "Mansoura", "vendor": "Tmart, El Mokhtalat", "all_orders": 1895, "failed_orders": 181, "lost_gmv_lc": 67423.45, "fail_rate": 0.003448},
+      {"city": "Mansoura", "vendor": "Bremer, Gihan Al Sadat", "all_orders": 1069, "failed_orders": 77, "lost_gmv_lc": 32864.50, "fail_rate": 0},
+      {"city": "Mansoura", "vendor": "AlSeoudi, Ahmed Maher", "all_orders": 786, "failed_orders": 73, "lost_gmv_lc": 35778.13, "fail_rate": 0.002759},
+      {"city": "Mansoura", "vendor": "Sharqy, El Gomhuria Street", "all_orders": 741, "failed_orders": 58, "lost_gmv_lc": 12117.23, "fail_rate": 0},
+      {"city": "Mansoura", "vendor": "Roshdy 3aSaree3, Ezbet El Shal", "all_orders": 572, "failed_orders": 70, "lost_gmv_lc": 21976.40, "fail_rate": 0},
+      {"city": "Mansoura", "vendor": "The Chef - Hassan Elkhalili", "all_orders": 526, "failed_orders": 38, "lost_gmv_lc": 19644.00, "fail_rate": 0.002033},
+      {"city": "Mansoura", "vendor": "Chicken Kickers, Suez Canal", "all_orders": 517, "failed_orders": 49, "lost_gmv_lc": 16740.00, "fail_rate": 0}
+    ],
+    "canal": [
+      {"city": "Ismailia", "vendor": "talabat mart - Downtown - Champollion", "all_orders": 2073, "failed_orders": 178, "lost_gmv_lc": 59224.04, "fail_rate": 0.001041},
+      {"city": "Port Said", "vendor": "talabat mart, Al Sharq District", "all_orders": 1999, "failed_orders": 168, "lost_gmv_lc": 68722.02, "fail_rate": 0.000541},
+      {"city": "Hurghada", "vendor": "Tmart, Masaken El Nagda", "all_orders": 1275, "failed_orders": 139, "lost_gmv_lc": 81711.36, "fail_rate": 0.003469},
+      {"city": "Suez", "vendor": "talabat mart, El Suez", "all_orders": 1121, "failed_orders": 62, "lost_gmv_lc": 23297.34, "fail_rate": 0.002806},
+      {"city": "Suez", "vendor": "B.LABAN, Suez University", "all_orders": 322, "failed_orders": 25, "lost_gmv_lc": 5573.78, "fail_rate": 0},
+      {"city": "Hurghada", "vendor": "B.LABAN, Sheraton", "all_orders": 312, "failed_orders": 24, "lost_gmv_lc": 6697.79, "fail_rate": 0.010204},
+      {"city": "Port Said", "vendor": "B.LABAN, El Gomhorya District", "all_orders": 288, "failed_orders": 26, "lost_gmv_lc": 5344.63, "fail_rate": 0.003759},
+      {"city": "Suez", "vendor": "Awlad Hanafi Market, Al Salam 1", "all_orders": 278, "failed_orders": 19, "lost_gmv_lc": 3231.80, "fail_rate": 0.003846},
+      {"city": "Suez", "vendor": "AL ALAMIA, Al Salam 1", "all_orders": 261, "failed_orders": 21, "lost_gmv_lc": 2765.26, "fail_rate": 0},
+      {"city": "Hurghada", "vendor": "Abou Aya, Sheraton Road", "all_orders": 257, "failed_orders": 29, "lost_gmv_lc": 4556.96, "fail_rate": 0}
+    ],
+    "upper_egypt": [
+      {"city": "Assiut", "vendor": "talabat mart, El Weleideya", "all_orders": 1209, "failed_orders": 97, "lost_gmv_lc": 35721.74, "fail_rate": 0},
+      {"city": "Damietta New", "vendor": "talabat mart, Down Town", "all_orders": 1006, "failed_orders": 85, "lost_gmv_lc": 21104.33, "fail_rate": 0.001083},
+      {"city": "Damietta New", "vendor": "Ibn Elseady Market, 2nd District", "all_orders": 232, "failed_orders": 14, "lost_gmv_lc": 4417.35, "fail_rate": 0.004545},
+      {"city": "Damietta New", "vendor": "Elmatboly, Central Park", "all_orders": 211, "failed_orders": 23, "lost_gmv_lc": 3432.73, "fail_rate": 0},
+      {"city": "Minya", "vendor": "Spinneys, Minya", "all_orders": 173, "failed_orders": 15, "lost_gmv_lc": 1835.95, "fail_rate": 0},
+      {"city": "Assiut", "vendor": "B.LABAN, El Gomhorya St.-assuit", "all_orders": 164, "failed_orders": 21, "lost_gmv_lc": 4324.35, "fail_rate": 0},
+      {"city": "Damietta New", "vendor": "B.laban, 2nd District", "all_orders": 154, "failed_orders": 7, "lost_gmv_lc": 1689.93, "fail_rate": 0},
+      {"city": "Damietta New", "vendor": "Koshary Gedoo, Central Park", "all_orders": 135, "failed_orders": 15, "lost_gmv_lc": 1542.86, "fail_rate": 0.016},
+      {"city": "Assiut", "vendor": "Koshary Hekaya, Fryal", "all_orders": 132, "failed_orders": 13, "lost_gmv_lc": 1745.71, "fail_rate": 0.008130},
+      {"city": "Damietta New", "vendor": "El.Hossen Market, 1st District", "all_orders": 126, "failed_orders": 11, "lost_gmv_lc": 1064.59, "fail_rate": 0}
+    ],
+    "key_accounts": [
+      {"city": "Cairo", "vendor": "Al Dahan, New Maadi", "all_orders": 798, "failed_orders": 44, "lost_gmv_lc": 43441.54, "fail_rate": 0.005270, "gmv_lc": 560637.54},
+      {"city": "Cairo", "vendor": "Al Dahan, 6th of October", "all_orders": 689, "failed_orders": 54, "lost_gmv_lc": 80085.81, "fail_rate": 0.006260, "gmv_lc": 508898.13},
+      {"city": "Cairo", "vendor": "Al Dahan - Mohandiseen", "all_orders": 611, "failed_orders": 41, "lost_gmv_lc": 46685.62, "fail_rate": 0.015544, "gmv_lc": 433406.88},
+      {"city": "Cairo", "vendor": "Ibn Alsham, Tagammoa 5", "all_orders": 591, "failed_orders": 68, "lost_gmv_lc": 49757.00, "fail_rate": 0.011321, "gmv_lc": 343092.00},
+      {"city": "Cairo", "vendor": "Al Dahan - Madinaty", "all_orders": 560, "failed_orders": 36, "lost_gmv_lc": 30226.24, "fail_rate": 0.009452, "gmv_lc": 408509.28},
+      {"city": "Cairo", "vendor": "Ibn Alsham, El Rehab City 2", "all_orders": 543, "failed_orders": 57, "lost_gmv_lc": 34909.00, "fail_rate": 0.006135, "gmv_lc": 325865.00},
+      {"city": "Alexandria", "vendor": "GAD, Victor Emanouil", "all_orders": 490, "failed_orders": 37, "lost_gmv_lc": 7644.71, "fail_rate": 0.002193, "gmv_lc": 104783.96},
+      {"city": "Cairo", "vendor": "Al Dahan - Heliopolis", "all_orders": 487, "failed_orders": 52, "lost_gmv_lc": 40967.35, "fail_rate": 0.006818, "gmv_lc": 328830.22},
+      {"city": "Cairo", "vendor": "Al Dahan - Tagammoa 5", "all_orders": 457, "failed_orders": 31, "lost_gmv_lc": 26860.21, "fail_rate": 0.004651, "gmv_lc": 325829.64},
+      {"city": "Cairo", "vendor": "Al Dahan, 90 St. Companies", "all_orders": 444, "failed_orders": 44, "lost_gmv_lc": 37252.69, "fail_rate": 0.009901, "gmv_lc": 298738.05}
+    ]
+  }
+}

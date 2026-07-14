@@ -1,0 +1,73 @@
+{
+  "reasons": {
+    "Vendor Cancelled": [
+      "Review peak-hour capacity and staffing plan",
+      "Audit minimum order thresholds vs. kitchen capacity",
+      "Conduct operational readiness review for high-volume periods",
+      "Validate order acceptance rate settings in the app"
+    ],
+    "Restaurant Cancelled": [
+      "Review peak-hour capacity and staffing plan",
+      "Audit minimum order thresholds vs. kitchen capacity",
+      "Conduct operational readiness review for high-volume periods",
+      "Validate order acceptance rate settings in the app"
+    ],
+    "Late Delivery": [
+      "Review kitchen preparation time vs. promised delivery SLA",
+      "Audit rider assignment and handover delays at peak hours",
+      "Validate dispatch timing relative to prep completion",
+      "Conduct peak-period operational audit with AM on-site visit"
+    ],
+    "Delayed": [
+      "Review kitchen preparation time vs. promised delivery SLA",
+      "Audit rider assignment and handover delays at peak hours",
+      "Validate dispatch timing relative to prep completion",
+      "Conduct peak-period operational audit with AM on-site visit"
+    ],
+    "Missing Items": [
+      "Implement per-SKU packaging checklist for kitchen staff",
+      "Conduct staff retraining on order completeness verification",
+      "Add QA checkpoint before handing order to rider",
+      "Review inventory availability vs. active menu items"
+    ],
+    "Incomplete Order": [
+      "Implement per-SKU packaging checklist for kitchen staff",
+      "Conduct staff retraining on order completeness verification",
+      "Add QA checkpoint before handing order to rider",
+      "Review inventory availability vs. active menu items"
+    ],
+    "Order Quality": [
+      "Implement food quality standards checklist at dispatch",
+      "Review storage temperature compliance and cold-chain handling",
+      "Conduct kitchen hygiene and food preparation audit",
+      "Add supervisor sign-off for high-value orders"
+    ],
+    "Food Quality": [
+      "Implement food quality standards checklist at dispatch",
+      "Review storage temperature compliance and cold-chain handling",
+      "Conduct kitchen hygiene and food preparation audit",
+      "Add supervisor sign-off for high-value orders"
+    ],
+    "Vendor Closed": [
+      "Align app listing hours with actual operating hours",
+      "Implement automated availability toggle at open/close",
+      "Review and update holiday/special hours schedule"
+    ],
+    "Closed": [
+      "Align app listing hours with actual operating hours",
+      "Implement automated availability toggle at open/close",
+      "Review and update holiday/special hours schedule"
+    ],
+    "_default": [
+      "Conduct comprehensive operational review with the vendor",
+      "Identify root cause through AM field visit",
+      "Review all fail reason categories for this vendor in Looker",
+      "Assess peak-hour staffing and operational capacity"
+    ]
+  },
+  "urgencyPrefix": {
+    "High": "⚠️ Recurring issue — ",
+    "Critical": "🚨 CRITICAL recurring offender — "
+  },
+  "escalationThresholdDays": 3
+}

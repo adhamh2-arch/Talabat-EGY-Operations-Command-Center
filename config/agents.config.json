@@ -1,0 +1,372 @@
+{
+  "system": {
+    "name": "talabat EGY Operations Command Center",
+    "version": "2.0.0",
+    "timezone": "Africa/Cairo",
+    "dailyTriggerTime": "09:00",
+    "weeklyTriggerDay": "Sunday",
+    "metric": "vendor_failed_orders",
+    "metricNote": "Uses failed_orders_count (NOT vendor_net_failed). Net failed is excluded from all calculations."
+  },
+  "clusters": {
+    "alex": {
+      "name": "Alex",
+      "agent": "alex",
+      "cities": [
+        "Alexandria",
+        "North Coast 24"
+      ],
+      "target": 0.007,
+      "targetLabel": "0.70%"
+    },
+    "delta": {
+      "name": "Delta",
+      "agent": "delta",
+      "cities": [
+        "Mansoura",
+        "Tanta",
+        "Talkha",
+        "Zagazig",
+        "Al Mahallah Al Kubra",
+        "Banha",
+        "Shebeen El Koom",
+        "Kafr El Sheikh"
+      ],
+      "target": 0.0072,
+      "targetLabel": "0.72%"
+    },
+    "canal": {
+      "name": "Canal",
+      "agent": "esm",
+      "cities": [
+        "Hurghada",
+        "Suez",
+        "Port Said",
+        "Ismailia",
+        "Port Saeed"
+      ],
+      "target": 0.0072,
+      "targetLabel": "0.72%"
+    },
+    "upper_egypt": {
+      "name": "Upper Egypt",
+      "agent": "esm",
+      "cities": [
+        "Assiut",
+        "Beni Suef.",
+        "Minya",
+        "Damanhour",
+        "Damietta New"
+      ],
+      "target": 0.0078,
+      "targetLabel": "0.78%"
+    },
+    "key_accounts": {
+      "name": "Key Accounts",
+      "agent": "key_accounts",
+      "cities": [],
+      "segment": true,
+      "target": 0.008,
+      "targetLabel": "0.80%"
+    }
+  },
+  "segmentTargets": {
+    "TGO": {
+      "target": 0.0065,
+      "targetLabel": "0.65%"
+    },
+    "TMP": {
+      "target": 0.0075,
+      "targetLabel": "0.75%"
+    }
+  },
+  "cityToCluster": {
+    "Alexandria": "alex",
+    "North Coast 24": "alex",
+    "Mansoura": "delta",
+    "Tanta": "delta",
+    "Talkha": "delta",
+    "Zagazig": "delta",
+    "Al Mahallah Al Kubra": "delta",
+    "Banha": "delta",
+    "Shebeen El Koom": "delta",
+    "Kafr El Sheikh": "delta",
+    "Hurghada": "canal",
+    "Suez": "canal",
+    "Port Said": "canal",
+    "Ismailia": "canal",
+    "Port Saeed": "canal",
+    "Assiut": "upper_egypt",
+    "Beni Suef.": "upper_egypt",
+    "Minya": "upper_egypt",
+    "Damanhour": "upper_egypt",
+    "Damietta New": "upper_egypt"
+  },
+  "agents": {
+    "alex": {
+      "name": "Alex Agent",
+      "type": "cluster_monitor",
+      "cluster": "alex",
+      "enabled": true
+    },
+    "delta": {
+      "name": "Delta Agent",
+      "type": "cluster_monitor",
+      "cluster": "delta",
+      "enabled": true
+    },
+    "esm": {
+      "name": "ESM Agent",
+      "type": "cluster_monitor",
+      "clusters": [
+        "canal",
+        "upper_egypt"
+      ],
+      "enabled": true
+    },
+    "key_accounts": {
+      "name": "Key Accounts Agent",
+      "type": "segment_monitor",
+      "cluster": "key_accounts",
+      "filters": {
+        "is_key": true,
+        "is_food": true,
+        "is_darkstore": false
+      },
+      "enabled": true
+    },
+    "quality": {
+      "name": "Quality Agent",
+      "type": "validator",
+      "enabled": true
+    },
+    "reporting": {
+      "name": "Reporting Agent",
+      "type": "reporter",
+      "enabled": true
+    },
+    "observer": {
+      "name": "Observer Agent",
+      "type": "auditor",
+      "enabled": true
+    }
+  },
+  "teamLeaders": {
+    "alex": {
+      "name": "Rowan Elkersh",
+      "email": "rowan.elkersh@talabat.com"
+    },
+    "delta": {
+      "name": "Ahmed Elhaddad",
+      "email": "ahmed.elhaddad@talabat.com"
+    },
+    "esm": {
+      "name": "Ahmed el Gharably",
+      "email": "ahmed.el.13@talabat.com"
+    },
+    "key_accounts": {
+      "name": "Hadeer Bahaa",
+      "email": "hadeer.bahaa@talabat.com"
+    }
+  },
+  "risk": {
+    "scoringFormula": {
+      "note": "Risk Score 0-100. Apply to every vendor in Top 20 MTD list.",
+      "factor1_targetDeviation": {
+        "maxPoints": 40,
+        "formula": "min(40, ((vendor_vfr_pct - cluster_target_pct) / cluster_target_pct * 100) * 0.8)",
+        "note": "Only applies when vendor VFR is above cluster target"
+      },
+      "factor2_vendorFaultCases": {
+        "maxPoints": 30,
+        "formula": "min(30, (vendor_vfos_mtd / 500) * 6)"
+      },
+      "factor3_orderVolume": {
+        "maxPoints": 20,
+        "formula": "min(20, (vendor_net_orders_mtd / 10000) * 4)"
+      },
+      "factor4_lostGmv": {
+        "maxPoints": 10,
+        "formula": "min(10, (vendor_vfos_mtd * 180) / 20000)",
+        "note": "Lost GMV proxy: VFOs x EGP 180 avg order value"
+      }
+    },
+    "thresholds": {
+      "low": {
+        "min": 0,
+        "max": 25,
+        "action": "No action needed"
+      },
+      "medium": {
+        "min": 26,
+        "max": 50,
+        "action": "Monitor closely"
+      },
+      "high": {
+        "min": 51,
+        "max": 75,
+        "action": "Requires immediate review"
+      },
+      "critical": {
+        "min": 76,
+        "max": 100,
+        "action": "Escalation required"
+      }
+    },
+    "escalationThreshold": 75,
+    "reviewThreshold": 50
+  },
+  "performance": {
+    "thresholds": {
+      "minDailyOrders": 10,
+      "minDailyRevenue": 500,
+      "minAverageOrderValue": 100,
+      "maxDeclinePercent": 20
+    }
+  },
+  "googleWorkspace": {
+    "rootFolderId": "1k__0J3WU317cuVXsnGrfqQMbP0MNavDq",
+    "reportsFolderId": "1tkWLKX7brov3GgFV_dA6V-Hfi8K25zOG",
+    "trackerSheetId": "1aCkuoKAtFB_ee7KQsLvpPtffGqHdNLUp-Z4Im7Jy7tk",
+    "feedSheetId": "1W_4kxTBPa6OzZYcjf3_1tXRNH1YUwzZXBnZBFcZyFys",
+    "masterTrackerSheetId": "1Z-IAnl-_usN3-7LUmXV4prurYoetiCsAivZywil03iY",
+    "clustersTrackerSheetId": "1Mm5lPcOmt_FzMw_Jrtx_yEaKb0kYfIhZVDdjzBqU1IY"
+  },
+  "googleSheets": {
+    "spreadsheetId": "1W_4kxTBPa6OzZYcjf3_1tXRNH1YUwzZXBnZBFcZyFys",
+    "sheets": {
+      "executiveSummary": "Executive Summary",
+      "operationalPerformance": "Operational Performance",
+      "financialImpact": "Financial Impact",
+      "rootCauseAnalysis": "Root Cause Analysis",
+      "riskMonitoring": "Risk Register",
+      "agentsPerformance": "Agents Performance",
+      "monitoring": "Monitoring Log",
+      "auditTrail": "Audit Trail"
+    },
+    "theme": {
+      "primary": "#FF5A00",
+      "primaryLight": "#FF8A50",
+      "primaryBg": "#FFF3E0",
+      "critical": "#D32F2F",
+      "high": "#FF5A00",
+      "medium": "#FFB74D",
+      "low": "#4CAF50",
+      "headerText": "#FFFFFF"
+    }
+  },
+  "reporting": {
+    "emailEnabled": true,
+    "stakeholders": [
+      {
+        "name": "Project Owner",
+        "email": "Adham.h.2@talabat.com",
+        "role": "primary",
+        "receives": [
+          "daily_summary",
+          "weekly_executive",
+          "critical_alerts"
+        ]
+      }
+    ]
+  },
+  "scheduling": {
+    "daily": {
+      "triggerTime": "09:00",
+      "workflow": [
+        "fetch_looker_data",
+        "process_cluster_metrics",
+        "score_risks",
+        "identify_top_offenders",
+        "update_google_sheets",
+        "send_email_report",
+        "observer_audit"
+      ]
+    },
+    "weekly": {
+      "triggerDay": "Sunday",
+      "triggerTime": "10:00",
+      "output": [
+        "weekly_executive_summary",
+        "risk_trends",
+        "performance_trends",
+        "escalations",
+        "strategic_recommendations"
+      ]
+    }
+  },
+  "alerting": {
+    "testMode": true,
+    "testEmail": "adham.h.2@talabat.com",
+    "stakeholderEmail": "adham.h.2@talabat.com",
+    "triggers": {
+      "lostGmvThreshold": 100000,
+      "keyAccountFailedThreshold": 50,
+      "vendorFailRateThreshold": 0.03,
+      "vendorFaultCasesThreshold": 100,
+      "forcedAlertOnRepeatLevels": [
+        "HIGH",
+        "CRITICAL"
+      ]
+    },
+    "repeatOffenderLevels": {
+      "NEW": {
+        "min": 1,
+        "max": 1
+      },
+      "MEDIUM": {
+        "min": 2,
+        "max": 3
+      },
+      "HIGH": {
+        "min": 4,
+        "max": 5
+      },
+      "CRITICAL": {
+        "min": 6,
+        "max": 999
+      }
+    },
+    "emailSubjectPrefix": {
+      "CRITICAL": "[ESCALATION REQUIRED]",
+      "HIGH": "[ACTION REQUIRED]",
+      "MEDIUM": "[MONITOR]",
+      "LOW": "[FYI]"
+    },
+    "sendMode": false,
+    "gmailMonitorLabel": "talabat-ops-alerts"
+  },
+  "looker": {
+    "dashboardId": "18231",
+    "model": "Order_PU",
+    "explore": "Orders",
+    "fields": {
+      "city": "delivery_location.city_name",
+      "vendorName": "dim_vendor_info.vendor_name",
+      "vendorId": "dim_vendor_info.vendor_id",
+      "chainName": "dim_vendor_info.chain_name",
+      "chainId": "dim_vendor_info.chain_id",
+      "amName": "dim_vendor_info.account_manager_name",
+      "amEmail": "dim_vendor_info.account_manager_email",
+      "orderDate": "fct_order_info.order_date_date",
+      "successfulOrders": "fct_order_info.successful_orders_count",
+      "gmvLC": "fct_order_info.successful_gmv_amount_lc",
+      "aovLC": "fct_order_info.avg_gmv_amount_lc",
+      "netOrders": "fct_order_info.all_orders_count",
+      "vendorNetFailed": "fct_order_info.failed_orders_count",
+      "lostGmvLC": "fct_order_info.lost_gmv_amount_lc",
+      "vendorFailRate": "fct_order_info.vendor_fail_rate",
+      "talabatReason": "dim_order_fail_reason.talabat_reason",
+      "contactReasonL3": "dim_contact_reason.contact_reason_l3",
+      "customerIncomingCases": "fct_contact.customer_contacts",
+      "vendorFaultIncomingCases": "fct_contact.vf_customer_incoming_cases",
+      "partialRefundAmountLC": "fct_repayment.partial_refund_amount_lc",
+      "partialRefundOrders": "fct_repayment.partial_refund_orders"
+    },
+    "segmentFilters": {
+      "isKeyVIP": "dim_vendor_info.is_key_vip_account",
+      "isFood": "dim_vendor_info.is_food",
+      "isDarkstore": "fct_order_info.is_darkstore"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+date,cluster,vendor_id,vendor_name,city,am_name,am_email,is_key_vip,net_orders,vendor_net_failed,fail_rate_pct,lost_gmv_lc,vendor_fault_cases,late_delivery_cases,missing_items_cases,order_quality_cases,talabat_reason,risk_score,risk_level,repeat_level,appearances,alert_triggered,alert_sent
+2026-06-24,alex,"talabat mart, Ibrahimia","talabat mart, Ibrahimia",Alexandria,,,no,3120,298,0.1780,157420,0,0,0,0,,41,,NEW,1,yes,no
+2026-06-24,alex,"talabat mart, Miami - Arab Academy","talabat mart, Miami - Arab Academy",Alexandria,,,no,3080,310,0.1810,152810,0,0,0,0,,41,,NEW,1,yes,no
+2026-06-24,alex,"Tmart, Fleming - Koliyat Tarbya 2","Tmart, Fleming - Koliyat Tarbya 2",Alexandria,,,no,3010,249,0.2900,93260,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"talabat mart, Semouha","talabat mart, Semouha",Alexandria,,,no,2870,284,0.2740,154210,0,0,0,0,,41,,NEW,1,yes,no
+2026-06-24,alex,"talabat mart, Agamy - Hanuvile","talabat mart, Agamy - Hanuvile",Alexandria,,,no,717,77,0.3040,33970,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"GAD, Victor Emanouil","GAD, Victor Emanouil",Alexandria,,,no,498,32,0.2170,6620,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"Beit Elkhalil Market, Moharam Bek","Beit Elkhalil Market, Moharam Bek",Alexandria,,,no,374,79,0.0000,46330,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"abo younes, Sidi Besher Bahary","abo younes, Sidi Besher Bahary",Alexandria,,,no,315,37,0.3680,12010,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"El Makhbaz El Lebnany El Asly, Semouha TGO","El Makhbaz El Lebnany El Asly, Semouha TGO",Alexandria,,,no,311,74,1.3200,20780,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,Burger King Semouha,Burger King Semouha,Alexandria,,,no,296,114,1.8200,79440,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,delta,"talabat mart, El Helw Street","talabat mart, El Helw Street",Tanta,,,no,2588,213,0.1690,102210,0,0,0,0,,27,,NEW,1,yes,no
+2026-06-24,delta,"talabat mart, Hay Thany Zagazig","talabat mart, Hay Thany Zagazig",Zagazig,,,no,2480,164,0.2610,58440,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"talabat mart, El Magzar","talabat mart, El Magzar",Mansoura,,,no,2389,229,0.1400,98010,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Tmart, El Mokhtalat","Tmart, El Mokhtalat",Mansoura,,,no,1924,159,0.3420,59470,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Bremer, Gihan Al Sadat","Bremer, Gihan Al Sadat",Mansoura,,,no,1086,68,0.0000,28990,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"AlSeoudi, Ahmed Maher","AlSeoudi, Ahmed Maher",Mansoura,,,no,799,64,0.2730,31540,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Sharqy, El Gomhuria Street","Sharqy, El Gomhuria Street",Mansoura,,,no,753,51,0.0000,10680,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Roshdy 3aSaree3, Ezbet El Shal","Roshdy 3aSaree3, Ezbet El Shal",Mansoura,,,no,581,62,0.0000,19380,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,The Chef - Hassan Elkhalili,The Chef - Hassan Elkhalili,Mansoura,,,no,534,34,0.2010,17330,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Chicken Kickers, Suez Canal","Chicken Kickers, Suez Canal",Mansoura,,,no,525,43,0.0000,14760,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,canal,talabat mart - Downtown - Champollion,talabat mart - Downtown - Champollion,Ismailia,,,no,2105,157,0.1030,52280,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"talabat mart, Al Sharq District","talabat mart, Al Sharq District",Port Said,,,no,2031,148,0.0530,60660,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"Tmart, Masaken El Nagda","Tmart, Masaken El Nagda",Hurghada,,,no,1294,122,0.3440,72080,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"talabat mart, El Suez","talabat mart, El Suez",Suez,,,no,1139,54,0.2780,20570,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"B.LABAN, Suez University","B.LABAN, Suez University",Suez,,,no,327,22,0.0000,4920,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"B.LABAN, Sheraton","B.LABAN, Sheraton",Hurghada,,,no,318,21,1.0100,5910,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"B.LABAN, El Gomhorya District","B.LABAN, El Gomhorya District",Port Said,,,no,293,23,0.3720,4720,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"Awlad Hanafi Market, Al Salam 1","Awlad Hanafi Market, Al Salam 1",Suez,,,no,283,17,0.3810,2850,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"AL ALAMIA, Al Salam 1","AL ALAMIA, Al Salam 1",Suez,,,no,265,18,0.0000,2440,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"Abou Aya, Sheraton Road","Abou Aya, Sheraton Road",Hurghada,,,no,261,25,0.0000,4020,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,upper_egypt,"talabat mart, El Weleideya","talabat mart, El Weleideya",Assiut,,,no,1228,85,0.0000,31520,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"talabat mart, Down Town","talabat mart, Down Town",Damietta New,,,no,1023,75,0.1070,18640,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Ibn Elseady Market, 2nd District","Ibn Elseady Market, 2nd District",Damietta New,,,no,236,12,0.4500,3900,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Elmatboly, Central Park","Elmatboly, Central Park",Damietta New,,,no,214,20,0.0000,3030,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Spinneys, Minya","Spinneys, Minya",Minya,,,no,176,13,0.0000,1620,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"B.LABAN, El Gomhorya St.-assuit","B.LABAN, El Gomhorya St.-assuit",Assiut,,,no,167,18,0.0000,3820,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"B.laban, 2nd District","B.laban, 2nd District",Damietta New,,,no,156,6,0.0000,1490,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Koshary Gedoo, Central Park","Koshary Gedoo, Central Park",Damietta New,,,no,137,13,1.6000,1360,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Koshary Hekaya, Fryal","Koshary Hekaya, Fryal",Assiut,,,no,134,11,0.8080,1540,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"El.Hossen Market, 1st District","El.Hossen Market, 1st District",Damietta New,,,no,128,10,0.0000,940,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,key_accounts,"Al Dahan, New Maadi","Al Dahan, New Maadi",Cairo,,,no,812,39,0.5200,38560,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,"Al Dahan, 6th of October","Al Dahan, 6th of October",Cairo,,,no,701,48,0.6180,71200,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,Al Dahan - Mohandiseen,Al Dahan - Mohandiseen,Cairo,,,no,622,36,1.5420,41080,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,"Ibn Alsham, Tagammoa 5","Ibn Alsham, Tagammoa 5",Cairo,,,no,601,59,1.1200,43180,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,Al Dahan - Madinaty,Al Dahan - Madinaty,Cairo,,,no,571,31,0.9360,26860,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,"Ibn Alsham, El Rehab City 2","Ibn Alsham, El Rehab City 2",Cairo,,,no,553,50,0.6070,30840,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,Al Dahan - Heliopolis,Al Dahan - Heliopolis,Cairo,,,no,496,46,0.6730,36230,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,Al Dahan - Tagammoa 5,Al Dahan - Tagammoa 5,Cairo,,,no,465,27,0.4600,23740,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,"Al Dahan, 90 St. Companies","Al Dahan, 90 St. Companies",Cairo,,,no,452,39,0.9800,32960,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,alex,"talabat mart, Ibrahimia","talabat mart, Ibrahimia",Alexandria,,,no,3120,298,0.1780,157420,0,0,0,0,,41,,NEW,1,yes,no
+2026-06-24,alex,"talabat mart, Miami - Arab Academy","talabat mart, Miami - Arab Academy",Alexandria,,,no,3080,310,0.1810,152810,0,0,0,0,,41,,NEW,1,yes,no
+2026-06-24,alex,"Tmart, Fleming - Koliyat Tarbya 2","Tmart, Fleming - Koliyat Tarbya 2",Alexandria,,,no,3010,249,0.2900,93260,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"talabat mart, Semouha","talabat mart, Semouha",Alexandria,,,no,2870,284,0.2740,154210,0,0,0,0,,41,,NEW,1,yes,no
+2026-06-24,alex,"talabat mart, Agamy - Hanuvile","talabat mart, Agamy - Hanuvile",Alexandria,,,no,717,77,0.3040,33970,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"GAD, Victor Emanouil","GAD, Victor Emanouil",Alexandria,,,no,498,32,0.2170,6620,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"Beit Elkhalil Market, Moharam Bek","Beit Elkhalil Market, Moharam Bek",Alexandria,,,no,374,79,0.0000,46330,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"abo younes, Sidi Besher Bahary","abo younes, Sidi Besher Bahary",Alexandria,,,no,315,37,0.3680,12010,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,"El Makhbaz El Lebnany El Asly, Semouha TGO","El Makhbaz El Lebnany El Asly, Semouha TGO",Alexandria,,,no,311,74,1.3200,20780,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,alex,Burger King Semouha,Burger King Semouha,Alexandria,,,no,296,114,1.8200,79440,0,0,0,0,,41,,NEW,1,no,no
+2026-06-24,delta,"talabat mart, El Helw Street","talabat mart, El Helw Street",Tanta,,,no,2588,213,0.1690,102210,0,0,0,0,,27,,NEW,1,yes,no
+2026-06-24,delta,"talabat mart, Hay Thany Zagazig","talabat mart, Hay Thany Zagazig",Zagazig,,,no,2480,164,0.2610,58440,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"talabat mart, El Magzar","talabat mart, El Magzar",Mansoura,,,no,2389,229,0.1400,98010,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Tmart, El Mokhtalat","Tmart, El Mokhtalat",Mansoura,,,no,1924,159,0.3420,59470,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Bremer, Gihan Al Sadat","Bremer, Gihan Al Sadat",Mansoura,,,no,1086,68,0.0000,28990,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"AlSeoudi, Ahmed Maher","AlSeoudi, Ahmed Maher",Mansoura,,,no,799,64,0.2730,31540,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Sharqy, El Gomhuria Street","Sharqy, El Gomhuria Street",Mansoura,,,no,753,51,0.0000,10680,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Roshdy 3aSaree3, Ezbet El Shal","Roshdy 3aSaree3, Ezbet El Shal",Mansoura,,,no,581,62,0.0000,19380,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,The Chef - Hassan Elkhalili,The Chef - Hassan Elkhalili,Mansoura,,,no,534,34,0.2010,17330,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,delta,"Chicken Kickers, Suez Canal","Chicken Kickers, Suez Canal",Mansoura,,,no,525,43,0.0000,14760,0,0,0,0,,27,,NEW,1,no,no
+2026-06-24,canal,talabat mart - Downtown - Champollion,talabat mart - Downtown - Champollion,Ismailia,,,no,2105,157,0.1030,52280,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"talabat mart, Al Sharq District","talabat mart, Al Sharq District",Port Said,,,no,2031,148,0.0530,60660,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"Tmart, Masaken El Nagda","Tmart, Masaken El Nagda",Hurghada,,,no,1294,122,0.3440,72080,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"talabat mart, El Suez","talabat mart, El Suez",Suez,,,no,1139,54,0.2780,20570,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"B.LABAN, Suez University","B.LABAN, Suez University",Suez,,,no,327,22,0.0000,4920,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"B.LABAN, Sheraton","B.LABAN, Sheraton",Hurghada,,,no,318,21,1.0100,5910,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"B.LABAN, El Gomhorya District","B.LABAN, El Gomhorya District",Port Said,,,no,293,23,0.3720,4720,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"Awlad Hanafi Market, Al Salam 1","Awlad Hanafi Market, Al Salam 1",Suez,,,no,283,17,0.3810,2850,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"AL ALAMIA, Al Salam 1","AL ALAMIA, Al Salam 1",Suez,,,no,265,18,0.0000,2440,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,canal,"Abou Aya, Sheraton Road","Abou Aya, Sheraton Road",Hurghada,,,no,261,25,0.0000,4020,0,0,0,0,,21,,NEW,1,no,no
+2026-06-24,upper_egypt,"talabat mart, El Weleideya","talabat mart, El Weleideya",Assiut,,,no,1228,85,0.0000,31520,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"talabat mart, Down Town","talabat mart, Down Town",Damietta New,,,no,1023,75,0.1070,18640,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Ibn Elseady Market, 2nd District","Ibn Elseady Market, 2nd District",Damietta New,,,no,236,12,0.4500,3900,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Elmatboly, Central Park","Elmatboly, Central Park",Damietta New,,,no,214,20,0.0000,3030,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Spinneys, Minya","Spinneys, Minya",Minya,,,no,176,13,0.0000,1620,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"B.LABAN, El Gomhorya St.-assuit","B.LABAN, El Gomhorya St.-assuit",Assiut,,,no,167,18,0.0000,3820,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"B.laban, 2nd District","B.laban, 2nd District",Damietta New,,,no,156,6,0.0000,1490,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Koshary Gedoo, Central Park","Koshary Gedoo, Central Park",Damietta New,,,no,137,13,1.6000,1360,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"Koshary Hekaya, Fryal","Koshary Hekaya, Fryal",Assiut,,,no,134,11,0.8080,1540,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,upper_egypt,"El.Hossen Market, 1st District","El.Hossen Market, 1st District",Damietta New,,,no,128,10,0.0000,940,0,0,0,0,,25,,NEW,1,no,no
+2026-06-24,key_accounts,"Al Dahan, New Maadi","Al Dahan, New Maadi",Cairo,,,no,812,39,0.5200,38560,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,"Al Dahan, 6th of October","Al Dahan, 6th of October",Cairo,,,no,701,48,0.6180,71200,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,Al Dahan - Mohandiseen,Al Dahan - Mohandiseen,Cairo,,,no,622,36,1.5420,41080,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,"Ibn Alsham, Tagammoa 5","Ibn Alsham, Tagammoa 5",Cairo,,,no,601,59,1.1200,43180,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,Al Dahan - Madinaty,Al Dahan - Madinaty,Cairo,,,no,571,31,0.9360,26860,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,"Ibn Alsham, El Rehab City 2","Ibn Alsham, El Rehab City 2",Cairo,,,no,553,50,0.6070,30840,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,Al Dahan - Heliopolis,Al Dahan - Heliopolis,Cairo,,,no,496,46,0.6730,36230,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,Al Dahan - Tagammoa 5,Al Dahan - Tagammoa 5,Cairo,,,no,465,27,0.4600,23740,0,0,0,0,,0,,NEW,1,no,no
+2026-06-24,key_accounts,"Al Dahan, 90 St. Companies","Al Dahan, 90 St. Companies",Cairo,,,no,452,39,0.9800,32960,0,0,0,0,,0,,NEW,1,no,no

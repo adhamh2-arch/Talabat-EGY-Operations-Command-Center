@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Talabat Egy Ops Dashboard",
+  "schemaVersion": 1,
+  "description": "Live 6-view dashboard for the talabat EGY Master Tracker. Loads vendor data from Google Drive on open, with tabs for: Current Offenders, Key Accounts, Communications, Vendor Actions, Recurring Offenders, and Improvement Tracking. Falls back to localStorage cache if Drive is unavailable.",
+  "mcpTools": [
+    "mcp__bd165437-ca6e-4c7e-b958-528a192c1f95__read_file_content"
+  ],
+  "mcpServerNames": [
+    "Google Drive"
+  ]
+}
+</script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>talabat EGY — Master Tracker</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/theme/mermaid.min.css" integrity="sha384-jZvDSsmGB9oGGT/4l9bHXGoAv1OxvG/cFmSo0dZaSqmBgvQTKDBFAMftlXTmMbNW" crossorigin="anonymous">
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; color: #1a1a1a; background: #f5f5f3; }
+.header { background: #FF5A00; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
+.header-title { color: #fff; font-size: 16px; font-weight: 500; }
+.header-sub { color: rgba(255,255,255,0.75); font-size: 12px; margin-top: 2px; }
+.refresh-btn { background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); color: #fff; padding: 7px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; font-family: inherit; }
+.refresh-btn:hover { background: rgba(255,255,255,0.28); }
+.refresh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.tab-bar { background: #fff; border-bottom: 1px solid #e2e2e0; padding: 0 20px; display: flex; gap: 2px; overflow-x: auto; }
+.tab-btn { padding: 10px 14px; font-size: 13px; border: none; background: none; color: #666; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; font-family: inherit; }
+.tab-btn.active { color: #FF5A00; border-bottom-color: #FF5A00; font-weight: 500; }
+.tab-btn:hover:not(.active) { color: #222; }
+.content { padding: 16px 20px; }
+
+/* Metric cards */
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 10px; margin-bottom: 14px; }
+.metric { background: #fff; border: 0.5px solid #e2e2e0; border-radius: 8px; padding: 12px 14px; }
+.metric-val { font-size: 24px; font-weight: 500; color: #FF5A00; line-height: 1.1; }
+.metric-val.green { color: #16a34a; }
+.metric-val.red { color: #dc2626; }
+.metric-val.amber { color: #d97706; }
+.metric-val.purple { color: #7c3aed; }
+.metric-label { font-size: 11px; color: #888; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* Charts */
+.chart-row { display: grid; gap: 12px; margin-bottom: 14px; }
+.chart-row-2 { grid-template-columns: 1fr 1fr; }
+.chart-row-3 { grid-template-columns: 1fr 1fr 1fr; }
+.chart-card { background: #fff; border: 0.5px solid #e2e2e0; border-radius: 8px; padding: 14px; }
+.chart-title { font-size: 12px; color: #888; margin-bottom: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* Tables */
+.table-wrap { background: #fff; border: 0.5px solid #e2e2e0; border-radius: 8px; overflow: hidden; }
+.section-title { font-size: 12px; font-weight: 500; color: #555; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+
+/* Cluster performance table (Overview) */
+.perf-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.perf-table th { background: #fafaf9; text-align: left; padding: 8px 12px; font-size: 11px; font-weight: 500; color: #666; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 0.5px solid #e2e2e0; }
+.perf-table td { padding: 9px 12px; border-bottom: 0.5px solid #f0f0ee; vertical-align: middle; }
+.perf-table tr:last-child td { border-bottom: none; }
+.perf-table tr:hover td { background: #fff9f7; }
+.cluster-tag { display: inline-block; background: #fff0e8; color: #c2410c; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* Heat bar */
+.heat-bar { display: flex; align-items: center; gap: 6px; }
+.heat-bar-track { flex: 1; height: 6px; background: #f0f0ee; border-radius: 3px; overflow: hidden; }
+.heat-bar-fill { height: 100%; border-radius: 3px; background: #FF5A00; }
+
+/* Top offenders mini-list */
+.top-list { background: #fff; border: 0.5px solid #e2e2e0; border-radius: 8px; overflow: hidden; margin-bottom: 14px; }
+.top-list-item { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-bottom: 0.5px solid #f0f0ee; }
+.top-list-item:last-child { border-bottom: none; }
+.top-rank { width: 22px; height: 22px; border-radius: 50%; background: #FF5A00; color: #fff; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.top-rank.r2 { background: #e5e7eb; color: #374151; }
+.top-rank.r3 { background: #e5e7eb; color: #374151; }
+.top-info { flex: 1; min-width: 0; }
+.top-name { font-weight: 500; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.top-meta { font-size: 11px; color: #888; margin-top: 1px; }
+.top-stat { text-align: right; flex-shrink: 0; }
+.top-stat-val { font-size: 13px; font-weight: 500; color: #dc2626; }
+.top-stat-lbl { font-size: 11px; color: #aaa; }
+
+/* Badges */
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; white-space: nowrap; }
+.b-critical { background: #fee2e2; color: #991b1b; }
+.b-high { background: #fef3c7; color: #92400e; }
+.b-medium { background: #dbeafe; color: #1e40af; }
+.b-low { background: #d1fae5; color: #065f46; }
+.b-new { background: #ede9fe; color: #5b21b6; }
+.b-improving { background: #d1fae5; color: #065f46; }
+.b-deteriorating { background: #fee2e2; color: #991b1b; }
+.b-stable { background: #f3f4f6; color: #374151; }
+.b-sent { background: #d1fae5; color: #065f46; }
+.b-pending { background: #fef3c7; color: #92400e; }
+.b-none { background: #f3f4f6; color: #6b7280; }
+.b-escalated { background: #fee2e2; color: #991b1b; }
+.b-complete { background: #d1fae5; color: #065f46; }
+.b-inprog { background: #dbeafe; color: #1e40af; }
+
+/* Loading / error */
+.loading { text-align: center; padding: 70px 20px; color: #999; }
+.spinner { display: inline-block; width: 30px; height: 30px; border: 3px solid #e5e5e5; border-top-color: #FF5A00; border-radius: 50%; animation: spin 0.7s linear infinite; margin-bottom: 12px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.error-box { background: #fef2f2; border: 0.5px solid #fca5a5; border-radius: 8px; padding: 16px; color: #991b1b; font-size: 13px; }
+
+/* Grid.js overrides */
+.gridjs-container { font-size: 13px !important; }
+.gridjs-th { background: #fafaf9 !important; font-size: 11px !important; font-weight: 500 !important; color: #555 !important; text-transform: uppercase !important; letter-spacing: 0.04em !important; }
+.gridjs-td { padding: 7px 12px !important; vertical-align: middle; }
+.gridjs-search input { font-size: 13px !important; border-radius: 6px !important; }
+.gridjs-footer { font-size: 12px !important; }
+
+/* Date pill */
+.date-pill { display: inline-block; background: rgba(255,255,255,0.2); border-radius: 4px; padding: 1px 7px; font-size: 11px; color: #fff; margin-left: 8px; vertical-align: middle; }
+
+/* Overview layout */
+.ov-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.ov-full { margin-bottom: 14px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="header-title">
+      talabat EGY — Master Tracker
+      <span class="date-pill" id="datePill">—</span>
+    </div>
+    <div class="header-sub" id="statusLine">Loading data…</div>
+  </div>
+  <button class="refresh-btn" id="refreshBtn" onclick="initDashboard()">↻ Refresh</button>
+</div>
+
+<div class="tab-bar" role="tablist">
+  <button class="tab-btn active" onclick="switchTab(0)" id="tb0">📊 Overview</button>
+  <button class="tab-btn" onclick="switchTab(1)" id="tb1">Current Offenders</button>
+  <button class="tab-btn" onclick="switchTab(2)" id="tb2">Key Accounts</button>
+  <button class="tab-btn" onclick="switchTab(3)" id="tb3">Communications</button>
+  <button class="tab-btn" onclick="switchTab(4)" id="tb4">Vendor Actions</button>
+  <button class="tab-btn" onclick="switchTab(5)" id="tb5">Recurring Offenders</button>
+  <button class="tab-btn" onclick="switchTab(6)" id="tb6">Improvement Tracking</button>
+</div>
+
+<div class="content" id="mainContent">
+  <div class="loading"><div class="spinner"></div><br>Fetching from Google Drive…</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/gridjs.umd.js" integrity="sha384-/XXDzxe4FsGiAe50i/u9pY/Vy/uX654MHB1xoc1BJNnH1WXHhqHga9g3q5tF4gj7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script>
+const TRACKER_ID = '1AJ5_lz7s0p-sZP4snjHsJrkPvI2agCYW9mqydA0sXKg';
+let allVendors = [];
+let currentTab = 0;
+let activeCharts = [];
+
+// ── Parser ───────────────────────────────────────────────
+function mdUnescape(s) {
+  return (s || '').replace(/\\([_.*`[\]()#!|\\])/g, '$1').trim();
+}
+
+function parseMdTable(raw) {
+  const lines = raw.split('\n');
+  let headerLine = null, startIdx = -1;
+  for (let i = 0; i < lines.length; i++) {
+    const l = lines[i];
+    if (l.includes('chain') && l.includes('name') && l.includes('|')) {
+      headerLine = l; startIdx = i; break;
+    }
+  }
+  if (!headerLine) return [];
+  const headers = headerLine.split('|').map(h => mdUnescape(h)).filter(h => h.length > 0);
+  const rows = [];
+  for (let i = startIdx + 1; i < lines.length; i++) {
+    const l = lines[i].trim();
+    if (!l) continue;
+    if (/^\|\s*:?-+:?\s*\|/.test(l)) continue;
+    const rawCells = l.split('|').map(c => mdUnescape(c));
+    const cleanCells = l.startsWith('|') ? rawCells.slice(1, l.endsWith('|') ? rawCells.length - 1 : rawCells.length) : rawCells;
+    if (cleanCells.length < 5) continue;
+    const row = {};
+    headers.forEach((h, j) => { row[h] = cleanCells[j] !== undefined ? cleanCells[j] : ''; });
+    if (!row['chain_name']) continue;
+    rows.push(row);
+  }
+  return rows;
+}
+
+// ── Fetch ────────────────────────────────────────────────
+async function fetchVendors() {
+  const r = await window.cowork.callMcpTool(
+    'mcp__bd165437-ca6e-4c7e-b958-528a192c1f95__read_file_content',
+    { fileId: TRACKER_ID }
+  );
+  if (r.isError) throw new Error('Drive MCP error');
+  const payload = r.structuredContent ?? JSON.parse(r.content[0].text);
+  const raw = payload.fileContent || '';
+  if (!raw) throw new Error('Empty file');
+  return parseMdTable(raw);
+}
+
+// ── Helpers ──────────────────────────────────────────────
+function bool(v) { return v === true || String(v).toLowerCase() === 'true' || String(v).toLowerCase() === 'yes'; }
+function num(v) { const n = parseFloat(v); return isNaN(n) ? 0 : n; }
+function fmt(n) { return Math.round(n).toLocaleString(); }
+function egpK(n) { const v = num(n); return v >= 1000 ? (v/1000).toFixed(1)+'K' : String(Math.round(v)); }
+function badge(text, cls) { return gridjs.html(`<span class="badge b-${cls}">${text||'—'}</span>`); }
+function severityBadge(s) { return badge(s||'New',{Critical:'critical',High:'high',Medium:'medium',Low:'low',New:'new'}[s]||'new'); }
+function improvBadge(s) { return badge(s||'—',{Improving:'improving',Deteriorating:'deteriorating',Stable:'stable',New:'new'}[s]||'stable'); }
+function commBadge(s) {
+  if (!s||s==='none'||s==='Not Sent') return badge('Not sent','none');
+  if (s==='Sent') return badge('Sent','sent');
+  if (s==='Follow-Up Required') return badge('Follow-up','pending');
+  if (s==='Escalated') return badge('Escalated','escalated');
+  if (s==='Closed') return badge('Closed','complete');
+  return badge(s,'none');
+}
+function actionBadge(v) {
+  if (bool(v.vendor_action_completed)) return badge('Completed','complete');
+  if (v.action_verification_status==='In Progress') return badge('In progress','inprog');
+  if (v.action_verification_status==='Rejected') return badge('Rejected','escalated');
+  if (bool(v.vendor_action_required)) return badge('Pending','pending');
+  return badge('Not required','none');
+}
+function riskDeltaHtml(v) {
+  const d = num(v.risk_score_change);
+  const color = d>0?'#dc2626':d<0?'#16a34a':'#9ca3af';
+  return gridjs.html(`<span style="color:${color};font-weight:500">${d>0?'+':''}${d}</span>`);
+}
+
+function metricCards(...pairs) {
+  return '<div class="metrics">' + pairs.map(([val,label,cls]) =>
+    `<div class="metric"><div class="metric-val ${cls||''}">${val}</div><div class="metric-label">${label}</div></div>`
+  ).join('') + '</div>';
+}
+
+function destroyCharts() {
+  activeCharts.forEach(c => { try { c.destroy(); } catch(e){} });
+  activeCharts = [];
+}
+
+function makeGrid(id, columns, data) {
+  if (!data.length) {
+    document.getElementById(id).innerHTML = '<div style="text-align:center;padding:40px;color:#aaa;font-size:13px">No records</div>';
+    return;
+  }
+  new gridjs.Grid({
+    columns, data,
+    sort: true,
+    search: { enabled: true, placeholder: 'Search…' },
+    pagination: { limit: 20, summary: true }
+  }).render(document.getElementById(id));
+}
+
+// ── Cluster stats builder ────────────────────────────────
+function buildClusterStats(vendors) {
+  const map = {};
+  vendors.forEach(v => {
+    const c = v.cluster || 'unknown';
+    if (!map[c]) map[c] = {
+      cluster: c, count: 0, failedOrders: 0, lostGmv: 0,
+      emailRequired: 0, emailSent: 0, improving: 0, deteriorating: 0,
+      stable: 0, critical: 0, high: 0, riskSum: 0
+    };
+    const s = map[c];
+    s.count++;
+    s.failedOrders += num(v.last_failed_orders);
+    s.lostGmv += num(v.last_lost_gmv);
+    if (bool(v.email_required)) s.emailRequired++;
+    if (bool(v.email_sent)) s.emailSent++;
+    if (v.improvement_status === 'Improving') s.improving++;
+    if (v.improvement_status === 'Deteriorating') s.deteriorating++;
+    if (v.improvement_status === 'Stable') s.stable++;
+    if (v.recurrence_severity === 'Critical') s.critical++;
+    if (v.recurrence_severity === 'High') s.high++;
+    s.riskSum += num(v.current_risk_score);
+  });
+  return Object.values(map).sort((a,b) => b.failedOrders - a.failedOrders);
+}
+
+const CLUSTER_LABEL = {
+  alex: 'Alexandria', delta: 'Delta', canal: 'Canal', upper_egypt: 'Upper Egypt',
+  key_accounts: 'Key Accounts', cairo: 'Cairo'
+};
+function clusterLabel(c) { return CLUSTER_LABEL[c] || c; }
+
+// ── Tab 0: Overview ──────────────────────────────────────
+function renderTab0(v) {
+  const active = v.filter(x => bool(x.is_active));
+  const critical = active.filter(x => x.recurrence_severity==='Critical').length;
+  const high = active.filter(x => x.recurrence_severity==='High').length;
+  const medium = active.filter(x => x.recurrence_severity==='Medium').length;
+  const emailReq = active.filter(x => bool(x.email_required)).length;
+  const emailSent = active.filter(x => bool(x.email_sent)).length;
+  const emailPending = emailReq - emailSent;
+  const improving = active.filter(x => x.improvement_status==='Improving').length;
+  const deteriorating = active.filter(x => x.improvement_status==='Deteriorating').length;
+  const totalOrders = active.reduce((s,x) => s+num(x.last_failed_orders),0);
+  const totalGmv = active.reduce((s,x) => s+num(x.last_lost_gmv),0);
+  const clusterStats = buildClusterStats(active);
+  const maxOrders = Math.max(...clusterStats.map(c=>c.failedOrders),1);
+  const top5 = [...active].sort((a,b)=>num(b.last_failed_orders)-num(a.last_failed_orders)).slice(0,7);
+  const runDate = active[0]?.last_seen_date || '—';
+
+  let html = metricCards(
+    [active.length, 'Active vendors'],
+    [fmt(totalOrders), 'Total failed orders', 'red'],
+    [(totalGmv/1000).toFixed(1)+'K EGP', 'Lost GMV', 'red'],
+    [critical+high, 'Critical + High', 'red'],
+    [emailPending, 'Emails pending', 'amber'],
+    [improving, 'Improving', 'green'],
+    [deteriorating, 'Deteriorating', 'red']
+  );
+
+  // Charts row: severity donut + improvement bar + email funnel
+  html += `<div class="chart-row chart-row-3">
+    <div class="chart-card">
+      <div class="chart-title">Severity distribution</div>
+      <div style="position:relative;height:160px"><canvas id="ov-sev"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Improvement status</div>
+      <div style="position:relative;height:160px"><canvas id="ov-improv"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Email pipeline</div>
+      <div style="position:relative;height:160px"><canvas id="ov-email"></canvas></div>
+    </div>
+  </div>`;
+
+  // Agent (cluster) performance table
+  html += `<div class="ov-grid">
+    <div>
+      <div class="section-title" style="margin-bottom:8px">Cluster performance — ${runDate}</div>
+      <div class="table-wrap">
+        <table class="perf-table">
+          <thead><tr>
+            <th>Cluster</th>
+            <th>Vendors</th>
+            <th>Failed orders</th>
+            <th>Volume share</th>
+            <th>Lost GMV</th>
+            <th>🟢 Impr.</th>
+            <th>🔴 Det.</th>
+            <th>Emails req.</th>
+          </tr></thead>
+          <tbody>
+            ${clusterStats.map(c => `<tr>
+              <td><span class="cluster-tag">${clusterLabel(c.cluster)}</span></td>
+              <td>${c.count}</td>
+              <td style="font-weight:500">${fmt(c.failedOrders)}</td>
+              <td>
+                <div class="heat-bar">
+                  <div class="heat-bar-track"><div class="heat-bar-fill" style="width:${Math.round(c.failedOrders/maxOrders*100)}%"></div></div>
+                  <span style="font-size:11px;color:#888;width:28px;flex-shrink:0">${Math.round(c.failedOrders/totalOrders*100)}%</span>
+                </div>
+              </td>
+              <td>${egpK(c.lostGmv)} EGP</td>
+              <td style="color:#16a34a;font-weight:500">${c.improving}</td>
+              <td style="color:#dc2626;font-weight:500">${c.deteriorating}</td>
+              <td>${c.emailRequired}</td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div class="section-title" style="margin-bottom:8px">Top offenders by failed orders</div>
+      <div class="top-list">
+        ${top5.map((x,i) => `<div class="top-list-item">
+          <div class="top-rank ${i===1?'r2':i===2?'r3':''}">${i+1}</div>
+          <div class="top-info">
+            <div class="top-name">${x.chain_name}</div>
+            <div class="top-meta">${clusterLabel(x.cluster)} · ${x.city} · ${x.recurrence_severity||'New'}</div>
+          </div>
+          <div class="top-stat">
+            <div class="top-stat-val">${fmt(num(x.last_failed_orders))}</div>
+            <div class="top-stat-lbl">failed orders</div>
+          </div>
+        </div>`).join('')}
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Failed orders by cluster</div>
+        <div style="position:relative;height:160px"><canvas id="ov-cluster"></canvas></div>
+      </div>
+    </div>
+  </div>`;
+
+  document.getElementById('mainContent').innerHTML = html;
+
+  // Severity donut
+  activeCharts.push(new Chart(document.getElementById('ov-sev'), {
+    type: 'doughnut',
+    data: { labels: ['Critical','High','Medium','Low/New'], datasets: [{ data: [critical,high,medium,active.length-critical-high-medium], backgroundColor: ['#dc2626','#f59e0b','#3b82f6','#10b981'], borderWidth: 0 }] },
+    options: { responsive:true, maintainAspectRatio:false, cutout:'65%', plugins:{ legend:{ position:'right', labels:{ boxWidth:12, font:{size:11} } } } }
+  }));
+
+  // Improvement bar
+  const stable = active.filter(x=>x.improvement_status==='Stable').length;
+  const isNew = active.filter(x=>!x.improvement_status||x.improvement_status==='New').length;
+  activeCharts.push(new Chart(document.getElementById('ov-improv'), {
+    type: 'bar',
+    data: { labels:['Improving','Stable','Deteriorating','New'], datasets:[{ data:[improving,stable,deteriorating,isNew], backgroundColor:['#10b981','#9ca3af','#dc2626','#8b5cf6'], borderRadius:4, borderWidth:0 }] },
+    options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true,ticks:{stepSize:1}}} }
+  }));
+
+  // Email funnel
+  const responded = active.filter(x=>bool(x.response_received)).length;
+  activeCharts.push(new Chart(document.getElementById('ov-email'), {
+    type: 'bar',
+    data: { labels:['Required','Sent','Responded'], datasets:[{ data:[emailReq,emailSent,responded], backgroundColor:['#FF5A00','#fb923c','#16a34a'], borderRadius:4, borderWidth:0 }] },
+    options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true,ticks:{stepSize:1}}} }
+  }));
+
+  // Cluster bar
+  activeCharts.push(new Chart(document.getElementById('ov-cluster'), {
+    type: 'bar',
+    data: { labels: clusterStats.map(c=>clusterLabel(c.cluster)), datasets:[{ data: clusterStats.map(c=>c.failedOrders), backgroundColor:'#FF5A00', borderRadius:4, borderWidth:0 }] },
+    options: { responsive:true, maintainAspectRatio:false, indexAxis:'y', plugins:{legend:{display:false}}, scales:{x:{beginAtZero:true}} }
+  }));
+}
+
+// ── Tab 1: Current Offenders ─────────────────────────────
+function renderTab1(v) {
+  const active = v.filter(x => bool(x.is_active)).sort((a,b)=>num(b.last_failed_orders)-num(a.last_failed_orders));
+  const totalGmv = active.reduce((s,x)=>s+num(x.last_lost_gmv),0);
+  document.getElementById('mainContent').innerHTML =
+    metricCards(
+      [active.length,'Active cases'],
+      [active.filter(x=>x.recurrence_severity==='Critical').length+active.filter(x=>x.recurrence_severity==='High').length,'Critical / High','red'],
+      [active.filter(x=>bool(x.email_required)&&!bool(x.email_sent)).length,'Emails pending','amber'],
+      [active.filter(x=>x.improvement_status==='Improving').length,'Improving','green'],
+      [active.filter(x=>x.improvement_status==='Deteriorating').length,'Deteriorating','red'],
+      [(totalGmv/1000).toFixed(0)+'K EGP','Total lost GMV']
+    ) + '<div class="table-wrap"><div id="g1"></div></div>';
+  makeGrid('g1',
+    ['Vendor','Cluster','City',{name:'Failed orders',sort:{compare:(a,b)=>Number(a)-Number(b)}},'Lost GMV','Fail rate %','Severity','Improvement'],
+    active.map(x=>[x.chain_name,x.cluster,x.city,num(x.last_failed_orders),egpK(x.last_lost_gmv)+' EGP',num(x.last_fail_rate).toFixed(1)+'%',severityBadge(x.recurrence_severity),improvBadge(x.improvement_status)])
+  );
+}
+
+// ── Tab 2: Key Accounts ──────────────────────────────────
+function renderTab2(v) {
+  const ka = v.filter(x=>x.cluster==='key_accounts').sort((a,b)=>num(b.last_failed_orders)-num(a.last_failed_orders));
+  document.getElementById('mainContent').innerHTML =
+    metricCards(
+      [ka.length,'Key accounts tracked'],
+      [fmt(ka.reduce((s,x)=>s+num(x.last_failed_orders),0)),'Total failed orders','red'],
+      [(ka.reduce((s,x)=>s+num(x.last_lost_gmv),0)/1000).toFixed(0)+'K EGP','Lost GMV'],
+      [ka.filter(x=>bool(x.email_required)).length,'Email required','amber']
+    ) + '<div class="table-wrap"><div id="g2"></div></div>';
+  makeGrid('g2',
+    ['Vendor','City','Appearances',{name:'Failed orders',sort:{compare:(a,b)=>Number(a)-Number(b)}},'Lost GMV','Fail rate %','Severity','Improvement','Comm. status'],
+    ka.map(x=>[x.chain_name,x.city,num(x.appearances),num(x.last_failed_orders),egpK(x.last_lost_gmv)+' EGP',num(x.last_fail_rate).toFixed(1)+'%',severityBadge(x.recurrence_severity),improvBadge(x.improvement_status),commBadge(x.communication_status)])
+  );
+}
+
+// ── Tab 3: Communications ────────────────────────────────
+function renderTab3(v) {
+  const req=v.filter(x=>bool(x.email_required)),sent=req.filter(x=>bool(x.email_sent)),responded=sent.filter(x=>bool(x.response_received));
+  document.getElementById('mainContent').innerHTML =
+    metricCards([req.length,'Email required'],[sent.length,'Sent','green'],[req.filter(x=>!bool(x.email_sent)).length,'Pending send','amber'],[responded.length,'Responses received','green']) +
+    '<div class="table-wrap"><div id="g3"></div></div>';
+  makeGrid('g3',
+    ['Vendor','Cluster','AM email','Required','Sent','Sent date','Status','Response','Classification'],
+    v.map(x=>[x.chain_name,x.cluster,x.am_email||'—',bool(x.email_required)?'Yes':'No',bool(x.email_sent)?'Yes':'No',x.email_sent_date||'—',commBadge(x.communication_status),bool(x.response_received)?'Yes':'No',x.response_classification||'—'])
+  );
+}
+
+// ── Tab 4: Vendor Actions ────────────────────────────────
+function renderTab4(v) {
+  const req=v.filter(x=>bool(x.vendor_action_required)),done=req.filter(x=>bool(x.vendor_action_completed));
+  document.getElementById('mainContent').innerHTML =
+    metricCards([req.length,'Action required'],[done.length,'Completed','green'],[req.filter(x=>!bool(x.vendor_action_completed)).length,'Pending','amber'],[req.filter(x=>x.action_verification_status==='Verification Needed').length,'Verification needed']) +
+    '<div class="table-wrap"><div id="g4"></div></div>';
+  makeGrid('g4',
+    ['Vendor','Cluster','City','Required','Status','Response classification'],
+    v.map(x=>[x.chain_name,x.cluster,x.city,bool(x.vendor_action_required)?'Yes':'No',actionBadge(x),x.response_classification||'—'])
+  );
+}
+
+// ── Tab 5: Recurring Offenders ───────────────────────────
+function renderTab5(v) {
+  const recurring=v.filter(x=>num(x.appearances)>=2).sort((a,b)=>num(b.appearances)-num(a.appearances));
+  const sev={Critical:0,High:0,Medium:0,Low:0};
+  recurring.forEach(x=>{if(sev[x.recurrence_severity]!==undefined)sev[x.recurrence_severity]++;});
+  const clusterMap={};
+  recurring.forEach(x=>{clusterMap[x.cluster]=(clusterMap[x.cluster]||0)+1;});
+  document.getElementById('mainContent').innerHTML =
+    metricCards([recurring.length,'Repeat offenders'],[sev.Critical,'Critical','red'],[sev.High,'High','amber'],[sev.Medium,'Medium']) +
+    '<div class="chart-row chart-row-2">' +
+      '<div class="chart-card"><div class="chart-title">Severity distribution</div><div style="position:relative;height:180px"><canvas id="g5a"></canvas></div></div>' +
+      '<div class="chart-card"><div class="chart-title">Recurring by cluster</div><div style="position:relative;height:180px"><canvas id="g5b"></canvas></div></div>' +
+    '</div><div class="table-wrap"><div id="g5"></div></div>';
+  activeCharts.push(new Chart(document.getElementById('g5a'),{type:'doughnut',data:{labels:Object.keys(sev),datasets:[{data:Object.values(sev),backgroundColor:['#dc2626','#d97706','#3b82f6','#10b981'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{boxWidth:12,font:{size:12}}}}}}));
+  activeCharts.push(new Chart(document.getElementById('g5b'),{type:'bar',data:{labels:Object.keys(clusterMap),datasets:[{label:'Vendors',data:Object.values(clusterMap),backgroundColor:'#FF5A00',borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{stepSize:1}}}}}));
+  makeGrid('g5',
+    ['Vendor','Cluster','City',{name:'Appearances',sort:{compare:(a,b)=>Number(a)-Number(b)}},'Consec. days','Severity','First seen','Last seen','Improvement'],
+    recurring.map(x=>[x.chain_name,x.cluster,x.city,num(x.appearances),num(x.consecutive_days),severityBadge(x.recurrence_severity),x.first_detection_date||'—',x.last_detection_date||'—',improvBadge(x.improvement_status)])
+  );
+}
+
+// ── Tab 6: Improvement Tracking ──────────────────────────
+function renderTab6(v) {
+  const improving=v.filter(x=>x.improvement_status==='Improving'),deteriorating=v.filter(x=>x.improvement_status==='Deteriorating'),stable=v.filter(x=>x.improvement_status==='Stable'),isNew=v.filter(x=>!x.improvement_status||x.improvement_status==='New');
+  document.getElementById('mainContent').innerHTML =
+    metricCards([improving.length,'Improving','green'],[stable.length,'Stable'],[deteriorating.length,'Deteriorating','red'],[isNew.length,'New (no baseline)']) +
+    '<div class="chart-card" style="margin-bottom:14px"><div class="chart-title">Improvement status breakdown</div><div style="position:relative;height:150px"><canvas id="g6c"></canvas></div></div>' +
+    '<div class="table-wrap"><div id="g6"></div></div>';
+  activeCharts.push(new Chart(document.getElementById('g6c'),{type:'bar',data:{labels:['Improving','Stable','Deteriorating','New'],datasets:[{data:[improving.length,stable.length,deteriorating.length,isNew.length],backgroundColor:['#10b981','#9ca3af','#dc2626','#8b5cf6'],borderRadius:4,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{stepSize:1}}}}}));
+  makeGrid('g6',
+    ['Vendor','Cluster','City','Risk score','Change','Rank','Rank movement','Improvement','Appearances'],
+    [...v].sort((a,b)=>num(b.current_risk_score)-num(a.current_risk_score)).map(x=>[x.chain_name,x.cluster,x.city,num(x.current_risk_score),riskDeltaHtml(x),num(x.current_rank)||'—',x.rank_movement||'stable',improvBadge(x.improvement_status),num(x.appearances)])
+  );
+}
+
+const tabRenderers = [renderTab0,renderTab1,renderTab2,renderTab3,renderTab4,renderTab5,renderTab6];
+
+// ── Tab switch ───────────────────────────────────────────
+function switchTab(idx) {
+  if (idx===currentTab && allVendors.length) return;
+  currentTab = idx;
+  for (let i=0;i<7;i++) document.getElementById('tb'+i).classList.toggle('active',i===idx);
+  destroyCharts();
+  if (allVendors.length) tabRenderers[idx](allVendors);
+}
+
+// ── Init ─────────────────────────────────────────────────
+async function initDashboard() {
+  destroyCharts();
+  document.getElementById('mainContent').innerHTML = '<div class="loading"><div class="spinner"></div><br>Fetching Master Tracker from Google Drive…</div>';
+  document.getElementById('statusLine').textContent = 'Loading…';
+  document.getElementById('datePill').textContent = '—';
+  document.getElementById('refreshBtn').disabled = true;
+  try {
+    allVendors = await fetchVendors();
+    const active = allVendors.filter(x=>bool(x.is_active));
+    const runDate = allVendors[0]?.last_seen_date || '';
+    document.getElementById('datePill').textContent = runDate || '—';
+    document.getElementById('statusLine').textContent = `${allVendors.length} vendors · ${active.length} active · refreshed ${new Date().toLocaleTimeString()}`;
+    localStorage.setItem('tlb_tracker_v3', JSON.stringify({ts:Date.now(),data:allVendors}));
+    tabRenderers[currentTab](allVendors);
+  } catch(e) {
+    const cached = localStorage.getItem('tlb_tracker_v3');
+    if (cached) {
+      try {
+        const {ts,data}=JSON.parse(cached);
+        allVendors=data;
+        document.getElementById('statusLine').textContent=`Cached ${new Date(ts).toLocaleString()} (live failed: ${e.message})`;
+        document.getElementById('datePill').textContent=allVendors[0]?.last_seen_date||'—';
+        tabRenderers[currentTab](allVendors);
+      } catch(e2){
+        document.getElementById('mainContent').innerHTML=`<div class="error-box">Failed to load: ${e.message}</div>`;
+      }
+    } else {
+      document.getElementById('mainContent').innerHTML=`<div class="error-box">Failed to load Master Tracker: ${e.message}.<br>Ensure the Google Drive connector is active.</div>`;
+      document.getElementById('statusLine').textContent='Load failed';
+    }
+  } finally {
+    document.getElementById('refreshBtn').disabled=false;
+  }
+}
+
+initDashboard();
+</script>
+</body>
+</html>

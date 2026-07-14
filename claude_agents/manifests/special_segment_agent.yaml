@@ -1,0 +1,19 @@
+name: special_segment_agent
+description: Monitor entities matching Is Key=Yes, Is Food=Yes, Is Darkstore=No segment criteria.
+runtime: nodejs18
+schedule: cron(0 3 * * *)
+timezone: Africa/Cairo
+inputs:
+  - run_date
+skills:
+  - config_loader
+  - looker_query
+  - compute_metrics
+  - apply_risk_scoring
+  - google_sheets
+  - persist_audit
+  - notify
+retries:
+  max_attempts: 3
+  backoff: exponential
+timeout_seconds: 1200

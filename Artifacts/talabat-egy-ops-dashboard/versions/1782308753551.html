@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Talabat Egy Ops Dashboard",
+  "schemaVersion": 1,
+  "description": "Live 6-view dashboard for the talabat EGY Master Tracker. Loads vendor data from Google Drive on open, with tabs for: Current Offenders, Key Accounts, Communications, Vendor Actions, Recurring Offenders, and Improvement Tracking. Falls back to localStorage cache if Drive is unavailable.",
+  "mcpTools": [
+    "mcp__bd165437-ca6e-4c7e-b958-528a192c1f95__read_file_content"
+  ],
+  "mcpServerNames": [
+    "Google Drive"
+  ]
+}
+</script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>talabat EGY — Master Tracker</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/theme/mermaid.min.css">
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; font-size: 14px; color: #1a1a1a; background: #f7f7f5; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.header { background: #FF5A00; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
+.header-title { color: #fff; font-size: 16px; font-weight: 500; }
+.header-sub { color: rgba(255,255,255,0.8); font-size: 12px; margin-top: 2px; }
+.refresh-btn { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 6px; }
+.refresh-btn:hover { background: rgba(255,255,255,0.3); }
+.tab-bar { background: #fff; border-bottom: 1px solid #e5e5e3; padding: 0 20px; display: flex; gap: 4px; overflow-x: auto; }
+.tab-btn { padding: 10px 16px; font-size: 13px; border: none; background: none; color: #666; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; font-family: inherit; }
+.tab-btn.active { color: #FF5A00; border-bottom-color: #FF5A00; font-weight: 500; }
+.tab-btn:hover:not(.active) { color: #333; }
+.content { padding: 16px 20px; }
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.metric { background: #fff; border: 0.5px solid #e5e5e3; border-radius: 8px; padding: 12px 14px; }
+.metric-val { font-size: 22px; font-weight: 500; color: #FF5A00; }
+.metric-val.green { color: #2d7a2d; }
+.metric-val.red { color: #c53030; }
+.metric-val.amber { color: #b45309; }
+.metric-label { font-size: 11px; color: #888; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+.table-wrap { background: #fff; border: 0.5px solid #e5e5e3; border-radius: 8px; overflow: hidden; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; }
+.badge-critical { background: #fee2e2; color: #991b1b; }
+.badge-high { background: #fef3c7; color: #92400e; }
+.badge-medium { background: #dbeafe; color: #1e40af; }
+.badge-low { background: #d1fae5; color: #065f46; }
+.badge-new { background: #ede9fe; color: #5b21b6; }
+.badge-improving { background: #d1fae5; color: #065f46; }
+.badge-deteriorating { background: #fee2e2; color: #991b1b; }
+.badge-stable { background: #f3f4f6; color: #374151; }
+.badge-sent { background: #d1fae5; color: #065f46; }
+.badge-pending { background: #fef3c7; color: #92400e; }
+.badge-none { background: #f3f4f6; color: #6b7280; }
+.badge-escalated { background: #fee2e2; color: #991b1b; }
+.badge-complete { background: #d1fae5; color: #065f46; }
+.badge-inprog { background: #dbeafe; color: #1e40af; }
+.loading { text-align: center; padding: 60px 20px; color: #888; }
+.loading-spin { display: inline-block; width: 28px; height: 28px; border: 3px solid #e5e5e3; border-top-color: #FF5A00; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 12px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.error-box { background: #fef2f2; border: 0.5px solid #fca5a5; border-radius: 8px; padding: 16px; color: #991b1b; font-size: 13px; }
+.filter-bar { display: flex; gap: 10px; margin-bottom: 12px; align-items: center; flex-wrap: wrap; }
+.filter-bar select, .filter-bar input { font-size: 13px; padding: 6px 10px; border: 0.5px solid #d1d5db; border-radius: 6px; background: #fff; color: #1a1a1a; font-family: inherit; }
+.section-label { font-size: 12px; color: #888; margin-bottom: 8px; }
+.chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.chart-card { background: #fff; border: 0.5px solid #e5e5e3; border-radius: 8px; padding: 14px; }
+.chart-title { font-size: 12px; color: #888; margin-bottom: 10px; }
+.gridjs-wrapper { border: none !important; }
+.gridjs-container { font-size: 13px; }
+.gridjs-th { background: #fafaf9 !important; font-size: 12px !important; font-weight: 500 !important; color: #555 !important; }
+.gridjs-td { padding: 8px 12px !important; }
+.gridjs-tr:hover td { background: #fff9f7 !important; }
+.no-data { text-align: center; padding: 40px; color: #aaa; font-size: 13px; }
+.last-updated { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 2px; }
+</style>
+</head>
+<body>
+<h2 class="sr-only">talabat Egypt Operations Master Tracker Dashboard — live offender management and stakeholder tracking</h2>
+
+<div class="header">
+  <div>
+    <div class="header-title">talabat EGY — Master Tracker Dashboard</div>
+    <div class="header-sub">Offender lifecycle · Communications · Vendor actions · Trends</div>
+    <div class="last-updated" id="lastUpdated">Loading…</div>
+  </div>
+  <button class="refresh-btn" onclick="initDashboard()" aria-label="Refresh data">
+    ↻ Refresh
+  </button>
+</div>
+
+<div class="tab-bar" role="tablist">
+  <button class="tab-btn active" role="tab" onclick="switchTab(0)" id="tab0">Current Offenders</button>
+  <button class="tab-btn" role="tab" onclick="switchTab(1)" id="tab1">Key Accounts</button>
+  <button class="tab-btn" role="tab" onclick="switchTab(2)" id="tab2">Communications</button>
+  <button class="tab-btn" role="tab" onclick="switchTab(3)" id="tab3">Vendor Actions</button>
+  <button class="tab-btn" role="tab" onclick="switchTab(4)" id="tab4">Recurring Offenders</button>
+  <button class="tab-btn" role="tab" onclick="switchTab(5)" id="tab5">Improvement Tracking</button>
+</div>
+
+<div class="content" id="mainContent">
+  <div class="loading">
+    <div class="loading-spin"></div>
+    <div>Loading Master Tracker data…</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/gridjs.umd.js" integrity="sha384-/XXDzxe4FsGiAe50i/u9pY/Vy/uX654MHB1xoc1BJNnH1WXHhqHga9g3q5tF4gj7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script>
+const TRACKER_ID = '1AJ5_lz7s0p-sZP4snjHsJrkPvI2agCYW9mqydA0sXKg';
+let allVendors = [];
+let currentTab = 0;
+let charts = {};
+
+function severityOrder(s) { return {Critical:4,High:3,Medium:2,Low:1,New:0}[s]||0; }
+function badge(text, cls) { return `<span class="badge badge-${cls}">${text||'—'}</span>`; }
+function severityBadge(s) {
+  const m = {Critical:'critical',High:'high',Medium:'medium',Low:'low',New:'new'};
+  return badge(s, m[s]||'none');
+}
+function improvBadge(s) {
+  const m = {Improving:'improving',Deteriorating:'deteriorating',Stable:'stable',New:'new'};
+  return badge(s, m[s]||'stable');
+}
+function commBadge(s) {
+  if(!s||s==='none'||s==='Not Sent') return badge('Not sent','none');
+  if(s==='Sent') return badge('Sent','sent');
+  if(s==='Follow-Up Required') return badge('Follow-up','pending');
+  if(s==='Escalated') return badge('Escalated','escalated');
+  if(s==='Closed') return badge('Closed','complete');
+  return badge(s,'none');
+}
+function bool(v) { return v===true||v==='true'||v==='yes'||v==='TRUE'||v==='YES'; }
+function num(v) { const n=parseFloat(v); return isNaN(n)?0:n; }
+function fmt(n) { return Math.round(n).toLocaleString(); }
+function egp(n) { return 'EGP '+Math.round(n).toLocaleString(); }
+
+function parseSheetText(raw) {
+  if (!raw) return [];
+  const lines = raw.split('\n');
+  let headers = [];
+  let headerIdx = -1;
+  for (let i = 0; i < lines.length; i++) {
+    const l = lines[i];
+    if (l.toLowerCase().includes('chain_name')) {
+      const delim = l.includes('|') ? '|' : ',';
+      headers = l.split(delim).map(h => h.trim().replace(/^["'\s]+|["'\s]+$/g,'').toLowerCase().replace(/\s+/g,'_'));
+      headerIdx = i;
+      break;
+    }
+  }
+  if (headerIdx < 0) return [];
+  const delim = lines[headerIdx].includes('|') ? '|' : ',';
+  const rows = [];
+  for (let i = headerIdx + 1; i < lines.length; i++) {
+    const l = lines[i].trim();
+    if (!l || l.startsWith('---') || l.startsWith('===')) continue;
+    const cells = l.split(delim).map(c => c.trim().replace(/^["'\s]+|["'\s]+$/g,''));
+    if (cells.length < 5) continue;
+    const row = {};
+    headers.forEach((h, j) => { row[h] = cells[j] !== undefined ? cells[j] : ''; });
+    if (row.chain_name) rows.push(row);
+  }
+  return rows;
+}
+
+async function loadFromDrive() {
+  const r = await window.cowork.callMcpTool(
+    'mcp__bd165437-ca6e-4c7e-b958-528a192c1f95__read_file_content',
+    { fileId: TRACKER_ID }
+  );
+  if (r.isError) throw new Error('Drive MCP error');
+  const payload = r.structuredContent ?? JSON.parse(r.content[0].text);
+  const raw = payload.fileContent || '';
+  let vendors = parseSheetText(raw);
+  if (vendors.length === 0 && raw.length > 100) {
+    const parsed = await window.cowork.askClaude(
+      'Extract all vendor rows from this Google Sheets data and return a JSON array. Each object must include: chain_name, cluster, city, am_name, am_email, is_key_vip, first_detection_date, last_detection_date, appearances, consecutive_days, recurrence_severity, improvement_status, current_risk_score, risk_score_change, current_rank, rank_movement, last_failed_orders, last_lost_gmv, last_fail_rate, top_failure_reason, email_required, email_sent, email_sent_date, communication_status, response_received, response_classification, vendor_action_required, vendor_action_completed, action_verification_status, is_active, last_seen_date. Return ONLY a JSON array.',
+      [raw]
+    );
+    const clean = parsed.replace(/^```[a-z]*\s*/m,'').replace(/\s*```$/m,'');
+    vendors = JSON.parse(clean);
+  }
+  return vendors;
+}
+
+function destroyCharts() {
+  Object.values(charts).forEach(c => { try { c.destroy(); } catch(e){} });
+  charts = {};
+}
+
+function renderMetrics(items) {
+  const active = items.filter(v => bool(v.is_active));
+  const critical = active.filter(v => v.recurrence_severity==='Critical').length;
+  const high = active.filter(v => v.recurrence_severity==='High').length;
+  const emailPending = active.filter(v => bool(v.email_required) && !bool(v.email_sent)).length;
+  const improving = active.filter(v => v.improvement_status==='Improving').length;
+  const deteriorating = active.filter(v => v.improvement_status==='Deteriorating').length;
+  const totalLostGmv = active.reduce((s,v) => s+num(v.last_lost_gmv),0);
+  return `<div class="metrics">
+    <div class="metric"><div class="metric-val">${active.length}</div><div class="metric-label">Active cases</div></div>
+    <div class="metric"><div class="metric-val red">${critical+high}</div><div class="metric-label">Critical/High severity</div></div>
+    <div class="metric"><div class="metric-val amber">${emailPending}</div><div class="metric-label">Emails pending</div></div>
+    <div class="metric"><div class="metric-val green">${improving}</div><div class="metric-label">Improving</div></div>
+    <div class="metric"><div class="metric-val red">${deteriorating}</div><div class="metric-label">Deteriorating</div></div>
+    <div class="metric"><div class="metric-val">${(totalLostGmv/1000).toFixed(0)}K EGP</div><div class="metric-label">Total lost GMV</div></div>
+  </div>`;
+}
+
+function gridTable(id, cols, data) {
+  return `<div class="table-wrap"><div id="${id}"></div></div>`;
+}
+
+function renderGrid(id, columns, data) {
+  if (!data.length) {
+    document.getElementById(id).innerHTML = '<div class="no-data">No records to display</div>';
+    return;
+  }
+  new gridjs.Grid({
+    columns,
+    data,
+    sort: true,
+    search: { enabled: true, placeholder: 'Search…' },
+    pagination: { limit: 25, summary: true },
+    style: { th: { 'font-size': '12px' }, td: { 'font-size': '13px' } }
+  }).render(document.getElementById(id));
+}
+
+function tab0(vendors) {
+  const active = vendors.filter(v => bool(v.is_active)).sort((a,b) => severityOrder(b.recurrence_severity)-severityOrder(a.recurrence_severity)||(num(b.last_failed_orders)-num(a.last_failed_orders)));
+  let html = renderMetrics(vendors);
+  html += gridTable('g0',null,null);
+  document.getElementById('mainContent').innerHTML = html;
+  renderGrid('g0',
+    ['Vendor','Cluster','City','Appearances','Severity','Rank','Failed orders','Lost GMV','Fail rate %','Status'],
+    active.map(v => [
+      v.chain_name||'—', v.cluster||'—', v.city||'—',
+      num(v.appearances), { name: severityBadge(v.recurrence_severity), innerHTML: true },
+      num(v.current_rank)||'—',
+      fmt(num(v.last_failed_orders)), egp(num(v.last_lost_gmv)),
+      (num(v.last_fail_rate)).toFixed(1)+'%',
+      { name: improvBadge(v.improvement_status), innerHTML: true }
+    ])
+  );
+}
+
+function tab1(vendors) {
+  const ka = vendors.filter(v => v.cluster==='key_accounts').sort((a,b)=>num(b.last_failed_orders)-num(a.last_failed_orders));
+  const total = ka.reduce((s,v)=>s+num(v.last_failed_orders),0);
+  const totalGmv = ka.reduce((s,v)=>s+num(v.last_lost_gmv),0);
+  let html = `<div class="metrics">
+    <div class="metric"><div class="metric-val">${ka.length}</div><div class="metric-label">Key accounts tracked</div></div>
+    <div class="metric"><div class="metric-val red">${fmt(total)}</div><div class="metric-label">Total failed orders</div></div>
+    <div class="metric"><div class="metric-val">${(totalGmv/1000).toFixed(0)}K EGP</div><div class="metric-label">Lost GMV</div></div>
+    <div class="metric"><div class="metric-val">${ka.filter(v=>bool(v.email_required)).length}</div><div class="metric-label">Email required</div></div>
+  </div>`;
+  html += gridTable('g1',null,null);
+  document.getElementById('mainContent').innerHTML = html;
+  renderGrid('g1',
+    ['Vendor','City','Appearances','Severity','Failed orders','Lost GMV','Improvement','Comm. status'],
+    ka.map(v=>[
+      v.chain_name||'—', v.city||'—', num(v.appearances),
+      {name:severityBadge(v.recurrence_severity),innerHTML:true},
+      fmt(num(v.last_failed_orders)), egp(num(v.last_lost_gmv)),
+      {name:improvBadge(v.improvement_status),innerHTML:true},
+      {name:commBadge(v.communication_status),innerHTML:true}
+    ])
+  );
+}
+
+function tab2(vendors) {
+  const emailRequired = vendors.filter(v => bool(v.email_required));
+  const sent = emailRequired.filter(v => bool(v.email_sent));
+  const responded = sent.filter(v => bool(v.response_received));
+  const pending = emailRequired.filter(v => !bool(v.email_sent));
+  let html = `<div class="metrics">
+    <div class="metric"><div class="metric-val">${emailRequired.length}</div><div class="metric-label">Email required</div></div>
+    <div class="metric"><div class="metric-val green">${sent.length}</div><div class="metric-label">Sent</div></div>
+    <div class="metric"><div class="metric-val amber">${pending.length}</div><div class="metric-label">Pending send</div></div>
+    <div class="metric"><div class="metric-val green">${responded.length}</div><div class="metric-label">Responses received</div></div>
+  </div>`;
+  html += gridTable('g2',null,null);
+  document.getElementById('mainContent').innerHTML = html;
+  renderGrid('g2',
+    ['Vendor','Cluster','AM email','Email required','Email sent','Sent date','Comm. status','Response','Classification'],
+    vendors.map(v=>[
+      v.chain_name||'—', v.cluster||'—', v.am_email||'—',
+      bool(v.email_required)?'Yes':'No',
+      bool(v.email_sent)?'Yes':'No',
+      v.email_sent_date||'—',
+      {name:commBadge(v.communication_status),innerHTML:true},
+      bool(v.response_received)?'Yes':'No',
+      v.response_classification||'—'
+    ])
+  );
+}
+
+function tab3(vendors) {
+  const actionRequired = vendors.filter(v => bool(v.vendor_action_required));
+  const completed = actionRequired.filter(v => bool(v.vendor_action_completed));
+  const pending = actionRequired.filter(v => !bool(v.vendor_action_completed));
+  const needVerify = actionRequired.filter(v => v.action_verification_status==='Verification Needed');
+  let html = `<div class="metrics">
+    <div class="metric"><div class="metric-val">${actionRequired.length}</div><div class="metric-label">Action required</div></div>
+    <div class="metric"><div class="metric-val green">${completed.length}</div><div class="metric-label">Completed</div></div>
+    <div class="metric"><div class="metric-val amber">${pending.length}</div><div class="metric-label">Pending</div></div>
+    <div class="metric"><div class="metric-val">${needVerify.length}</div><div class="metric-label">Verification needed</div></div>
+  </div>`;
+  html += gridTable('g3',null,null);
+  document.getElementById('mainContent').innerHTML = html;
+  function actionBadge(v) {
+    if(bool(v.vendor_action_completed)) return badge('Completed','complete');
+    if(v.action_verification_status==='In Progress') return badge('In progress','inprog');
+    if(v.action_verification_status==='Rejected') return badge('Rejected','escalated');
+    return badge('Pending','pending');
+  }
+  renderGrid('g3',
+    ['Vendor','Cluster','City','Action required','Completed','Verification status','Response classification'],
+    vendors.map(v=>[
+      v.chain_name||'—', v.cluster||'—', v.city||'—',
+      bool(v.vendor_action_required)?'Yes':'No',
+      bool(v.vendor_action_completed)?'Yes':'No',
+      {name:actionBadge(v),innerHTML:true},
+      v.response_classification||'—'
+    ])
+  );
+}
+
+function tab4(vendors) {
+  const recurring = vendors.filter(v => num(v.appearances) >= 2).sort((a,b)=>severityOrder(b.recurrence_severity)-severityOrder(a.recurrence_severity)||num(b.appearances)-num(a.appearances));
+  const critical = recurring.filter(v=>v.recurrence_severity==='Critical').length;
+  const high = recurring.filter(v=>v.recurrence_severity==='High').length;
+  const medium = recurring.filter(v=>v.recurrence_severity==='Medium').length;
+  let html = `<div class="metrics">
+    <div class="metric"><div class="metric-val">${recurring.length}</div><div class="metric-label">Repeat offenders</div></div>
+    <div class="metric"><div class="metric-val red">${critical}</div><div class="metric-label">Critical</div></div>
+    <div class="metric"><div class="metric-val amber">${high}</div><div class="metric-label">High</div></div>
+    <div class="metric"><div class="metric-val">${medium}</div><div class="metric-label">Medium</div></div>
+  </div>`;
+  html += `<div style="margin-bottom:12px;display:flex;gap:12px;">
+    <div style="flex:1;background:#fff;border:0.5px solid #e5e5e3;border-radius:8px;padding:14px;">
+      <div class="chart-title">Recurrence severity distribution</div>
+      <div style="position:relative;height:180px;"><canvas id="severityChart" role="img" aria-label="Donut chart of recurrence severity: Critical, High, Medium, Low"></canvas></div>
+    </div>
+    <div style="flex:1;background:#fff;border:0.5px solid #e5e5e3;border-radius:8px;padding:14px;">
+      <div class="chart-title">Appearances by cluster</div>
+      <div style="position:relative;height:180px;"><canvas id="clusterChart" role="img" aria-label="Bar chart of recurring offenders by cluster"></canvas></div>
+    </div>
+  </div>`;
+  html += gridTable('g4',null,null);
+  document.getElementById('mainContent').innerHTML = html;
+
+  const counts = {Critical:0,High:0,Medium:0,Low:0};
+  recurring.forEach(v => { counts[v.recurrence_severity]=(counts[v.recurrence_severity]||0)+1; });
+  new Chart(document.getElementById('severityChart'), {
+    type: 'doughnut',
+    data: { labels: Object.keys(counts), datasets: [{ data: Object.values(counts), backgroundColor: ['#dc2626','#d97706','#3b82f6','#10b981'], borderWidth: 0 }] },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: { font: { size: 12 }, boxWidth: 12 } } } }
+  });
+
+  const clusterCounts = {};
+  recurring.forEach(v => { clusterCounts[v.cluster]=(clusterCounts[v.cluster]||0)+1; });
+  new Chart(document.getElementById('clusterChart'), {
+    type: 'bar',
+    data: { labels: Object.keys(clusterCounts), datasets: [{ label: 'Recurring vendors', data: Object.values(clusterCounts), backgroundColor: '#FF5A00', borderRadius: 4, borderWidth: 0 }] },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } }
+  });
+
+  renderGrid('g4',
+    ['Vendor','Cluster','City','Appearances','Consecutive days','Severity','First seen','Last seen','Status'],
+    recurring.map(v=>[
+      v.chain_name||'—', v.cluster||'—', v.city||'—',
+      num(v.appearances), num(v.consecutive_days),
+      {name:severityBadge(v.recurrence_severity),innerHTML:true},
+      v.first_detection_date||'—', v.last_detection_date||'—',
+      {name:improvBadge(v.improvement_status),innerHTML:true}
+    ])
+  );
+}
+
+function tab5(vendors) {
+  const improving = vendors.filter(v=>v.improvement_status==='Improving');
+  const deteriorating = vendors.filter(v=>v.improvement_status==='Deteriorating');
+  const stable = vendors.filter(v=>v.improvement_status==='Stable');
+  let html = `<div class="metrics">
+    <div class="metric"><div class="metric-val green">${improving.length}</div><div class="metric-label">Improving</div></div>
+    <div class="metric"><div class="metric-val">${stable.length}</div><div class="metric-label">Stable</div></div>
+    <div class="metric"><div class="metric-val red">${deteriorating.length}</div><div class="metric-label">Deteriorating</div></div>
+    <div class="metric"><div class="metric-val">${vendors.filter(v=>v.improvement_status==='New').length}</div><div class="metric-label">New (no baseline)</div></div>
+  </div>`;
+  html += `<div style="background:#fff;border:0.5px solid #e5e5e3;border-radius:8px;padding:14px;margin-bottom:12px;">
+    <div class="chart-title">Improvement status breakdown</div>
+    <div style="position:relative;height:160px;"><canvas id="improvChart" role="img" aria-label="Bar chart of improvement status: Improving, Stable, Deteriorating, New"></canvas></div>
+  </div>`;
+  html += gridTable('g5',null,null);
+  document.getElementById('mainContent').innerHTML = html;
+
+  new Chart(document.getElementById('improvChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Improving','Stable','Deteriorating','New'],
+      datasets: [{ data: [improving.length,stable.length,deteriorating.length,vendors.filter(v=>v.improvement_status==='New').length], backgroundColor: ['#10b981','#9ca3af','#dc2626','#8b5cf6'], borderRadius: 4, borderWidth: 0 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } }
+  });
+
+  const sorted = [...vendors].sort((a,b)=>num(b.risk_score_change)-num(a.risk_score_change));
+  renderGrid('g5',
+    ['Vendor','Cluster','City','Risk score','Change','Rank','Rank movement','Improvement','Appearances'],
+    sorted.map(v=>[
+      v.chain_name||'—', v.cluster||'—', v.city||'—',
+      num(v.current_risk_score),
+      { name: `<span style="color:${num(v.risk_score_change)>0?'#dc2626':num(v.risk_score_change)<0?'#10b981':'#9ca3af'}">${num(v.risk_score_change)>0?'+':''}${num(v.risk_score_change)}</span>`, innerHTML: true },
+      num(v.current_rank)||'—', v.rank_movement||'stable',
+      {name:improvBadge(v.improvement_status),innerHTML:true},
+      num(v.appearances)
+    ])
+  );
+}
+
+const tabRenderers = [tab0, tab1, tab2, tab3, tab4, tab5];
+
+function switchTab(idx) {
+  currentTab = idx;
+  document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
+  destroyCharts();
+  if (allVendors.length) tabRenderers[idx](allVendors);
+}
+
+async function initDashboard() {
+  destroyCharts();
+  document.getElementById('mainContent').innerHTML = '<div class="loading"><div class="loading-spin"></div><div>Fetching Master Tracker from Google Drive…</div></div>';
+  document.getElementById('lastUpdated').textContent = 'Loading…';
+  try {
+    allVendors = await loadFromDrive();
+    document.getElementById('lastUpdated').textContent = 'Updated ' + new Date().toLocaleTimeString();
+    localStorage.setItem('tlb_tracker_cache', JSON.stringify({ ts: Date.now(), data: allVendors }));
+    tabRenderers[currentTab](allVendors);
+  } catch(e) {
+    const cached = localStorage.getItem('tlb_tracker_cache');
+    if (cached) {
+      const { ts, data } = JSON.parse(cached);
+      allVendors = data;
+      document.getElementById('lastUpdated').textContent = 'Cached ' + new Date(ts).toLocaleTimeString() + ' (live load failed)';
+      tabRenderers[currentTab](allVendors);
+    } else {
+      document.getElementById('mainContent').innerHTML = `<div class="error-box">Failed to load Master Tracker: ${e.message}. Make sure the Google Drive connector is active.</div>`;
+      document.getElementById('lastUpdated').textContent = 'Load failed';
+    }
+  }
+}
+
+initDashboard();
+</script>
+</body>
+</html>

@@ -1,0 +1,600 @@
+{
+  "date": "2026-06-12",
+  "clusterResults": [
+    {
+      "cluster": "alex",
+      "name": "Alex",
+      "agent": "alex",
+      "target": 0.007,
+      "targetLabel": "0.70%",
+      "allOrders": 57179,
+      "failedOrders": 7714,
+      "successfulOrders": 49465,
+      "gmv": 19404507,
+      "lostGmv": 3391920,
+      "vendorFailRate": 0.8239,
+      "partialRefund": 73963,
+      "partialRefundOrders": 719,
+      "deviation": 0.1239,
+      "deviationPct": 17.7,
+      "riskScore": 67,
+      "riskLevel": "high",
+      "dod": {
+        "failedOrders": 47.2,
+        "lostGmv": 32.7,
+        "failRate": -4.6
+      },
+      "cities": [
+        {
+          "city": "Alexandria",
+          "allOrders": 56829,
+          "failedOrders": 7646,
+          "gmv": 19151928,
+          "lostGmv": 3335771,
+          "vendorFailRate": 0.7757,
+          "partialRefund": 73663
+        },
+        {
+          "city": "North Coast 24",
+          "allOrders": 350,
+          "failedOrders": 68,
+          "gmv": 252580,
+          "lostGmv": 56149,
+          "vendorFailRate": 8.6538,
+          "partialRefund": 300
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor": "talabat mart, Ibrahimia",
+          "city": "Alexandria",
+          "failedOrders": 345,
+          "lostGmv": 182246,
+          "failRate": 0.1807
+        },
+        {
+          "vendor": "talabat mart, Miami - Arab Academy",
+          "city": "Alexandria",
+          "failedOrders": 354,
+          "lostGmv": 174080,
+          "failRate": 0.1829
+        },
+        {
+          "vendor": "Tmart, Fleming - Koliyat Tarbya 2",
+          "city": "Alexandria",
+          "failedOrders": 283,
+          "lostGmv": 105789,
+          "failRate": 0.293
+        },
+        {
+          "vendor": "talabat mart, Semouha",
+          "city": "Alexandria",
+          "failedOrders": 322,
+          "lostGmv": 174980,
+          "failRate": 0.2771
+        },
+        {
+          "vendor": "talabat mart, Agamy - Hanuvile",
+          "city": "Alexandria",
+          "failedOrders": 88,
+          "lostGmv": 38557,
+          "failRate": 0.3067
+        }
+      ]
+    },
+    {
+      "cluster": "delta",
+      "name": "Delta",
+      "agent": "delta",
+      "target": 0.0072,
+      "targetLabel": "0.72%",
+      "allOrders": 41606,
+      "failedOrders": 4331,
+      "successfulOrders": 37275,
+      "gmv": 12420317,
+      "lostGmv": 1674710,
+      "vendorFailRate": 0.6858,
+      "partialRefund": 40617,
+      "partialRefundOrders": 486,
+      "deviation": -0.0342,
+      "deviationPct": -4.8,
+      "riskScore": 38,
+      "riskLevel": "medium",
+      "dod": {
+        "failedOrders": 19.1,
+        "lostGmv": 4.7,
+        "failRate": -3.3
+      },
+      "cities": [
+        {
+          "city": "Mansoura",
+          "allOrders": 19137,
+          "failedOrders": 1839,
+          "gmv": 6057456,
+          "lostGmv": 727999,
+          "vendorFailRate": 0.5063,
+          "partialRefund": 20559
+        },
+        {
+          "city": "Tanta",
+          "allOrders": 9244,
+          "failedOrders": 914,
+          "gmv": 2654523,
+          "lostGmv": 336223,
+          "vendorFailRate": 0.8018,
+          "partialRefund": 8413
+        },
+        {
+          "city": "Talkha",
+          "allOrders": 1231,
+          "failedOrders": 87,
+          "gmv": 414561,
+          "lostGmv": 37550,
+          "vendorFailRate": 0.3445,
+          "partialRefund": 1183
+        },
+        {
+          "city": "Zagazig",
+          "allOrders": 7647,
+          "failedOrders": 682,
+          "gmv": 2207667,
+          "lostGmv": 227207,
+          "vendorFailRate": 0.8212,
+          "partialRefund": 8412
+        },
+        {
+          "city": "Al Mahallah Al Kubra",
+          "allOrders": 2109,
+          "failedOrders": 556,
+          "gmv": 482949,
+          "lostGmv": 268859,
+          "vendorFailRate": 0.5718,
+          "partialRefund": 1407
+        },
+        {
+          "city": "Banha",
+          "allOrders": 680,
+          "failedOrders": 65,
+          "gmv": 224042,
+          "lostGmv": 29886,
+          "vendorFailRate": 1.1076,
+          "partialRefund": 202
+        },
+        {
+          "city": "Shebeen El Koom",
+          "allOrders": 1231,
+          "failedOrders": 139,
+          "gmv": 304889,
+          "lostGmv": 34725,
+          "vendorFailRate": 1.259,
+          "partialRefund": 334
+        },
+        {
+          "city": "Kafr El Sheikh",
+          "allOrders": 327,
+          "failedOrders": 49,
+          "gmv": 74229,
+          "lostGmv": 12263,
+          "vendorFailRate": 3.7288,
+          "partialRefund": 107
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor": "talabat mart, El Helw Street",
+          "city": "Tanta",
+          "failedOrders": 242,
+          "lostGmv": 116027,
+          "failRate": 0.1711
+        },
+        {
+          "vendor": "talabat mart, Hay Thany Zagazig",
+          "city": "Zagazig",
+          "failedOrders": 186,
+          "lostGmv": 66298,
+          "failRate": 0.2637
+        },
+        {
+          "vendor": "talabat mart, El Magzar",
+          "city": "Mansoura",
+          "failedOrders": 260,
+          "lostGmv": 111126,
+          "failRate": 0.1418
+        },
+        {
+          "vendor": "Tmart, El Mokhtalat",
+          "city": "Mansoura",
+          "failedOrders": 181,
+          "lostGmv": 67423,
+          "failRate": 0.3448
+        },
+        {
+          "vendor": "Bremer, Gihan Al Sadat",
+          "city": "Mansoura",
+          "failedOrders": 77,
+          "lostGmv": 32865,
+          "failRate": 0
+        }
+      ]
+    },
+    {
+      "cluster": "canal",
+      "name": "Canal",
+      "agent": "esm",
+      "target": 0.0072,
+      "targetLabel": "0.72%",
+      "allOrders": 22975,
+      "failedOrders": 2166,
+      "successfulOrders": 20809,
+      "gmv": 6772225,
+      "lostGmv": 767811,
+      "vendorFailRate": 0.7926,
+      "partialRefund": 25611,
+      "partialRefundOrders": 318,
+      "deviation": 0.0726,
+      "deviationPct": 10.1,
+      "riskScore": 34,
+      "riskLevel": "medium",
+      "dod": {
+        "failedOrders": 27.7,
+        "lostGmv": 29.6,
+        "failRate": 10.3
+      },
+      "cities": [
+        {
+          "city": "Hurghada",
+          "allOrders": 6433,
+          "failedOrders": 633,
+          "gmv": 2214242,
+          "lostGmv": 268694,
+          "vendorFailRate": 0.7435,
+          "partialRefund": 10735
+        },
+        {
+          "city": "Suez",
+          "allOrders": 5349,
+          "failedOrders": 429,
+          "gmv": 1226347,
+          "lostGmv": 110276,
+          "vendorFailRate": 0.9796,
+          "partialRefund": 1907
+        },
+        {
+          "city": "Port Said",
+          "allOrders": 6398,
+          "failedOrders": 652,
+          "gmv": 1852581,
+          "lostGmv": 236519,
+          "vendorFailRate": 0.8223,
+          "partialRefund": 6741
+        },
+        {
+          "city": "Ismailia",
+          "allOrders": 4794,
+          "failedOrders": 451,
+          "gmv": 1479056,
+          "lostGmv": 152166,
+          "vendorFailRate": 0.6106,
+          "partialRefund": 6228
+        },
+        {
+          "city": "Port Saeed",
+          "allOrders": 1,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 156,
+          "vendorFailRate": 0,
+          "partialRefund": 0
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor": "talabat mart - Downtown - Champollion",
+          "city": "Ismailia",
+          "failedOrders": 178,
+          "lostGmv": 59224,
+          "failRate": 0.1041
+        },
+        {
+          "vendor": "talabat mart, Al Sharq District",
+          "city": "Port Said",
+          "failedOrders": 168,
+          "lostGmv": 68722,
+          "failRate": 0.0541
+        },
+        {
+          "vendor": "Tmart, Masaken El Nagda",
+          "city": "Hurghada",
+          "failedOrders": 139,
+          "lostGmv": 81711,
+          "failRate": 0.3469
+        },
+        {
+          "vendor": "talabat mart, El Suez",
+          "city": "Suez",
+          "failedOrders": 62,
+          "lostGmv": 23297,
+          "failRate": 0.2806
+        },
+        {
+          "vendor": "B.LABAN, Suez University",
+          "city": "Suez",
+          "failedOrders": 25,
+          "lostGmv": 5574,
+          "failRate": 0
+        }
+      ]
+    },
+    {
+      "cluster": "upper_egypt",
+      "name": "Upper Egypt",
+      "agent": "esm",
+      "target": 0.0078,
+      "targetLabel": "0.78%",
+      "allOrders": 10744,
+      "failedOrders": 1026,
+      "successfulOrders": 9718,
+      "gmv": 2758350,
+      "lostGmv": 333617,
+      "vendorFailRate": 0.9594,
+      "partialRefund": 12788,
+      "partialRefundOrders": 95,
+      "deviation": 0.1794,
+      "deviationPct": 23,
+      "riskScore": 37,
+      "riskLevel": "medium",
+      "dod": {
+        "failedOrders": 23.3,
+        "lostGmv": 11.3,
+        "failRate": -25.8
+      },
+      "cities": [
+        {
+          "city": "Assiut",
+          "allOrders": 3569,
+          "failedOrders": 349,
+          "gmv": 942216,
+          "lostGmv": 108292,
+          "vendorFailRate": 0.9454,
+          "partialRefund": 2226
+        },
+        {
+          "city": "Beni Suef.",
+          "allOrders": 1202,
+          "failedOrders": 134,
+          "gmv": 255374,
+          "lostGmv": 31810,
+          "vendorFailRate": 0.9217,
+          "partialRefund": 732
+        },
+        {
+          "city": "Minya",
+          "allOrders": 1223,
+          "failedOrders": 105,
+          "gmv": 279296,
+          "lostGmv": 32144,
+          "vendorFailRate": 0.524,
+          "partialRefund": 1228
+        },
+        {
+          "city": "Damanhour",
+          "allOrders": 782,
+          "failedOrders": 81,
+          "gmv": 199866,
+          "lostGmv": 25424,
+          "vendorFailRate": 1.1173,
+          "partialRefund": 235
+        },
+        {
+          "city": "Damietta New",
+          "allOrders": 3968,
+          "failedOrders": 357,
+          "gmv": 1081598,
+          "lostGmv": 135946,
+          "vendorFailRate": 1.0864,
+          "partialRefund": 8368
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor": "talabat mart, El Weleideya",
+          "city": "Assiut",
+          "failedOrders": 97,
+          "lostGmv": 35722,
+          "failRate": 0
+        },
+        {
+          "vendor": "talabat mart, Down Town",
+          "city": "Damietta New",
+          "failedOrders": 85,
+          "lostGmv": 21104,
+          "failRate": 0.1083
+        },
+        {
+          "vendor": "Ibn Elseady Market, 2nd District",
+          "city": "Damietta New",
+          "failedOrders": 14,
+          "lostGmv": 4417,
+          "failRate": 0.4545
+        },
+        {
+          "vendor": "Elmatboly, Central Park",
+          "city": "Damietta New",
+          "failedOrders": 23,
+          "lostGmv": 3433,
+          "failRate": 0
+        },
+        {
+          "vendor": "Spinneys, Minya",
+          "city": "Minya",
+          "failedOrders": 15,
+          "lostGmv": 1836,
+          "failRate": 0
+        }
+      ]
+    }
+  ],
+  "keyAccounts": {
+    "target": 0.0085,
+    "targetLabel": "0.85%",
+    "topOffenders": [
+      {
+        "vendor": "Al Dahan, New Maadi",
+        "city": "Cairo",
+        "allOrders": 798,
+        "failedOrders": 44,
+        "lostGmv": 43442,
+        "failRate": 0.527,
+        "gmv": 560638
+      },
+      {
+        "vendor": "Al Dahan, 6th of October",
+        "city": "Cairo",
+        "allOrders": 689,
+        "failedOrders": 54,
+        "lostGmv": 80086,
+        "failRate": 0.626,
+        "gmv": 508898
+      },
+      {
+        "vendor": "Al Dahan - Mohandiseen",
+        "city": "Cairo",
+        "allOrders": 611,
+        "failedOrders": 41,
+        "lostGmv": 46686,
+        "failRate": 1.5544,
+        "gmv": 433407
+      },
+      {
+        "vendor": "Ibn Alsham, Tagammoa 5",
+        "city": "Cairo",
+        "allOrders": 591,
+        "failedOrders": 68,
+        "lostGmv": 49757,
+        "failRate": 1.1321,
+        "gmv": 343092
+      },
+      {
+        "vendor": "Al Dahan - Madinaty",
+        "city": "Cairo",
+        "allOrders": 560,
+        "failedOrders": 36,
+        "lostGmv": 30226,
+        "failRate": 0.9452,
+        "gmv": 408509
+      },
+      {
+        "vendor": "Ibn Alsham, El Rehab City 2",
+        "city": "Cairo",
+        "allOrders": 543,
+        "failedOrders": 57,
+        "lostGmv": 34909,
+        "failRate": 0.6135,
+        "gmv": 325865
+      },
+      {
+        "vendor": "GAD, Victor Emanouil",
+        "city": "Alexandria",
+        "allOrders": 490,
+        "failedOrders": 37,
+        "lostGmv": 7645,
+        "failRate": 0.2193,
+        "gmv": 104784
+      },
+      {
+        "vendor": "Al Dahan - Heliopolis",
+        "city": "Cairo",
+        "allOrders": 487,
+        "failedOrders": 52,
+        "lostGmv": 40967,
+        "failRate": 0.6818,
+        "gmv": 328830
+      },
+      {
+        "vendor": "Al Dahan - Tagammoa 5",
+        "city": "Cairo",
+        "allOrders": 457,
+        "failedOrders": 31,
+        "lostGmv": 26860,
+        "failRate": 0.4651,
+        "gmv": 325830
+      },
+      {
+        "vendor": "Al Dahan, 90 St. Companies",
+        "city": "Cairo",
+        "allOrders": 444,
+        "failedOrders": 44,
+        "lostGmv": 37253,
+        "failRate": 0.9901,
+        "gmv": 298738
+      }
+    ]
+  },
+  "segmentTargets": {
+    "TGO": {
+      "target": 0.0065,
+      "targetLabel": "0.65%"
+    },
+    "TMP": {
+      "target": 0.0075,
+      "targetLabel": "0.75%"
+    }
+  },
+  "summary": {
+    "totalAllOrders": 132504,
+    "totalFailed": 15237,
+    "totalLostGmv": 6168058,
+    "totalGmv": 41355399,
+    "totalPartialRefund": 152979,
+    "overallFailRate": 0.7861,
+    "criticalClusters": 0,
+    "highRiskClusters": 1,
+    "clustersAboveTarget": [
+      "Alex",
+      "Canal",
+      "Upper Egypt"
+    ]
+  },
+  "riskRegister": [
+    {
+      "cluster": "Alex",
+      "riskScore": 67,
+      "riskLevel": "high",
+      "failRate": "0.8239%",
+      "target": "0.70%",
+      "deviation": "0.12%",
+      "lostGmv": 3391920,
+      "topOffender": "talabat mart, Ibrahimia"
+    },
+    {
+      "cluster": "Delta",
+      "riskScore": 38,
+      "riskLevel": "medium",
+      "failRate": "0.6858%",
+      "target": "0.72%",
+      "deviation": "-0.03%",
+      "lostGmv": 1674710,
+      "topOffender": "talabat mart, El Helw Street"
+    },
+    {
+      "cluster": "Canal",
+      "riskScore": 34,
+      "riskLevel": "medium",
+      "failRate": "0.7926%",
+      "target": "0.72%",
+      "deviation": "0.07%",
+      "lostGmv": 767811,
+      "topOffender": "talabat mart - Downtown - Champollion"
+    },
+    {
+      "cluster": "Upper Egypt",
+      "riskScore": 37,
+      "riskLevel": "medium",
+      "failRate": "0.9594%",
+      "target": "0.78%",
+      "deviation": "0.18%",
+      "lostGmv": 333617,
+      "topOffender": "talabat mart, El Weleideya"
+    }
+  ]
+}

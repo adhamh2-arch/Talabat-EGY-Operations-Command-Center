@@ -1,0 +1,16 @@
+name: reporting_agent
+description: Aggregate monitoring outputs, generate daily executive summaries, and email stakeholders.
+runtime: nodejs18
+schedule: cron(30 3 * * *)
+timezone: Africa/Cairo
+inputs:
+  - run_date
+skills:
+  - config_loader
+  - google_sheets
+  - email_report
+  - persist_audit
+retries:
+  max_attempts: 2
+  backoff: exponential
+timeout_seconds: 900

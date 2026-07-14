@@ -1,0 +1,27 @@
+name: orchestrator
+description: Coordinates the full daily and weekly agent execution pipeline.
+runtime: nodejs18
+schedule: cron(0 3 * * *)
+timezone: Africa/Cairo
+inputs:
+  - run_date
+  - cycle
+workflow:
+  daily:
+    - phase: monitoring
+      agents: [alexandria_agent, esm_agent, delta_agent, special_segment_agent]
+      parallel: true
+    - phase: quality
+      agents: [quality_agent]
+    - phase: reporting
+      agents: [reporting_agent]
+    - phase: observer
+      agents: [observer_agent]
+  weekly:
+    - phase: observer_weekly
+      agents: [observer_agent]
+      mode: weekly
+retries:
+  max_attempts: 1
+  backoff: none
+timeout_seconds: 3600

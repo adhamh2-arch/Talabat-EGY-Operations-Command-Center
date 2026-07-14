@@ -1,0 +1,19 @@
+name: alexandria_agent
+description: Monitor operational performance and risk for Alexandria (Alex) city.
+runtime: nodejs18
+schedule: cron(0 3 * * *)
+timezone: Africa/Cairo
+inputs:
+  - run_date
+skills:
+  - config_loader
+  - looker_query
+  - compute_metrics
+  - apply_risk_scoring
+  - google_sheets
+  - persist_audit
+  - notify
+retries:
+  max_attempts: 3
+  backoff: exponential
+timeout_seconds: 900

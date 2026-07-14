@@ -1,0 +1,29 @@
+{
+  "agent": "Special Segment Agent",
+  "segment": "Key VIP + Food + Non-Darkstore",
+  "run_date": "2026-06-12",
+  "query_timestamp": "2026-06-13T09:00:00+02:00",
+  "source": "Looker MCP - Order_PU.Orders (is_key=Y, is_food=Y, is_darkstore=N)",
+  "data": [
+    {"city": "Cairo", "vendor": "Al Dahan, New Maadi", "orders": 753, "gmv_lc": 560164.93, "aov_lc": 743.91},
+    {"city": "Cairo", "vendor": "Al Dahan, 6th of October", "orders": 635, "gmv_lc": 508898.13, "aov_lc": 801.41},
+    {"city": "Cairo", "vendor": "Al Dahan - Mohandiseen", "orders": 570, "gmv_lc": 433406.88, "aov_lc": 760.36},
+    {"city": "Cairo", "vendor": "Al Dahan - Madinaty", "orders": 524, "gmv_lc": 408509.28, "aov_lc": 779.60},
+    {"city": "Cairo", "vendor": "Ibn Alsham, Tagammoa 5", "orders": 523, "gmv_lc": 343092.00, "aov_lc": 656.01},
+    {"city": "Cairo", "vendor": "Ibn Alsham, El Rehab City 2", "orders": 486, "gmv_lc": 325865.00, "aov_lc": 670.50},
+    {"city": "Alexandria", "vendor": "GAD, Victor Emanouil", "orders": 453, "gmv_lc": 104783.96, "aov_lc": 231.31},
+    {"city": "Cairo", "vendor": "Al Dahan - Heliopolis", "orders": 434, "gmv_lc": 327862.95, "aov_lc": 755.44},
+    {"city": "Cairo", "vendor": "Al Dahan - Tagammoa 5", "orders": 426, "gmv_lc": 325829.64, "aov_lc": 764.86},
+    {"city": "Cairo", "vendor": "Al Dahan, 90 St. Companies", "orders": 400, "gmv_lc": 298738.05, "aov_lc": 746.85},
+    {"city": "Cairo", "vendor": "Al Dahan, Nasr City", "orders": 397, "gmv_lc": 292806.00, "aov_lc": 737.55},
+    {"city": "Cairo", "vendor": "B.LABAN, Nasr City Hay 10", "orders": 361, "gmv_lc": 98526.22, "aov_lc": 272.93},
+    {"city": "Cairo", "vendor": "Ibn Alsham, El Rehab 1", "orders": 356, "gmv_lc": 212525.00, "aov_lc": 596.98},
+    {"city": "Cairo", "vendor": "B.LABAN, 6th October 2nd District", "orders": 347, "gmv_lc": 97394.38, "aov_lc": 280.68},
+    {"city": "Cairo", "vendor": "Anas Al Demeshky, Ard El Golf", "orders": 343, "gmv_lc": 130614.16, "aov_lc": 380.80},
+    {"city": "Cairo", "vendor": "Anas Al Demeshky, Abbas El Akkad", "orders": 311, "gmv_lc": 117109.44, "aov_lc": 376.56},
+    {"city": "Suez", "vendor": "B.LABAN, Suez University", "orders": 297, "gmv_lc": 72519.39, "aov_lc": 244.17},
+    {"city": "Hurghada", "vendor": "B.LABAN, Sheraton", "orders": 288, "gmv_lc": 78581.99, "aov_lc": 272.85},
+    {"city": "Cairo", "vendor": "Anas Al Demeshky, Triumph Square", "orders": 288, "gmv_lc": 101345.55, "aov_lc": 351.89},
+    {"city": "Cairo", "vendor": "Anas Al Demeshky, Haram", "orders": 287, "gmv_lc": 138833.72, "aov_lc": 483.74}
+  ]
+}

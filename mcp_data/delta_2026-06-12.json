@@ -1,0 +1,29 @@
+{
+  "agent": "Delta Agent",
+  "cities": ["Mansoura", "Tanta", "Mahalla"],
+  "run_date": "2026-06-12",
+  "query_timestamp": "2026-06-13T09:00:00+02:00",
+  "source": "Looker MCP - Order_PU.Orders",
+  "data": [
+    {"city": "Tanta", "vendor": "talabat mart, El Helw Street", "orders": 2309, "gmv_lc": 806150.97, "aov_lc": 349.13},
+    {"city": "Mansoura", "vendor": "talabat mart, El Magzar", "orders": 2091, "gmv_lc": 848809.11, "aov_lc": 405.93},
+    {"city": "Mansoura", "vendor": "Tmart, El Mokhtalat", "orders": 1714, "gmv_lc": 679358.33, "aov_lc": 396.36},
+    {"city": "Mansoura", "vendor": "Bremer, Gihan Al Sadat", "orders": 992, "gmv_lc": 434357.80, "aov_lc": 437.86},
+    {"city": "Mansoura", "vendor": "AlSeoudi, Ahmed Maher", "orders": 713, "gmv_lc": 233304.05, "aov_lc": 327.21},
+    {"city": "Mansoura", "vendor": "Sharqy, El Gomhuria Street", "orders": 683, "gmv_lc": 117497.88, "aov_lc": 172.03},
+    {"city": "Mansoura", "vendor": "Roshdy 3aSaree3, Ezbet El Shal", "orders": 502, "gmv_lc": 141684.93, "aov_lc": 282.24},
+    {"city": "Mansoura", "vendor": "The Chef, Kanat Al Suez", "orders": 488, "gmv_lc": 216364.00, "aov_lc": 443.37},
+    {"city": "Mansoura", "vendor": "Chicken Kickers, Suez Canal", "orders": 468, "gmv_lc": 188159.00, "aov_lc": 402.05},
+    {"city": "Mansoura", "vendor": "B.LABAN, Mansoura University", "orders": 287, "gmv_lc": 79154.55, "aov_lc": 275.80},
+    {"city": "Mansoura", "vendor": "El Makhbaz El Lebnany, El Mashaya", "orders": 266, "gmv_lc": 77597.17, "aov_lc": 291.72},
+    {"city": "Tanta", "vendor": "Mohamed Saad, El Mohafza", "orders": 259, "gmv_lc": 72063.20, "aov_lc": 278.24},
+    {"city": "Mansoura", "vendor": "Abu Adel, Hay El Gama'a", "orders": 227, "gmv_lc": 67377.92, "aov_lc": 296.82},
+    {"city": "Mansoura", "vendor": "Koshary El Tahrir, Gadila & Toreel", "orders": 191, "gmv_lc": 28926.88, "aov_lc": 151.45},
+    {"city": "Mansoura", "vendor": "Spinneys, Mansoura", "orders": 149, "gmv_lc": 63442.42, "aov_lc": 425.79},
+    {"city": "Mansoura", "vendor": "McDonald's - Mansoura", "orders": 148, "gmv_lc": 67065.00, "aov_lc": 453.14},
+    {"city": "Mansoura", "vendor": "Carrefour, Mansoura University", "orders": 147, "gmv_lc": 64955.97, "aov_lc": 441.88},
+    {"city": "Mansoura", "vendor": "Buffalo Burger, Mansoura TGO", "orders": 142, "gmv_lc": 59987.45, "aov_lc": 422.45},
+    {"city": "Mansoura", "vendor": "Khedr, Talkha 1", "orders": 137, "gmv_lc": 40487.71, "aov_lc": 295.53},
+    {"city": "Mansoura", "vendor": "RIVO Specialty Coffee, Al Teraa", "orders": 134, "gmv_lc": 30925.24, "aov_lc": 230.79}
+  ]
+}

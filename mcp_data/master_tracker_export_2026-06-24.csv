@@ -1,0 +1,201 @@
+chain_name,cluster,city,am_name,am_email,is_key_vip,first_detection_date,last_detection_date,appearances,consecutive_days,recurrence_severity,current_risk_score,risk_score_change,improvement_status,current_rank,rank_movement,historical_highest_rank,last_failed_orders,last_lost_gmv,last_fail_rate,top_failure_reason,recommended_action,email_required,email_sent,email_sent_date,communication_status,response_received,response_classification,vendor_action_required,vendor_action_completed,action_verification_status,is_active,last_seen_date
+"talabat mart, Miami - Arab Academy",alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,2,stable,2,310,152810,18.099999999999998,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, Ibrahimia",alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,1,stable,1,298,157420,17.8,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, Semouha",alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,4,stable,4,284,154210,27.400000000000002,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Tmart, Fleming - Koliyat Tarbya 2",alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,3,stable,3,249,93260,28.999999999999996,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, El Magzar",delta,Mansoura,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,3,stable,3,229,98010,14.000000000000002,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, El Helw Street",delta,Tanta,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,1,stable,1,213,102210,16.900000000000002,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, Hay Thany Zagazig",delta,Zagazig,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,2,stable,2,164,58440,26.1,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Tmart, El Mokhtalat",delta,Mansoura,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,4,stable,4,159,59470,34.2,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+talabat mart - Downtown - Champollion,canal,Ismailia,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,1,stable,1,157,52280,10.299999999999999,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, Al Sharq District",canal,Port Said,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,2,stable,2,148,60660,5.3,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Tmart, Masaken El Nagda",canal,Hurghada,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,3,stable,3,122,72080,34.4,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+Burger King Semouha,alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,10,stable,10,114,79440,1.82,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, El Weleideya",upper_egypt,Assiut,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,1,stable,1,85,31520,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"Beit Elkhalil Market, Moharam Bek",alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,7,stable,7,79,46330,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, Agamy - Hanuvile",alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,5,stable,5,77,33970,30.4,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, Down Town",upper_egypt,Damietta New,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,2,stable,2,75,18640,10.7,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"El Makhbaz El Lebnany El Asly, Semouha TGO",alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,9,stable,9,74,20780,1.32,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"Bremer, Gihan Al Sadat",delta,Mansoura,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,5,stable,5,68,28990,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"AlSeoudi, Ahmed Maher",delta,Mansoura,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,6,stable,6,64,31540,27.3,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Roshdy 3aSaree3, Ezbet El Shal",delta,Mansoura,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,8,stable,8,62,19380,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"Ibn Alsham, Tagammoa 5",key_accounts,Cairo,,,no,2026-06-24,2026-06-24,3,1,Medium,0,0,New,4,stable,4,59,43180,1.12,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"talabat mart, El Suez",canal,Suez,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,4,stable,4,54,20570,27.800000000000004,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Sharqy, El Gomhuria Street",delta,Mansoura,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,7,stable,7,51,10680,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"Ibn Alsham, El Rehab City 2",key_accounts,Cairo,,,no,2026-06-24,2026-06-24,3,1,Medium,0,0,New,6,stable,6,50,30840,60.699999999999996,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Al Dahan, 6th of October",key_accounts,Cairo,,,no,2026-06-24,2026-06-24,3,1,Medium,0,0,New,2,stable,2,48,71200,61.8,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+Al Dahan - Heliopolis,key_accounts,Cairo,,,no,2026-06-24,2026-06-24,3,1,Medium,0,0,New,8,stable,8,46,36230,67.30000000000001,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Chicken Kickers, Suez Canal",delta,Mansoura,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,10,stable,10,43,14760,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"Al Dahan, New Maadi",key_accounts,Cairo,,,no,2026-06-24,2026-06-24,3,1,Medium,0,0,New,1,stable,1,39,38560,52,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Al Dahan, 90 St. Companies",key_accounts,Cairo,,,no,2026-06-24,2026-06-24,3,1,Medium,0,0,New,10,stable,10,39,32960,98,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"abo younes, Sidi Besher Bahary",alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,8,stable,8,37,12010,36.8,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+Al Dahan - Mohandiseen,key_accounts,Cairo,,,no,2026-06-24,2026-06-24,3,1,Medium,0,0,New,3,stable,3,36,41080,1.542,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+The Chef - Hassan Elkhalili,delta,Mansoura,,,no,2026-06-24,2026-06-24,3,1,Medium,27,0,Stable,9,stable,9,34,17330,20.1,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"GAD, Victor Emanouil",alex,Alexandria,,,no,2026-06-24,2026-06-24,3,1,Medium,41,0,Stable,6,stable,6,32,6620,21.7,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"GAD, Victor Emanouil",key_accounts,Alexandria,,,yes,2026-06-24,2026-06-24,2,1,Medium,0,0,New,7,stable,7,32,6620,21.7,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+Al Dahan - Madinaty,key_accounts,Cairo,,,no,2026-06-24,2026-06-24,3,1,Medium,0,0,New,5,stable,5,31,26860,93.60000000000001,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+Al Dahan - Tagammoa 5,key_accounts,Cairo,,,no,2026-06-24,2026-06-24,3,1,Medium,0,0,New,9,stable,9,27,23740,46,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Abou Aya, Sheraton Road",canal,Hurghada,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,10,stable,10,25,4020,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"B.LABAN, El Gomhorya District",canal,Port Said,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,7,stable,7,23,4720,37.2,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"B.LABAN, Suez University",canal,Suez,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,5,stable,5,22,4920,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"B.LABAN, Sheraton",canal,Hurghada,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,6,stable,6,21,5910,1.01,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"Elmatboly, Central Park",upper_egypt,Damietta New,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,4,stable,4,20,3030,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"AL ALAMIA, Al Salam 1",canal,Suez,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,9,stable,9,18,2440,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"B.LABAN, El Gomhorya St.-assuit",upper_egypt,Assiut,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,6,stable,6,18,3820,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"Awlad Hanafi Market, Al Salam 1",canal,Suez,,,no,2026-06-24,2026-06-24,3,1,Medium,21,0,Stable,8,stable,8,17,2850,38.1,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Spinneys, Minya",upper_egypt,Minya,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,5,stable,5,13,1620,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"Koshary Gedoo, Central Park",upper_egypt,Damietta New,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,8,stable,8,13,1360,1.6,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"Ibn Elseady Market, 2nd District",upper_egypt,Damietta New,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,3,stable,3,12,3900,45,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"Koshary Hekaya, Fryal",upper_egypt,Assiut,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,9,stable,9,11,1540,80.80000000000001,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",yes,no,,none,no,,no,no,,yes,2026-06-24
+"El.Hossen Market, 1st District",upper_egypt,Damietta New,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,10,stable,10,10,940,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24
+"B.laban, 2nd District",upper_egypt,Damietta New,,,no,2026-06-24,2026-06-24,3,1,Medium,25,0,Stable,7,stable,7,6,1490,0,,"1. Conduct comprehensive operational review with the vendor
+2. Identify root cause through AM field visit
+3. Review all fail reason categories for this vendor in Looker
+4. Assess peak-hour staffing and operational capacity",no,no,,none,no,,no,no,,yes,2026-06-24

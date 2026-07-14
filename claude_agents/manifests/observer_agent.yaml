@@ -1,0 +1,18 @@
+name: observer_agent
+description: Executive oversight — receives all agent outputs, produces daily and weekly executive reports.
+runtime: nodejs18
+schedule: cron(45 3 * * *)
+timezone: Africa/Cairo
+inputs:
+  - run_date
+  - mode
+skills:
+  - config_loader
+  - google_sheets
+  - email_report
+  - persist_audit
+retries:
+  max_attempts: 2
+  backoff: exponential
+timeout_seconds: 600
+weekly_schedule: cron(0 2 * * 0)

@@ -1,0 +1,15 @@
+// deploy/snippets/bigquery-query.js
+import { BigQuery } from '@google-cloud/bigquery';
+
+const bigquery = new BigQuery();
+
+export async function runQuery(query, params = {}) {
+  const options = {
+    query,
+    params,
+    location: 'US'
+  };
+  const [job] = await bigquery.createQueryJob(options);
+  const [rows] = await job.getQueryResults();
+  return rows;
+}

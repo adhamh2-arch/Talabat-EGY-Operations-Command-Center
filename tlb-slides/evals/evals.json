@@ -1,0 +1,41 @@
+{
+  "skill_name": "tlb-slides",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to create a presentation for our team update. Use the talabat branding. It should have a cover, agenda, 3 content slides, and a thank you slide.",
+      "expected_output": "The agent should reference the Talabat design system for colors, fonts, and layouts, consult slide-patterns.md for code patterns, use brand assets from the assets directory, and structure the deck following the recommended presentation order.",
+      "expectations": [
+        "Uses Talabat brand colors with Warm Orange #FF5900 as the primary brand color and Warm Cream #F4EDE3 as default background",
+        "Specifies Poppins as the primary font with correct weights for titles (SemiBold/Black) and body (Regular)",
+        "Includes the talabat logo from assets/logo/talabat-logo.png with the characteristic 4.7 degree rotation",
+        "Follows the recommended presentation structure: Cover, Agenda, Section Dividers, Content, Thank You",
+        "References slide-patterns.md for detailed pptxgenjs code patterns for each slide type"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Create a talabat deck with data charts — I need a bar chart, a pie chart, and a comparison table for competitors.",
+      "expected_output": "The agent should provide the correct Talabat design system specifications for data visualization slides including chart colors from the orange tint scale, proper chart slide layouts, and competitor chart patterns.",
+      "expectations": [
+        "Uses the orange tint scale for data visualization fills (e.g., #FA6E22, #FF944D, #FCA06F, #FFD1B3)",
+        "References the correct chart slide types from the catalog (chart-bar, chart-pie, chart-competitor)",
+        "Applies the standard content slide layout with accent bar at top-left (1.20 x 0.07 inches, #FF5900)",
+        "Uses slide dimensions of 10.00 x 5.63 inches (16:9 aspect ratio)",
+        "Applies correct text styling with slide titles in Poppins SemiBold 25pt #FF5900 on cream background"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Make a talabat presentation with a bold orange section divider that highlights the word 'Strategy' in lime green.",
+      "expected_output": "The agent should create a section divider slide on an orange background with the keyword highlighted in Electric Lime, following the two-tone title and keyword highlighting design patterns.",
+      "expectations": [
+        "Uses #FF5900 orange as the section divider background color",
+        "Highlights the keyword 'Strategy' using Electric Lime #CFFF00",
+        "Uses Poppins Black at 70pt for the bold section divider variant or 50pt for the simple variant",
+        "Sets remaining text in cream #F4EDE3 for contrast against the orange background",
+        "Follows the keyword highlighting pattern where key words on orange backgrounds use lime"
+      ]
+    }
+  ]
+}

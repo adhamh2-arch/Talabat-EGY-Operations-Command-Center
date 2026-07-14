@@ -1,0 +1,17 @@
+name: quality_agent
+description: Validate data accuracy, risk calculations, and recommendation quality across all monitoring agents.
+runtime: nodejs18
+schedule: cron(15 3 * * *)
+timezone: Africa/Cairo
+inputs:
+  - run_date
+skills:
+  - config_loader
+  - compute_metrics
+  - apply_risk_scoring
+  - google_sheets
+  - persist_audit
+retries:
+  max_attempts: 2
+  backoff: exponential
+timeout_seconds: 600

@@ -1,0 +1,757 @@
+{
+  "lastRun": "2026-07-14",
+  "runCount": 17,
+  "history": [
+    {
+      "runId": "run_1781356894347",
+      "date": "2026-06-12",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Run Bridge Scoring",
+          "status": "success"
+        },
+        {
+          "step": "4. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "5. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.2,
+      "timestamp": "2026-06-13T13:21:34.525Z"
+    },
+    {
+      "runId": "run_1782292510005",
+      "date": "2026-06-12",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Run Bridge Scoring",
+          "status": "success"
+        },
+        {
+          "step": "4. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "5. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.2,
+      "timestamp": "2026-06-24T09:15:10.317Z"
+    },
+    {
+      "runId": "run_1782292517513",
+      "date": "2026-06-24",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Run Bridge Scoring",
+          "status": "success"
+        },
+        {
+          "step": "4. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "5. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.4,
+      "timestamp": "2026-06-24T09:15:18.129Z"
+    },
+    {
+      "runId": "run_1782304685977",
+      "date": "2026-06-24",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Run Bridge Scoring",
+          "status": "success"
+        },
+        {
+          "step": "4. Append Tracker",
+          "status": "success"
+        },
+        {
+          "step": "5. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "6. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "7. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.30000000000000004,
+      "timestamp": "2026-06-24T12:38:06.506Z"
+    },
+    {
+      "runId": "run_1782306134185",
+      "date": "2026-06-24",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Run Bridge Scoring",
+          "status": "success"
+        },
+        {
+          "step": "4. Append Tracker",
+          "status": "success"
+        },
+        {
+          "step": "5. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "6. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "7. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.4,
+      "timestamp": "2026-06-24T13:02:14.817Z"
+    },
+    {
+      "runId": "run_1782308039237",
+      "date": "2026-06-24",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.6,
+      "timestamp": "2026-06-24T13:33:59.883Z"
+    },
+    {
+      "runId": "run_1782308091471",
+      "date": "2026-06-24",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.2,
+      "timestamp": "2026-06-24T13:34:51.840Z"
+    },
+    {
+      "runId": "run_1782378850583",
+      "date": "2026-06-25",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 2,
+      "timestamp": "2026-06-25T09:14:12.908Z"
+    },
+    {
+      "runId": "run_1782453773088",
+      "date": "2026-06-26",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.4,
+      "timestamp": "2026-06-26T06:02:53.518Z"
+    },
+    {
+      "runId": "run_1782543534395",
+      "date": "2026-06-27",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 1.1000000000000003,
+      "timestamp": "2026-06-27T06:58:55.810Z"
+    },
+    {
+      "runId": "run_1782629335222",
+      "date": "2026-06-28",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.7,
+      "timestamp": "2026-06-28T06:48:56.176Z"
+    },
+    {
+      "runId": "run_1782809893820",
+      "date": "2026-06-30",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 1,
+      "timestamp": "2026-06-30T08:58:15.122Z"
+    },
+    {
+      "runId": "run_1782830569170",
+      "date": "2026-06-30",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 1.1000000000000003,
+      "timestamp": "2026-06-30T14:42:50.373Z"
+    },
+    {
+      "runId": "run_1783578020931",
+      "date": "2026-07-09",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 1.1000000000000003,
+      "timestamp": "2026-07-09T06:20:22.178Z"
+    },
+    {
+      "runId": "run_1783844854506",
+      "date": "2026-07-12",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 1,
+      "timestamp": "2026-07-12T08:27:35.774Z"
+    },
+    {
+      "runId": "run_1783926797960",
+      "date": "2026-07-13",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.7,
+      "timestamp": "2026-07-13T07:13:18.658Z"
+    },
+    {
+      "runId": "run_1784013585246",
+      "date": "2026-07-14",
+      "status": "SUCCESS",
+      "steps": [
+        {
+          "step": "1. Validate Config",
+          "status": "success"
+        },
+        {
+          "step": "2. Check Data Files",
+          "status": "success"
+        },
+        {
+          "step": "3. Score Clusters",
+          "status": "success"
+        },
+        {
+          "step": "4. Check Gmail Monitor",
+          "status": "success"
+        },
+        {
+          "step": "5. Upsert Master Tracker",
+          "status": "success"
+        },
+        {
+          "step": "6. Generate Recommendations",
+          "status": "success"
+        },
+        {
+          "step": "7. Fire Alerts",
+          "status": "success"
+        },
+        {
+          "step": "8. Prepare Export",
+          "status": "success"
+        },
+        {
+          "step": "9. Validate Results",
+          "status": "success"
+        },
+        {
+          "step": "10. Generate Report",
+          "status": "success"
+        }
+      ],
+      "elapsed": 0.5,
+      "timestamp": "2026-07-14T07:19:45.815Z"
+    }
+  ],
+  "lastRunId": "run_1784013585246",
+  "lastStatus": "SUCCESS"
+}

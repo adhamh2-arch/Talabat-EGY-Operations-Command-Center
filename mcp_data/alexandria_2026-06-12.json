@@ -1,0 +1,29 @@
+{
+  "agent": "Alexandria Agent",
+  "cities": ["Alexandria"],
+  "run_date": "2026-06-12",
+  "query_timestamp": "2026-06-13T09:00:00+02:00",
+  "source": "Looker MCP - Order_PU.Orders",
+  "data": [
+    {"city": "Alexandria", "vendor": "talabat mart, Ibrahimia", "orders": 2725, "gmv_lc": 1150935.78, "aov_lc": 422.36},
+    {"city": "Alexandria", "vendor": "Tmart, Fleming - Koliyat Tarbya 2", "orders": 2685, "gmv_lc": 1187216.70, "aov_lc": 442.17},
+    {"city": "Alexandria", "vendor": "talabat mart, Miami - Arab Academy", "orders": 2679, "gmv_lc": 1129768.20, "aov_lc": 421.71},
+    {"city": "Alexandria", "vendor": "talabat mart, Semouha", "orders": 2501, "gmv_lc": 1041339.85, "aov_lc": 416.37},
+    {"city": "Alexandria", "vendor": "talabat mart, Agamy - Hanuvile", "orders": 617, "gmv_lc": 238982.60, "aov_lc": 387.33},
+    {"city": "Alexandria", "vendor": "GAD, Victor Emanouil", "orders": 453, "gmv_lc": 104783.96, "aov_lc": 231.31},
+    {"city": "Alexandria", "vendor": "Beit Elkhalil Market, Moharam Bek", "orders": 279, "gmv_lc": 97464.40, "aov_lc": 349.33},
+    {"city": "Alexandria", "vendor": "abo younes, Sidi Besher Bahary", "orders": 268, "gmv_lc": 103971.84, "aov_lc": 387.95},
+    {"city": "Alexandria", "vendor": "Carrefour, Alex City Light", "orders": 258, "gmv_lc": 137258.89, "aov_lc": 532.01},
+    {"city": "Alexandria", "vendor": "Krispy Kreme, Green Plaza", "orders": 231, "gmv_lc": 73335.65, "aov_lc": 317.47},
+    {"city": "Alexandria", "vendor": "Cilantro, Glim", "orders": 224, "gmv_lc": 69169.94, "aov_lc": 308.79},
+    {"city": "Alexandria", "vendor": "El Makhbaz El Lebnany El Asly, Semouha TGO", "orders": 221, "gmv_lc": 65923.18, "aov_lc": 298.29},
+    {"city": "Alexandria", "vendor": "Sultan Ayub - Semouha", "orders": 217, "gmv_lc": 75985.02, "aov_lc": 350.16},
+    {"city": "Alexandria", "vendor": "Sultan Ayub, El Seyouf", "orders": 208, "gmv_lc": 76636.66, "aov_lc": 368.45},
+    {"city": "Alexandria", "vendor": "Gad, Stanly", "orders": 204, "gmv_lc": 40166.86, "aov_lc": 196.90},
+    {"city": "Alexandria", "vendor": "Koshary El Tahrir, Miami", "orders": 196, "gmv_lc": 35872.01, "aov_lc": 183.02},
+    {"city": "Alexandria", "vendor": "Abu Reyad EL Soury, Semouha", "orders": 192, "gmv_lc": 52108.00, "aov_lc": 271.40},
+    {"city": "Alexandria", "vendor": "Koshary Harony, Agamy", "orders": 192, "gmv_lc": 23911.19, "aov_lc": 124.54},
+    {"city": "Alexandria", "vendor": "Starbucks, El Ataren", "orders": 191, "gmv_lc": 58605.80, "aov_lc": 306.84},
+    {"city": "Alexandria", "vendor": "Abo Rabie - Bolkly", "orders": 190, "gmv_lc": 31000.70, "aov_lc": 163.16}
+  ]
+}

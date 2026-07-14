@@ -1,0 +1,68 @@
+{
+  "run_date": "2026-06-12",
+  "comparison_date": "2026-06-11",
+  "source": "Looker MCP - Order_PU.Orders",
+  "today": {
+    "city_performance": [
+      {"city": "Cairo", "vendor_net_failed": 3786, "failed_orders": 47303, "lost_gmv_lc": 21339057.33, "successful_orders": 384259, "gmv_lc": 163891305.23, "all_orders": 431562, "vendor_fail_rate": 0.00964, "partial_refund_amount_lc": 697241.36, "partial_refund_orders": 6881},
+      {"city": "Alexandria", "vendor_net_failed": 389, "failed_orders": 7646, "lost_gmv_lc": 3335770.74, "successful_orders": 49183, "gmv_lc": 19151927.50, "all_orders": 56829, "vendor_fail_rate": 0.00776, "partial_refund_amount_lc": 73663.04, "partial_refund_orders": 717},
+      {"city": "Mansoura", "vendor_net_failed": 89, "failed_orders": 1839, "lost_gmv_lc": 727998.71, "successful_orders": 17298, "gmv_lc": 6057456.49, "all_orders": 19137, "vendor_fail_rate": 0.00506, "partial_refund_amount_lc": 20558.64, "partial_refund_orders": 235},
+      {"city": "Tanta", "vendor_net_failed": 68, "failed_orders": 914, "lost_gmv_lc": 336222.64, "successful_orders": 8330, "gmv_lc": 2654523.07, "all_orders": 9244, "vendor_fail_rate": 0.00802, "partial_refund_amount_lc": 8413.45, "partial_refund_orders": 105},
+      {"city": "Zagazig", "vendor_net_failed": 58, "failed_orders": 682, "lost_gmv_lc": 227206.92, "successful_orders": 6965, "gmv_lc": 2207666.73, "all_orders": 7647, "vendor_fail_rate": 0.00821, "partial_refund_amount_lc": 8411.60, "partial_refund_orders": 96},
+      {"city": "Suez", "vendor_net_failed": 49, "failed_orders": 429, "lost_gmv_lc": 110275.95, "successful_orders": 4920, "gmv_lc": 1226346.55, "all_orders": 5349, "vendor_fail_rate": 0.00980, "partial_refund_amount_lc": 1906.70, "partial_refund_orders": 37},
+      {"city": "Port Said", "vendor_net_failed": 48, "failed_orders": 652, "lost_gmv_lc": 236518.50, "successful_orders": 5746, "gmv_lc": 1852580.62, "all_orders": 6398, "vendor_fail_rate": 0.00822, "partial_refund_amount_lc": 6741.25, "partial_refund_orders": 108},
+      {"city": "Hurghada", "vendor_net_failed": 44, "failed_orders": 633, "lost_gmv_lc": 268694.14, "successful_orders": 5800, "gmv_lc": 2214241.58, "all_orders": 6433, "vendor_fail_rate": 0.00743, "partial_refund_amount_lc": 10735.15, "partial_refund_orders": 114},
+      {"city": "Damietta New", "vendor_net_failed": 40, "failed_orders": 357, "lost_gmv_lc": 135946.05, "successful_orders": 3611, "gmv_lc": 1081597.75, "all_orders": 3968, "vendor_fail_rate": 0.01086, "partial_refund_amount_lc": 8368.09, "partial_refund_orders": 35},
+      {"city": "Assiut", "vendor_net_failed": 31, "failed_orders": 349, "lost_gmv_lc": 108292.43, "successful_orders": 3220, "gmv_lc": 942215.77, "all_orders": 3569, "vendor_fail_rate": 0.00945, "partial_refund_amount_lc": 2225.77, "partial_refund_orders": 29},
+      {"city": "Ismailia", "vendor_net_failed": 27, "failed_orders": 451, "lost_gmv_lc": 152166.07, "successful_orders": 4343, "gmv_lc": 1479056.16, "all_orders": 4794, "vendor_fail_rate": 0.00611, "partial_refund_amount_lc": 6228.34, "partial_refund_orders": 59},
+      {"city": "Al Mahallah Al Kubra", "vendor_net_failed": 9, "failed_orders": 556, "lost_gmv_lc": 268859.18, "successful_orders": 1553, "gmv_lc": 482949.40, "all_orders": 2109, "vendor_fail_rate": 0.00572, "partial_refund_amount_lc": 1406.83, "partial_refund_orders": 22}
+    ],
+    "talabat_reasons": [
+      {"reason": "Unavailable Menu item", "vendor_net_failed": 716, "failed_orders": 716, "lost_gmv_lc": 339166.80},
+      {"reason": "Ven - uncontactable", "vendor_net_failed": 696, "failed_orders": 696, "lost_gmv_lc": 364949.75},
+      {"reason": "Late Delivery", "vendor_net_failed": 640, "failed_orders": 882, "lost_gmv_lc": 425110.81},
+      {"reason": "Food is inedible", "vendor_net_failed": 474, "failed_orders": 474, "lost_gmv_lc": 148423.53},
+      {"reason": "Ven Wrong Order", "vendor_net_failed": 435, "failed_orders": 435, "lost_gmv_lc": 158646.08},
+      {"reason": "Failing to Punch Order (MISSED)", "vendor_net_failed": 373, "failed_orders": 373, "lost_gmv_lc": 146990.84},
+      {"reason": "Ven Closed", "vendor_net_failed": 305, "failed_orders": 307, "lost_gmv_lc": 126816.85},
+      {"reason": "Ven - Refuse to prepare Order", "vendor_net_failed": 265, "failed_orders": 265, "lost_gmv_lc": 187000.35},
+      {"reason": "Failing to Punch Order (Expired)", "vendor_net_failed": 171, "failed_orders": 171, "lost_gmv_lc": 83839.31},
+      {"reason": "Ven - System/ Device Issue", "vendor_net_failed": 165, "failed_orders": 165, "lost_gmv_lc": 91742.53},
+      {"reason": "internet issue", "vendor_net_failed": 89, "failed_orders": 89, "lost_gmv_lc": 39623.36},
+      {"reason": "Ven - don't deliver to this area", "vendor_net_failed": 80, "failed_orders": 80, "lost_gmv_lc": 36935.48},
+      {"reason": "Preparation Delay", "vendor_net_failed": 63, "failed_orders": 63, "lost_gmv_lc": 26170.48},
+      {"reason": "Electricity Issue", "vendor_net_failed": 42, "failed_orders": 42, "lost_gmv_lc": 20927.49},
+      {"reason": "Lack of Delivery Men", "vendor_net_failed": 25, "failed_orders": 442, "lost_gmv_lc": 208277.36}
+    ],
+    "contact_reasons_l3": [
+      {"reason": "Check order status", "contacts": 2172, "customer_contacts": 2172, "vf_cases": 1607},
+      {"reason": "Complaint about extreme delay", "contacts": 1745, "customer_contacts": 1745, "vf_cases": 1539},
+      {"reason": "Food quality", "contacts": 969, "customer_contacts": 969, "vf_cases": 969},
+      {"reason": "Wrong item", "contacts": 801, "customer_contacts": 801, "vf_cases": 801},
+      {"reason": "Complaint about short delay", "contacts": 1666, "customer_contacts": 1666, "vf_cases": 714},
+      {"reason": "Complaint about moderate delay", "contacts": 1020, "customer_contacts": 1020, "vf_cases": 650},
+      {"reason": "Complaint about severe delay", "contacts": 815, "customer_contacts": 815, "vf_cases": 633},
+      {"reason": "Missing item", "contacts": 2124, "customer_contacts": 1945, "vf_cases": 412},
+      {"reason": "Not willing to do the order", "contacts": 12549, "customer_contacts": 0, "vf_cases": 0},
+      {"reason": "Issue accessing the premises", "contacts": 4872, "customer_contacts": 0, "vf_cases": 0},
+      {"reason": "App issue", "contacts": 4171, "customer_contacts": 14, "vf_cases": 0}
+    ],
+    "payment_split": [
+      {"method": "Credit Card", "orders": 251453, "gmv_lc": 112773083.74},
+      {"method": "Cash", "orders": 208987, "gmv_lc": 76335315.90},
+      {"method": "BNPL", "orders": 24401, "gmv_lc": 9076294.17},
+      {"method": "talabat Pay", "orders": 17355, "gmv_lc": 7296769.26}
+    ]
+  },
+  "yesterday": {
+    "city_performance": [
+      {"city": "Cairo", "vendor_net_failed": 3836, "failed_orders": 39207, "lost_gmv_lc": 17555741.25, "successful_orders": 401210, "gmv_lc": 166749156.13, "all_orders": 440417, "vendor_fail_rate": 0.00935},
+      {"city": "Alexandria", "vendor_net_failed": 419, "failed_orders": 5207, "lost_gmv_lc": 2521411.21, "successful_orders": 48912, "gmv_lc": 18749559.02, "all_orders": 54119, "vendor_fail_rate": 0.00840},
+      {"city": "Mansoura", "vendor_net_failed": 80, "failed_orders": 1323, "lost_gmv_lc": 571241.69, "successful_orders": 16796, "gmv_lc": 5748804.30, "all_orders": 18119, "vendor_fail_rate": 0.00470},
+      {"city": "Tanta", "vendor_net_failed": 73, "failed_orders": 657, "lost_gmv_lc": 281917.28, "successful_orders": 8185, "gmv_lc": 2528978.92, "all_orders": 8842, "vendor_fail_rate": 0.00878},
+      {"city": "Suez", "vendor_net_failed": 35, "failed_orders": 317, "lost_gmv_lc": 81285.39, "successful_orders": 4562, "gmv_lc": 1119253.98, "all_orders": 4879, "vendor_fail_rate": 0.00756},
+      {"city": "Hurghada", "vendor_net_failed": 35, "failed_orders": 570, "lost_gmv_lc": 230853.52, "successful_orders": 5726, "gmv_lc": 2177328.59, "all_orders": 6296, "vendor_fail_rate": 0.00600},
+      {"city": "Assiut", "vendor_net_failed": 21, "failed_orders": 237, "lost_gmv_lc": 82180.68, "successful_orders": 3204, "gmv_lc": 922618.68, "all_orders": 3441, "vendor_fail_rate": 0.00646}
+    ]
+  }
+}
