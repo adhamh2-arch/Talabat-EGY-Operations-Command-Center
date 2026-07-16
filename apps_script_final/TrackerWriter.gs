@@ -106,7 +106,12 @@ function updateVendorTracker(scoredOutput, feedData, emailsSent) {
     sheet.insertColumnsAfter(sheet.getMaxColumns(), TRACKER_WRITE_COLS - sheet.getMaxColumns());
   }
 
-  var startRow = sheet.getLastRow() + 1;
+  // Write today's block at the TOP (row 2), newest-first, so it is ALWAYS visible.
+  // Previously we appended at getLastRow()+1; with accumulated history (and leftover
+  // rows from the old duplicate bug) that pushed each new block hundreds of rows down,
+  // out of view — which looked like "nothing was written to the tracker".
+  var startRow = 2;
+  sheet.insertRowsBefore(2, rows.length);
   // write A–AF (32 cols): the 31-col core block + Chain ID. AG–AI stay owned by ActionTool.
   sheet.getRange(startRow, 1, rows.length, TRACKER_WRITE_COLS).setValues(rows);
 
