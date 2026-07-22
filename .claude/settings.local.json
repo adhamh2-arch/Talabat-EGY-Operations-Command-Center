@@ -6,7 +6,8 @@
       "Bash(git config *)",
       "Bash(git commit *)",
       "Bash(git remote *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "PowerShell(cd \"C:\\\\Users\\\\AdhamHElSayed\\\\Desktop\\\\Claude Test Project 1\"; $tag = \"snapshot-$\\(Get-Date -Format 'yyyy-MM-dd'\\)\"; $exists = git tag -l $tag; if \\($exists\\) { Write-Output \"Tag $tag already exists, skipping.\" } else { git tag $tag; Write-Output \"Tag $tag created.\" })"
     ]
   }
 }

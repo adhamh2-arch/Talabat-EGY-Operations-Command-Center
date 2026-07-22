@@ -1,5 +1,5 @@
 /**
- * ActionTool.gs — talabat EGY Ops Command Center: Vendor Status Action module (v5.2, July 2026)
+ * ActionTool.gs — talabat EGY Ops Command Center: Vendor Status Action module (v5.3, July 2026)
  * AF Chain ID | AG Requested Action (auto) | AH Last Seen Status (found) | AI Action Taken (set)
  */
 
@@ -25,7 +25,7 @@ var RESTORE_ACTION = 'Open';
 function requestedActionFormula_() {
   return '=ARRAYFORMULA(IF(LEN($O$2:$O)=0,"",' +
          'IF(($AC$2:$AC="Yes")+($AC$2:$AC="Partial")>0,"' + RESTORE_ACTION + '",' +
-         'IF(IFERROR(VALUE(SUBSTITUTE($O$2:$O,"%","")),0)>=' + VFR_ACTION_THRESHOLD + ',"' + APPROVED_ACTION + '",""))))';
+         'IF(IFERROR(VALUE(SUBSTITUTE($O$2:$O,"%","")),0)>=' + VFR_ACTION_THRESHOLD + ',"' + APPROVED_ACTION + '","")))';
 }
 
 function buildPortalStatusUrl_(chainId, vendorId) {
@@ -65,11 +65,27 @@ function setupActionColumns() {
   // rejected Chain ID writes). Chain ID / statuses here are free text, not dropdowns.
   sheet.getRange(2, TCOL.chainId, Math.max(sheet.getMaxRows() - 1, 1), 4).clearDataValidations();
 
+  reanchorRequestedAction_();
+
+  return 'Action columns ready: AF Chain ID (validation cleared) · AG Requested Action (auto formula) · AH Last Seen · AI Action Taken.';
+}
+
+// TrackerWriter writes each day's block via sheet.insertRowsBefore(2, N) so today's rows
+// are always on top (see TrackerWriter.gs / command-center-live-script-state memory).
+// Inserting rows above row 2 physically shifts whatever was anchored at AG2 — including
+// this ARRAYFORMULA — further down the sheet, so it silently stops covering the newest
+// rows after every single run (see memory: action-formula-anchor-shift-bug, found 2026-07-20).
+// Called once by setupActionColumns() and again every day from Main.dailyRun() (right after
+// refreshChainIds()) so AG always covers row 2 downward, regardless of how many times
+// TrackerWriter has inserted rows above it since the formula was last planted.
+function reanchorRequestedAction_() {
+  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var sheet = ss.getSheetByName(SHEET_NAMES.vendorTracker);
+  if (!sheet) return 'Vendor Action Tracker sheet not found';
   var lastRow = Math.max(sheet.getLastRow(), 2);
   sheet.getRange(2, TCOL.requestedAction, lastRow - 1, 1).clearContent();
   sheet.getRange(2, TCOL.requestedAction).setFormula(requestedActionFormula_());
-
-  return 'Action columns ready: AF Chain ID (validation cleared) · AG Requested Action (auto formula) · AH Last Seen · AI Action Taken.';
+  return 'Requested Action formula re-anchored at row 2 (covers 2:' + lastRow + ').';
 }
 
 function buildChainIdMap_() {

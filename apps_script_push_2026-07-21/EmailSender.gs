@@ -141,6 +141,8 @@ function sendActionedVendorEmails() {
     if (actionTaken.indexOf('Set Hidden') !== 0) continue; // only the real corrective action counts — not "No action"/"Left active"/"Restored"/"Skipped"
     rows.push({
       sheetRow: i + 2,
+      vendorId: String(r[1] || '').trim(),  // Vendor ID (col B) — needed for the per-vendor Action Plan form link
+      runDate: today,                        // this row's Run Date, for the same link
       vendor: String(r[2] || ''),
       city: String(r[3] || ''),
       clusterName: String(r[4] || ''),

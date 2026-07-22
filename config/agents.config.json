@@ -68,6 +68,34 @@
       "segment": true,
       "target": 0.008,
       "targetLabel": "0.80%"
+    },
+    "cairo_east_1": {
+      "name": "Cairo East 1",
+      "agent": "cairo_east_1",
+      "cities": [],
+      "target": 0.008,
+      "targetLabel": "0.80%"
+    },
+    "cairo_central": {
+      "name": "Cairo Central",
+      "agent": "cairo_central",
+      "cities": [],
+      "target": 0.0078,
+      "targetLabel": "0.78%"
+    },
+    "cairo_east_2": {
+      "name": "Cairo East 2",
+      "agent": "cairo_east_2",
+      "cities": [],
+      "target": 0.008,
+      "targetLabel": "0.80%"
+    },
+    "cairo_west": {
+      "name": "Cairo West",
+      "agent": "cairo_west",
+      "cities": [],
+      "target": 0.008,
+      "targetLabel": "0.80%"
     }
   },
   "segmentTargets": {
@@ -229,7 +257,7 @@
     "reportsFolderId": "1tkWLKX7brov3GgFV_dA6V-Hfi8K25zOG",
     "trackerSheetId": "1aCkuoKAtFB_ee7KQsLvpPtffGqHdNLUp-Z4Im7Jy7tk",
     "feedSheetId": "1W_4kxTBPa6OzZYcjf3_1tXRNH1YUwzZXBnZBFcZyFys",
-    "masterTrackerSheetId": "1zH6yI5T2dE33hLiZCknP0afU-S0-P739GDLTgagISCo",
+    "masterTrackerSheetId": "1YdR7juOhsh-qCWKGJ1SvTtRJLb-ozVWdioLxhDOujKs",
     "clustersTrackerSheetId": "1Mm5lPcOmt_FzMw_Jrtx_yEaKb0kYfIhZVDdjzBqU1IY"
   },
   "googleSheets": {

@@ -43,6 +43,13 @@ function dailyRun() {
     try { if (typeof refreshChainIds === 'function') { refreshChainIds(); runLog.steps.push('Chain IDs refreshed'); } }
     catch (ce) { runLog.errors.push('refreshChainIds: ' + ce.message); }
 
+    // Re-plant the AG "Requested Action" ARRAYFORMULA at row 2. TrackerWriter's
+    // insertRowsBefore(2, N) above physically shifts whatever formula was anchored at AG2
+    // further down the sheet on every run, so without this it silently stops covering
+    // today's fresh rows (see memory: action-formula-anchor-shift-bug, found 2026-07-20).
+    try { if (typeof reanchorRequestedAction_ === 'function') { reanchorRequestedAction_(); runLog.steps.push('Requested Action re-anchored'); } }
+    catch (re) { runLog.errors.push('reanchorRequestedAction_: ' + re.message); }
+
     // AM emails no longer fire from here. The portal action agent (daily 17:00) calls
     // sendActionedVendorEmails() itself once it knows which vendors it actually set to
     // Hidden today, so the email only covers vendors that were truly actioned — and it
