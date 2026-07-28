@@ -10,7 +10,8 @@
       "PowerShell(cd \"C:\\\\Users\\\\AdhamHElSayed\\\\Desktop\\\\Claude Test Project 1\"; $tag = \"snapshot-$\\(Get-Date -Format 'yyyy-MM-dd'\\)\"; $exists = git tag -l $tag; if \\($exists\\) { Write-Output \"Tag $tag already exists, skipping.\" } else { git tag $tag; Write-Output \"Tag $tag created.\" })",
       "PowerShell(cd \"C:\\\\Users\\\\AdhamHElSayed\\\\Desktop\\\\Claude Test Project 1\"; git commit -m \"Daily snapshot - $\\(Get-Date -Format 'yyyy-MM-dd'\\)\")",
       "Bash(Get-Date -Format 'yyyy-MM-dd')",
-      "PowerShell(cd \"C:\\\\Users\\\\AdhamHElSayed\\\\Desktop\\\\Claude Test Project 1\"; $date = Get-Date -Format 'yyyy-MM-dd'; $tag = \"snapshot-$date\"; $existingTag = git tag -l $tag; if \\($existingTag\\) { Write-Host \"Tag $tag already exists, skipping.\" } else { git tag $tag; Write-Host \"Created tag: $tag\" })"
+      "PowerShell(cd \"C:\\\\Users\\\\AdhamHElSayed\\\\Desktop\\\\Claude Test Project 1\"; $date = Get-Date -Format 'yyyy-MM-dd'; $tag = \"snapshot-$date\"; $existingTag = git tag -l $tag; if \\($existingTag\\) { Write-Host \"Tag $tag already exists, skipping.\" } else { git tag $tag; Write-Host \"Created tag: $tag\" })",
+      "PowerShell(cd \"C:\\\\Users\\\\AdhamHElSayed\\\\Desktop\\\\Claude Test Project 1\"; $today = Get-Date -Format 'yyyy-MM-dd'; $tagName = \"snapshot-$today\"; $tagExists = git tag -l $tagName; if \\($tagExists\\) { Write-Output \"TAG_EXISTS: $tagName\" } else { git tag $tagName; Write-Output \"TAG_CREATED: $tagName\" })"
     ]
   }
 }
