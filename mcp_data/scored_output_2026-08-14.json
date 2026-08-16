@@ -1,0 +1,3418 @@
+{
+  "date": "2026-08-14",
+  "clusterResults": [
+    {
+      "cluster": "alex",
+      "name": "Alex",
+      "agent": "alex",
+      "target": 0.007,
+      "targetLabel": "0.70%",
+      "allOrders": 9728339,
+      "failedOrders": 1010067485837,
+      "successfulOrders": -1010057757498,
+      "gmv": 0,
+      "lostGmv": 7202745899,
+      "vendorFailRate": 10382733.2275,
+      "partialRefund": 0,
+      "partialRefundOrders": 0,
+      "vendorFaultCases": 151336599697,
+      "deviation": 10382732.5275,
+      "deviationPct": 1483247503.9,
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "riskFactors": {
+        "targetDeviationPts": 40,
+        "vendorFaultPts": 30,
+        "orderVolumePts": 20,
+        "financialPts": 10
+      },
+      "dod": {
+        "failedOrders": -0.2,
+        "lostGmv": -5,
+        "failRate": 5.1
+      },
+      "cities": [
+        {
+          "city": "Alexandria",
+          "allOrders": 156892,
+          "failedOrders": 1721,
+          "gmv": 0,
+          "lostGmv": 7666752,
+          "vendorFailRate": 1.0968,
+          "partialRefund": 0
+        },
+        {
+          "city": "Cairo",
+          "allOrders": 37645,
+          "failedOrders": 348,
+          "gmv": 0,
+          "lostGmv": 1582219,
+          "vendorFailRate": 0.9256,
+          "partialRefund": 0
+        },
+        {
+          "city": "North Coast",
+          "allOrders": 3262,
+          "failedOrders": 174,
+          "gmv": 0,
+          "lostGmv": 552086,
+          "vendorFailRate": 5.3352,
+          "partialRefund": 0
+        },
+        {
+          "city": "Zagazig",
+          "allOrders": 1539,
+          "failedOrders": 28,
+          "gmv": 0,
+          "lostGmv": 85422,
+          "vendorFailRate": 1.8342,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damanhour",
+          "allOrders": 646,
+          "failedOrders": 10,
+          "gmv": 0,
+          "lostGmv": 22932,
+          "vendorFailRate": 1.6134,
+          "partialRefund": 0
+        },
+        {
+          "city": "Mansoura",
+          "allOrders": 977,
+          "failedOrders": 9,
+          "gmv": 0,
+          "lostGmv": 21913,
+          "vendorFailRate": 0.9018,
+          "partialRefund": 0
+        },
+        {
+          "city": "Tanta",
+          "allOrders": 540,
+          "failedOrders": 5,
+          "gmv": 0,
+          "lostGmv": 15483,
+          "vendorFailRate": 0.9115,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ras El Bar",
+          "allOrders": 19,
+          "failedOrders": 6,
+          "gmv": 0,
+          "lostGmv": 8059,
+          "vendorFailRate": 32.2502,
+          "partialRefund": 0
+        },
+        {
+          "city": "Talkha",
+          "allOrders": 109,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 3693,
+          "vendorFailRate": 1.7872,
+          "partialRefund": 0
+        },
+        {
+          "city": "Kafr El Sheikh",
+          "allOrders": 80,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 941,
+          "vendorFailRate": 2.3231,
+          "partialRefund": 0
+        },
+        {
+          "city": "Egypt",
+          "allOrders": 10,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Banha",
+          "allOrders": 1,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Assiut",
+          "allOrders": 1,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "CRITICAL",
+          "allOrders": 9524386,
+          "failedOrders": 1010067483532,
+          "gmv": 0,
+          "lostGmv": 7192786399,
+          "vendorFailRate": 10605066.6524,
+          "partialRefund": 0
+        },
+        {
+          "city": "Food Inedible",
+          "allOrders": 454,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Unavailable Menu item",
+          "allOrders": 403,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (MISSED)",
+          "allOrders": 356,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Wrong Order",
+          "allOrders": 253,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven Closed",
+          "allOrders": 200,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Uncontactable",
+          "allOrders": 177,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Late Delivery",
+          "allOrders": 139,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "internet issue",
+          "allOrders": 129,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Preparation Delay",
+          "allOrders": 40,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (Expired)",
+          "allOrders": 20,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Refuse to Prepare",
+          "allOrders": 16,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - System/ Device Issue",
+          "allOrders": 11,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Content Discrepancy",
+          "allOrders": 10,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Kitchen Issue",
+          "allOrders": 9,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Ignored Special Request",
+          "allOrders": 8,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - don't deliver to this area",
+          "allOrders": 7,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor_id": "1100275",
+          "vendor": "Genoise, ⁠Louran  Sarai",
+          "city": "Alexandria",
+          "am_name": "Abdelrahman Omar",
+          "am_email": "abdelrahman.khalil@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 548,
+          "vendor_net_failed": 27,
+          "failedOrders": 27,
+          "lostGmv": 41941,
+          "failRate": 4.927,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 6,
+          "order_quality_cases": 4,
+          "vendor_fault_cases": 10,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "751246",
+          "vendor": "Karam El Sham, Miami - Central Miami",
+          "city": "Alexandria",
+          "am_name": "Mostafa Ibrahim",
+          "am_email": "mostafa.amin@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 1338,
+          "vendor_net_failed": 39,
+          "failedOrders": 39,
+          "lostGmv": 54852,
+          "failRate": 2.9148,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 4,
+          "vendor_fault_cases": 4,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "751244",
+          "vendor": "Karam El Sham, Downtown - Talaat Harab",
+          "city": "Cairo",
+          "am_name": "Mostafa Ibrahim",
+          "am_email": "mostafa.amin@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 1442,
+          "vendor_net_failed": 40,
+          "failedOrders": 40,
+          "lostGmv": 71763,
+          "failRate": 2.7739,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 7,
+          "vendor_fault_cases": 7,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "751235",
+          "vendor": "Karam El Sham, Shobra - Rod El Farg",
+          "city": "Cairo",
+          "am_name": "Mostafa Ibrahim",
+          "am_email": "mostafa.amin@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 1574,
+          "vendor_net_failed": 33,
+          "failedOrders": 33,
+          "lostGmv": 38288,
+          "failRate": 2.0966,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 6,
+          "vendor_fault_cases": 6,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "751237",
+          "vendor": "Karam El Sham, Faisal - Awel Faisal",
+          "city": "Cairo",
+          "am_name": "Mostafa Ibrahim",
+          "am_email": "mostafa.amin@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 2675,
+          "vendor_net_failed": 36,
+          "failedOrders": 36,
+          "lostGmv": 91396,
+          "failRate": 1.3458,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 9,
+          "order_quality_cases": 10,
+          "vendor_fault_cases": 19,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        }
+      ]
+    },
+    {
+      "cluster": "delta",
+      "name": "Delta",
+      "agent": "delta",
+      "target": 0.0072,
+      "targetLabel": "0.72%",
+      "allOrders": 7525207,
+      "failedOrders": 518597481146,
+      "successfulOrders": -518589955939,
+      "gmv": 0,
+      "lostGmv": 4319145886,
+      "vendorFailRate": 6891471.3064,
+      "partialRefund": 0,
+      "partialRefundOrders": 0,
+      "vendorFaultCases": 70735062920,
+      "deviation": 6891470.5864,
+      "deviationPct": 957148692.5,
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "riskFactors": {
+        "targetDeviationPts": 40,
+        "vendorFaultPts": 30,
+        "orderVolumePts": 20,
+        "financialPts": 10
+      },
+      "dod": {
+        "failedOrders": 2.4,
+        "lostGmv": -1.5,
+        "failRate": -0.4
+      },
+      "cities": [
+        {
+          "city": "Mansoura",
+          "allOrders": 70744,
+          "failedOrders": 353,
+          "gmv": 0,
+          "lostGmv": 2367673,
+          "vendorFailRate": 0.4984,
+          "partialRefund": 0
+        },
+        {
+          "city": "Tanta",
+          "allOrders": 25051,
+          "failedOrders": 297,
+          "gmv": 0,
+          "lostGmv": 897651,
+          "vendorFailRate": 1.1849,
+          "partialRefund": 0
+        },
+        {
+          "city": "Cairo",
+          "allOrders": 28733,
+          "failedOrders": 235,
+          "gmv": 0,
+          "lostGmv": 1474203,
+          "vendorFailRate": 0.8177,
+          "partialRefund": 0
+        },
+        {
+          "city": "Zagazig",
+          "allOrders": 21976,
+          "failedOrders": 206,
+          "gmv": 0,
+          "lostGmv": 518314,
+          "vendorFailRate": 0.9396,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damietta New",
+          "allOrders": 17412,
+          "failedOrders": 165,
+          "gmv": 0,
+          "lostGmv": 544248,
+          "vendorFailRate": 0.9464,
+          "partialRefund": 0
+        },
+        {
+          "city": "Al Mahallah Al Kubra",
+          "allOrders": 7101,
+          "failedOrders": 75,
+          "gmv": 0,
+          "lostGmv": 319239,
+          "vendorFailRate": 1.0591,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damanhour",
+          "allOrders": 3818,
+          "failedOrders": 70,
+          "gmv": 0,
+          "lostGmv": 168202,
+          "vendorFailRate": 1.8316,
+          "partialRefund": 0
+        },
+        {
+          "city": "Shebeen El Koom",
+          "allOrders": 4892,
+          "failedOrders": 49,
+          "gmv": 0,
+          "lostGmv": 169198,
+          "vendorFailRate": 1.0052,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ras El Bar",
+          "allOrders": 2443,
+          "failedOrders": 48,
+          "gmv": 0,
+          "lostGmv": 139576,
+          "vendorFailRate": 1.981,
+          "partialRefund": 0
+        },
+        {
+          "city": "Banha",
+          "allOrders": 1390,
+          "failedOrders": 28,
+          "gmv": 0,
+          "lostGmv": 42452,
+          "vendorFailRate": 1.9848,
+          "partialRefund": 0
+        },
+        {
+          "city": "Talkha",
+          "allOrders": 5030,
+          "failedOrders": 54,
+          "gmv": 0,
+          "lostGmv": 233517,
+          "vendorFailRate": 1.0793,
+          "partialRefund": 0
+        },
+        {
+          "city": "Kafr El Sheikh",
+          "allOrders": 1312,
+          "failedOrders": 24,
+          "gmv": 0,
+          "lostGmv": 44301,
+          "vendorFailRate": 1.8488,
+          "partialRefund": 0
+        },
+        {
+          "city": "Alexandria",
+          "allOrders": 1053,
+          "failedOrders": 22,
+          "gmv": 0,
+          "lostGmv": 59884,
+          "vendorFailRate": 2.0668,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damietta",
+          "allOrders": 1201,
+          "failedOrders": 23,
+          "gmv": 0,
+          "lostGmv": 62763,
+          "vendorFailRate": 1.9006,
+          "partialRefund": 0
+        },
+        {
+          "city": "Port Said",
+          "allOrders": 1389,
+          "failedOrders": 13,
+          "gmv": 0,
+          "lostGmv": 36514,
+          "vendorFailRate": 0.916,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ismailia",
+          "allOrders": 724,
+          "failedOrders": 15,
+          "gmv": 0,
+          "lostGmv": 40044,
+          "vendorFailRate": 2.0853,
+          "partialRefund": 0
+        },
+        {
+          "city": "Hurghada",
+          "allOrders": 391,
+          "failedOrders": 8,
+          "gmv": 0,
+          "lostGmv": 16256,
+          "vendorFailRate": 2.1221,
+          "partialRefund": 0
+        },
+        {
+          "city": "North Coast",
+          "allOrders": 270,
+          "failedOrders": 6,
+          "gmv": 0,
+          "lostGmv": 92466,
+          "vendorFailRate": 2.1442,
+          "partialRefund": 0
+        },
+        {
+          "city": "Suez",
+          "allOrders": 264,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 8177,
+          "vendorFailRate": 0.8731,
+          "partialRefund": 0
+        },
+        {
+          "city": "Beni Suef.",
+          "allOrders": 16,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 678,
+          "vendorFailRate": 11.0767,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ain Sokhna",
+          "allOrders": 1,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Egypt",
+          "allOrders": 8,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "CRITICAL",
+          "allOrders": 7328249,
+          "failedOrders": 518597479451,
+          "gmv": 0,
+          "lostGmv": 4311910533,
+          "vendorFailRate": 7076690.2087,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (MISSED)",
+          "allOrders": 383,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Unavailable Menu item",
+          "allOrders": 292,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Food Inedible",
+          "allOrders": 262,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Uncontactable",
+          "allOrders": 174,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Wrong Order",
+          "allOrders": 142,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven Closed",
+          "allOrders": 132,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "internet issue",
+          "allOrders": 130,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Late Delivery",
+          "allOrders": 95,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Preparation Delay",
+          "allOrders": 59,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Refuse to Prepare",
+          "allOrders": 39,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (Expired)",
+          "allOrders": 17,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - don't deliver to this area",
+          "allOrders": 7,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Content Discrepancy",
+          "allOrders": 7,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor_id": "1115226",
+          "vendor": "istanbul, El Nahas Street",
+          "city": "Tanta",
+          "am_name": "Salah Abdallah",
+          "am_email": "salah.abdallah@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 573,
+          "vendor_net_failed": 27,
+          "failedOrders": 27,
+          "lostGmv": 33316,
+          "failRate": 4.712,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 11,
+          "vendor_fault_cases": 11,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "791310",
+          "vendor": "Qasr ELasmaK, El Mansoura University",
+          "city": "Mansoura",
+          "am_name": "Abdelrahman Saadeldin",
+          "am_email": "abdelrahman.shahin@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 211,
+          "vendor_net_failed": 9,
+          "failedOrders": 9,
+          "lostGmv": 58716,
+          "failRate": 4.2654,
+          "late_delivery_cases": 22,
+          "missing_items_cases": 161,
+          "order_quality_cases": 4,
+          "vendor_fault_cases": 187,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "712451",
+          "vendor": "Shrimpo, Marina 4 -5- 6 -7",
+          "city": "North Coast",
+          "am_name": "Salah Abdallah",
+          "am_email": "salah.abdallah@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 86,
+          "vendor_net_failed": 3,
+          "failedOrders": 3,
+          "lostGmv": 21182,
+          "failRate": 3.4884,
+          "late_delivery_cases": 35,
+          "missing_items_cases": 1,
+          "order_quality_cases": 0,
+          "vendor_fault_cases": 36,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "1000684",
+          "vendor": "The Crepe Company, Downtown - Abdin",
+          "city": "Cairo",
+          "am_name": "Moaaz Mohamed",
+          "am_email": "moaaz.meshak@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 235,
+          "vendor_net_failed": 9,
+          "failedOrders": 9,
+          "lostGmv": 17490,
+          "failRate": 3.8298,
+          "late_delivery_cases": 67,
+          "missing_items_cases": 2,
+          "order_quality_cases": 4,
+          "vendor_fault_cases": 73,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "756846",
+          "vendor": "Samy Salem Patisserie, Madinaty - Buildings Area (B12)",
+          "city": "Cairo",
+          "am_name": "Moaaz Mohamed",
+          "am_email": "moaaz.meshak@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 796,
+          "vendor_net_failed": 20,
+          "failedOrders": 20,
+          "lostGmv": 35536,
+          "failRate": 2.5126,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 4,
+          "order_quality_cases": 1,
+          "vendor_fault_cases": 5,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        }
+      ]
+    },
+    {
+      "cluster": "canal",
+      "name": "Canal",
+      "agent": "esm",
+      "target": 0.0072,
+      "targetLabel": "0.72%",
+      "allOrders": 1470373,
+      "failedOrders": 22094632154,
+      "successfulOrders": -22093161781,
+      "gmv": 0,
+      "lostGmv": 368981352,
+      "vendorFailRate": 1502654.9151,
+      "partialRefund": 0,
+      "partialRefundOrders": 0,
+      "vendorFaultCases": 3387308831,
+      "deviation": 1502654.1951,
+      "deviationPct": 208701971.5,
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "riskFactors": {
+        "targetDeviationPts": 40,
+        "vendorFaultPts": 30,
+        "orderVolumePts": 20,
+        "financialPts": 10
+      },
+      "dod": {
+        "failedOrders": -2.2,
+        "lostGmv": 0.2,
+        "failRate": 0.3
+      },
+      "cities": [
+        {
+          "city": "Port Said",
+          "allOrders": 20104,
+          "failedOrders": 190,
+          "gmv": 0,
+          "lostGmv": 409138,
+          "vendorFailRate": 0.9465,
+          "partialRefund": 0
+        },
+        {
+          "city": "Suez",
+          "allOrders": 22826,
+          "failedOrders": 263,
+          "gmv": 0,
+          "lostGmv": 570812,
+          "vendorFailRate": 1.151,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ismailia",
+          "allOrders": 14478,
+          "failedOrders": 171,
+          "gmv": 0,
+          "lostGmv": 467126,
+          "vendorFailRate": 1.1835,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damietta New",
+          "allOrders": 235,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 3492,
+          "vendorFailRate": 0.9694,
+          "partialRefund": 0
+        },
+        {
+          "city": "CRITICAL",
+          "allOrders": 1412108,
+          "failedOrders": 22094631528,
+          "gmv": 0,
+          "lostGmv": 367530785,
+          "vendorFailRate": 1564655.9277,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (MISSED)",
+          "allOrders": 171,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "internet issue",
+          "allOrders": 87,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Unavailable Menu item",
+          "allOrders": 85,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven Closed",
+          "allOrders": 80,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Food Inedible",
+          "allOrders": 82,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Uncontactable",
+          "allOrders": 42,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Wrong Order",
+          "allOrders": 40,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Preparation Delay",
+          "allOrders": 16,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (Expired)",
+          "allOrders": 12,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Content Discrepancy",
+          "allOrders": 7,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor_id": "753337",
+          "vendor": "Ebn Qamesh, Al Sharq District",
+          "city": "Port Said",
+          "am_name": "Mahmoud Farag",
+          "am_email": "mahmoud.salama.2@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 155,
+          "vendor_net_failed": 44,
+          "failedOrders": 44,
+          "lostGmv": 21231,
+          "failRate": 28.3871,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 1,
+          "vendor_fault_cases": 1,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "744618",
+          "vendor": "Abu El Mashwy, Al Manakh District",
+          "city": "Port Said",
+          "am_name": "Mahmoud Farag",
+          "am_email": "mahmoud.salama.2@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 198,
+          "vendor_net_failed": 27,
+          "failedOrders": 27,
+          "lostGmv": 17632,
+          "failRate": 13.6364,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 0,
+          "vendor_fault_cases": 0,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "1116530",
+          "vendor": "Pizza El Safer, Al Salam 2",
+          "city": "Suez",
+          "am_name": "Mohamed Helal",
+          "am_email": "mohamed.helal.2@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 210,
+          "vendor_net_failed": 26,
+          "failedOrders": 26,
+          "lostGmv": 7143,
+          "failRate": 12.381,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 2,
+          "order_quality_cases": 1,
+          "vendor_fault_cases": 3,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "691633",
+          "vendor": "Al Tayeb, Hay El Salam",
+          "city": "Ismailia",
+          "am_name": "seif Elshabrawy",
+          "am_email": "seif.elshabrawy@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 308,
+          "vendor_net_failed": 11,
+          "failedOrders": 11,
+          "lostGmv": 5154,
+          "failRate": 3.5714,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 4,
+          "order_quality_cases": 6,
+          "vendor_fault_cases": 10,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "746907",
+          "vendor": "El Dahan Grills Suez, El Arba'ain",
+          "city": "Suez",
+          "am_name": "Mohamed Helal",
+          "am_email": "mohamed.helal.2@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 203,
+          "vendor_net_failed": 6,
+          "failedOrders": 6,
+          "lostGmv": 26152,
+          "failRate": 2.9557,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 8,
+          "order_quality_cases": 0,
+          "vendor_fault_cases": 8,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        }
+      ]
+    },
+    {
+      "cluster": "upper_egypt",
+      "name": "Upper Egypt",
+      "agent": "esm",
+      "target": 0.0078,
+      "targetLabel": "0.78%",
+      "allOrders": 2089887,
+      "failedOrders": 43268466116,
+      "successfulOrders": -43266376229,
+      "gmv": 0,
+      "lostGmv": 437703232,
+      "vendorFailRate": 2070373.4756,
+      "partialRefund": 0,
+      "partialRefundOrders": 0,
+      "vendorFaultCases": 5688008390,
+      "deviation": 2070372.6956,
+      "deviationPct": 265432396.9,
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "riskFactors": {
+        "targetDeviationPts": 40,
+        "vendorFaultPts": 30,
+        "orderVolumePts": 20,
+        "financialPts": 10
+      },
+      "dod": {
+        "failedOrders": -4.3,
+        "lostGmv": -5.7,
+        "failRate": -1.7
+      },
+      "cities": [
+        {
+          "city": "Hurghada",
+          "allOrders": 35281,
+          "failedOrders": 329,
+          "gmv": 0,
+          "lostGmv": 1374081,
+          "vendorFailRate": 0.9334,
+          "partialRefund": 0
+        },
+        {
+          "city": "Assiut",
+          "allOrders": 14419,
+          "failedOrders": 155,
+          "gmv": 0,
+          "lostGmv": 351416,
+          "vendorFailRate": 1.0779,
+          "partialRefund": 0
+        },
+        {
+          "city": "Minya",
+          "allOrders": 7254,
+          "failedOrders": 154,
+          "gmv": 0,
+          "lostGmv": 166838,
+          "vendorFailRate": 2.1227,
+          "partialRefund": 0
+        },
+        {
+          "city": "Beni Suef.",
+          "allOrders": 5742,
+          "failedOrders": 122,
+          "gmv": 0,
+          "lostGmv": 423597,
+          "vendorFailRate": 2.1294,
+          "partialRefund": 0
+        },
+        {
+          "city": "CRITICAL",
+          "allOrders": 2026546,
+          "failedOrders": 43268465356,
+          "gmv": 0,
+          "lostGmv": 435387299,
+          "vendorFailRate": 2135084.294,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (MISSED)",
+          "allOrders": 215,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Food Inedible",
+          "allOrders": 89,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Unavailable Menu item",
+          "allOrders": 93,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven Closed",
+          "allOrders": 69,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Wrong Order",
+          "allOrders": 53,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Uncontactable",
+          "allOrders": 51,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Preparation Delay",
+          "allOrders": 27,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "internet issue",
+          "allOrders": 23,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Refuse to Prepare",
+          "allOrders": 16,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (Expired)",
+          "allOrders": 9,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor_id": "802887",
+          "vendor": "Dahab Al Sham, Minya",
+          "city": "Minya",
+          "am_name": "Ashraf Khalaf",
+          "am_email": "ashraf.khalaf@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 74,
+          "vendor_net_failed": 18,
+          "failedOrders": 18,
+          "lostGmv": 2083,
+          "failRate": 24.3243,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 7,
+          "vendor_fault_cases": 7,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "795820",
+          "vendor": "DOCTOR BOX, Al Ibrahimya",
+          "city": "Assiut",
+          "am_name": "Ashraf Khalaf",
+          "am_email": "ashraf.khalaf@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 328,
+          "vendor_net_failed": 17,
+          "failedOrders": 17,
+          "lostGmv": 12711,
+          "failRate": 5.1829,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 1,
+          "vendor_fault_cases": 1,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "1100105",
+          "vendor": "KOSHARY REZO, Sheraton",
+          "city": "Hurghada",
+          "am_name": "Hasnaa Noureldeen",
+          "am_email": "hasnaa.hesham@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 333,
+          "vendor_net_failed": 15,
+          "failedOrders": 15,
+          "lostGmv": 12585,
+          "failRate": 4.5045,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 1,
+          "order_quality_cases": 0,
+          "vendor_fault_cases": 1,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "762945",
+          "vendor": "Schietto, Sharq El Nile",
+          "city": "Beni Suef.",
+          "am_name": "Ashraf Khalaf",
+          "am_email": "ashraf.khalaf@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 237,
+          "vendor_net_failed": 8,
+          "failedOrders": 8,
+          "lostGmv": 15576,
+          "failRate": 3.3755,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 2,
+          "order_quality_cases": 0,
+          "vendor_fault_cases": 2,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "773045",
+          "vendor": "Albeit alsoury, Taha Hussien",
+          "city": "Minya",
+          "am_name": "Ashraf Khalaf",
+          "am_email": "ashraf.khalaf@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 484,
+          "vendor_net_failed": 13,
+          "failedOrders": 13,
+          "lostGmv": 8235,
+          "failRate": 2.686,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 2,
+          "vendor_fault_cases": 2,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        }
+      ]
+    },
+    {
+      "cluster": "cairo_east_1",
+      "name": "Cairo East 1",
+      "agent": "cairo_east_1",
+      "target": 0.008,
+      "targetLabel": "0.80%",
+      "allOrders": 22318044,
+      "failedOrders": 4653795221943,
+      "successfulOrders": -4653772903899,
+      "gmv": 0,
+      "lostGmv": 24692915835,
+      "vendorFailRate": 20852164.383,
+      "partialRefund": 0,
+      "partialRefundOrders": 0,
+      "vendorFaultCases": 725139164944,
+      "deviation": 20852163.583,
+      "deviationPct": 2606520447.9,
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "riskFactors": {
+        "targetDeviationPts": 40,
+        "vendorFaultPts": 30,
+        "orderVolumePts": 20,
+        "financialPts": 10
+      },
+      "dod": {
+        "failedOrders": 1.1,
+        "lostGmv": 3.4,
+        "failRate": -1
+      },
+      "cities": [
+        {
+          "city": "Cairo",
+          "allOrders": 281141,
+          "failedOrders": 3037,
+          "gmv": 0,
+          "lostGmv": 23447845,
+          "vendorFailRate": 1.0804,
+          "partialRefund": 0
+        },
+        {
+          "city": "North Coast",
+          "allOrders": 5390,
+          "failedOrders": 100,
+          "gmv": 0,
+          "lostGmv": 995294,
+          "vendorFailRate": 1.8622,
+          "partialRefund": 0
+        },
+        {
+          "city": "Alexandria",
+          "allOrders": 4045,
+          "failedOrders": 38,
+          "gmv": 0,
+          "lostGmv": 187431,
+          "vendorFailRate": 0.9334,
+          "partialRefund": 0
+        },
+        {
+          "city": "Beni Suef.",
+          "allOrders": 536,
+          "failedOrders": 10,
+          "gmv": 0,
+          "lostGmv": 13442,
+          "vendorFailRate": 1.8521,
+          "partialRefund": 0
+        },
+        {
+          "city": "Mansoura",
+          "allOrders": 817,
+          "failedOrders": 8,
+          "gmv": 0,
+          "lostGmv": 25483,
+          "vendorFailRate": 1.0191,
+          "partialRefund": 0
+        },
+        {
+          "city": "Hurghada",
+          "allOrders": 869,
+          "failedOrders": 8,
+          "gmv": 0,
+          "lostGmv": 37107,
+          "vendorFailRate": 0.9506,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ismailia",
+          "allOrders": 204,
+          "failedOrders": 7,
+          "gmv": 0,
+          "lostGmv": 5559,
+          "vendorFailRate": 3.427,
+          "partialRefund": 0
+        },
+        {
+          "city": "Zagazig",
+          "allOrders": 545,
+          "failedOrders": 6,
+          "gmv": 0,
+          "lostGmv": 37927,
+          "vendorFailRate": 1.0326,
+          "partialRefund": 0
+        },
+        {
+          "city": "Suez",
+          "allOrders": 360,
+          "failedOrders": 3,
+          "gmv": 0,
+          "lostGmv": 6276,
+          "vendorFailRate": 0.8664,
+          "partialRefund": 0
+        },
+        {
+          "city": "Tanta",
+          "allOrders": 335,
+          "failedOrders": 3,
+          "gmv": 0,
+          "lostGmv": 32154,
+          "vendorFailRate": 0.9188,
+          "partialRefund": 0
+        },
+        {
+          "city": "Port Said",
+          "allOrders": 155,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 2691,
+          "vendorFailRate": 0.9898,
+          "partialRefund": 0
+        },
+        {
+          "city": "Banha",
+          "allOrders": 133,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 2602,
+          "vendorFailRate": 1.1133,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damanhour",
+          "allOrders": 63,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 2697,
+          "vendorFailRate": 1.871,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damietta",
+          "allOrders": 46,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 488,
+          "vendorFailRate": 1.8217,
+          "partialRefund": 0
+        },
+        {
+          "city": "Assiut",
+          "allOrders": 167,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Al Mahallah Al Kubra",
+          "allOrders": 165,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Minya",
+          "allOrders": 131,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Shebeen El Koom",
+          "allOrders": 116,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Talkha",
+          "allOrders": 74,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Kafr El Sheikh",
+          "allOrders": 39,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damietta New",
+          "allOrders": 9,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Egypt",
+          "allOrders": 19,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Cairo\\_inactive",
+          "allOrders": 1,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "CRITICAL",
+          "allOrders": 22019941,
+          "failedOrders": 4653795218717,
+          "gmv": 0,
+          "lostGmv": 24668118839,
+          "vendorFailRate": 21134458.1655,
+          "partialRefund": 0
+        },
+        {
+          "city": "Food Inedible",
+          "allOrders": 505,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Unavailable Menu item",
+          "allOrders": 455,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (MISSED)",
+          "allOrders": 388,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Late Delivery",
+          "allOrders": 348,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Wrong Order",
+          "allOrders": 285,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Uncontactable",
+          "allOrders": 272,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven Closed",
+          "allOrders": 152,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Preparation Delay",
+          "allOrders": 69,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "internet issue",
+          "allOrders": 66,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Refuse to Prepare",
+          "allOrders": 39,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - don't deliver to this area",
+          "allOrders": 33,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (Expired)",
+          "allOrders": 28,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - System/ Device Issue",
+          "allOrders": 23,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Spilt/ damaged Order",
+          "allOrders": 20,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Ignored Special Request",
+          "allOrders": 20,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Electricity Issue",
+          "allOrders": 15,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Lack of Delivery Men",
+          "allOrders": 14,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Content Discrepancy",
+          "allOrders": 11,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor_id": "1116117",
+          "vendor": "Crystal, Nasr City - Mostafa El Nahaas",
+          "city": "Cairo",
+          "am_name": "Darine Hajj",
+          "am_email": "darine.hajj@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 89,
+          "vendor_net_failed": 75,
+          "failedOrders": 75,
+          "lostGmv": 27633,
+          "failRate": 84.2697,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 0,
+          "order_quality_cases": 0,
+          "vendor_fault_cases": 0,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "1117017",
+          "vendor": "Pablo & Abdo, Tagammoa 5 - Emaar Mivida",
+          "city": "Cairo",
+          "am_name": "Darine Hajj",
+          "am_email": "darine.hajj@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 626,
+          "vendor_net_failed": 31,
+          "failedOrders": 31,
+          "lostGmv": 39740,
+          "failRate": 4.9521,
+          "late_delivery_cases": 265,
+          "missing_items_cases": 22,
+          "order_quality_cases": 5,
+          "vendor_fault_cases": 292,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "737426",
+          "vendor": "Gandovilla, Nasr City - TMP",
+          "city": "Cairo",
+          "am_name": "Neveen Helal",
+          "am_email": "neveen.helal@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 159,
+          "vendor_net_failed": 6,
+          "failedOrders": 6,
+          "lostGmv": 25878,
+          "failRate": 3.7736,
+          "late_delivery_cases": 23,
+          "missing_items_cases": 91,
+          "order_quality_cases": 1,
+          "vendor_fault_cases": 115,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "1000136",
+          "vendor": "Pablo & Abdo, El Sheikh Zayed - Nile University",
+          "city": "Cairo",
+          "am_name": "Darine Hajj",
+          "am_email": "darine.hajj@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 706,
+          "vendor_net_failed": 24,
+          "failedOrders": 24,
+          "lostGmv": 41843,
+          "failRate": 3.3994,
+          "late_delivery_cases": 214,
+          "missing_items_cases": 1,
+          "order_quality_cases": 2,
+          "vendor_fault_cases": 217,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "1106159",
+          "vendor": "Crepe 2000, SeaShell Village",
+          "city": "North Coast",
+          "am_name": "Darine Hajj",
+          "am_email": "darine.hajj@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 293,
+          "vendor_net_failed": 8,
+          "failedOrders": 8,
+          "lostGmv": 85781,
+          "failRate": 2.7304,
+          "late_delivery_cases": 69,
+          "missing_items_cases": 1,
+          "order_quality_cases": 0,
+          "vendor_fault_cases": 70,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        }
+      ]
+    },
+    {
+      "cluster": "cairo_central",
+      "name": "Cairo Central",
+      "agent": "cairo_central",
+      "target": 0.0078,
+      "targetLabel": "0.78%",
+      "allOrders": 17679723,
+      "failedOrders": 3237463364343,
+      "successfulOrders": -3237445684620,
+      "gmv": 0,
+      "lostGmv": 9222692297,
+      "vendorFailRate": 18311731.2661,
+      "partialRefund": 0,
+      "partialRefundOrders": 0,
+      "vendorFaultCases": 466764791980,
+      "deviation": 18311730.4861,
+      "deviationPct": 2347657754.6,
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "riskFactors": {
+        "targetDeviationPts": 40,
+        "vendorFaultPts": 30,
+        "orderVolumePts": 20,
+        "financialPts": 10
+      },
+      "dod": {
+        "failedOrders": 1.8,
+        "lostGmv": -2.4,
+        "failRate": 3.9
+      },
+      "cities": [
+        {
+          "city": "Cairo",
+          "allOrders": 359860,
+          "failedOrders": 3286,
+          "gmv": 0,
+          "lostGmv": 15975977,
+          "vendorFailRate": 0.9132,
+          "partialRefund": 0
+        },
+        {
+          "city": "North Coast",
+          "allOrders": 3338,
+          "failedOrders": 62,
+          "gmv": 0,
+          "lostGmv": 635188,
+          "vendorFailRate": 1.8532,
+          "partialRefund": 0
+        },
+        {
+          "city": "Alexandria",
+          "allOrders": 8215,
+          "failedOrders": 76,
+          "gmv": 0,
+          "lostGmv": 246700,
+          "vendorFailRate": 0.9252,
+          "partialRefund": 0
+        },
+        {
+          "city": "Mansoura",
+          "allOrders": 3994,
+          "failedOrders": 4,
+          "gmv": 0,
+          "lostGmv": 19386,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Tanta",
+          "allOrders": 1204,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 3943,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Shebeen El Koom",
+          "allOrders": 975,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 4230,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Kafr El Sheikh",
+          "allOrders": 239,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 2083,
+          "vendorFailRate": 1.0404,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ismailia",
+          "allOrders": 110,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 4082,
+          "vendorFailRate": 1.7561,
+          "partialRefund": 0
+        },
+        {
+          "city": "Minya",
+          "allOrders": 18,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 1396,
+          "vendorFailRate": 11.7427,
+          "partialRefund": 0
+        },
+        {
+          "city": "Hurghada",
+          "allOrders": 1050,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 11317,
+          "vendorFailRate": 0.1075,
+          "partialRefund": 0
+        },
+        {
+          "city": "Talkha",
+          "allOrders": 301,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Banha",
+          "allOrders": 76,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 1322,
+          "vendorFailRate": 1.625,
+          "partialRefund": 0
+        },
+        {
+          "city": "Suhag",
+          "allOrders": 8,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 88,
+          "vendorFailRate": 10.1275,
+          "partialRefund": 0
+        },
+        {
+          "city": "Zagazig",
+          "allOrders": 92,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Assiut",
+          "allOrders": 173,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Beni Suef.",
+          "allOrders": 3,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damanhour",
+          "allOrders": 4,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Egypt",
+          "allOrders": 28,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Marsa Matrouh",
+          "allOrders": 1,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Port Said",
+          "allOrders": 7,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damietta",
+          "allOrders": 3,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Suez",
+          "allOrders": 1,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "HIGH",
+          "allOrders": 17296691,
+          "failedOrders": 3237463360902,
+          "gmv": 0,
+          "lostGmv": 9205786583,
+          "vendorFailRate": 18717241.1238,
+          "partialRefund": 0
+        },
+        {
+          "city": "Late Delivery",
+          "allOrders": 655,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Food Inedible",
+          "allOrders": 595,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Unavailable Menu item",
+          "allOrders": 382,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Uncontactable",
+          "allOrders": 384,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (MISSED)",
+          "allOrders": 369,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Wrong Order",
+          "allOrders": 366,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven Closed",
+          "allOrders": 140,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Preparation Delay",
+          "allOrders": 99,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "internet issue",
+          "allOrders": 72,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Refuse to Prepare",
+          "allOrders": 51,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Technical issue",
+          "allOrders": 36,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - System/ Device Issue",
+          "allOrders": 33,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - don't deliver to this area",
+          "allOrders": 34,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (Expired)",
+          "allOrders": 21,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Spilt/ damaged Order",
+          "allOrders": 19,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Electricity Issue",
+          "allOrders": 17,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Content Discrepancy",
+          "allOrders": 18,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Ignored Special Request",
+          "allOrders": 17,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Lack of Delivery Men",
+          "allOrders": 14,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Blacklisted Customer",
+          "allOrders": 10,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor_id": "716032",
+          "vendor": "Vinny's Pizza, Heliopolis - Heliopolis Square",
+          "city": "Cairo",
+          "am_name": "Abdelrahman ElMahy",
+          "am_email": "aelmahly@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 393,
+          "vendor_net_failed": 26,
+          "failedOrders": 26,
+          "lostGmv": 47491,
+          "failRate": 6.6158,
+          "late_delivery_cases": 8,
+          "missing_items_cases": 9,
+          "order_quality_cases": 4,
+          "vendor_fault_cases": 21,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "1100029",
+          "vendor": "Al Saddah le Mandi & Madhbi, Mohandesin - Jazerat El Arab",
+          "city": "Cairo",
+          "am_name": "Nouran Mahran",
+          "am_email": "nouran.moustafa@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 1025,
+          "vendor_net_failed": 33,
+          "failedOrders": 33,
+          "lostGmv": 102792,
+          "failRate": 3.2195,
+          "late_delivery_cases": 187,
+          "missing_items_cases": 9,
+          "order_quality_cases": 0,
+          "vendor_fault_cases": 196,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "743045",
+          "vendor": "Sobhy Kaber, Shobra - El Sahel",
+          "city": "Cairo",
+          "am_name": "Abdelrahman ElMahy",
+          "am_email": "aelmahly@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 1325,
+          "vendor_net_failed": 41,
+          "failedOrders": 41,
+          "lostGmv": 103610,
+          "failRate": 3.0943,
+          "late_delivery_cases": 361,
+          "missing_items_cases": 11,
+          "order_quality_cases": 18,
+          "vendor_fault_cases": 390,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "804511",
+          "vendor": "Abu Tarek Koshary, Ard El Golf",
+          "city": "Cairo",
+          "am_name": "Ahmed Dief",
+          "am_email": "ahmed.daif@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 1649,
+          "vendor_net_failed": 45,
+          "failedOrders": 45,
+          "lostGmv": 25205,
+          "failRate": 2.7289,
+          "late_delivery_cases": 337,
+          "missing_items_cases": 23,
+          "order_quality_cases": 4,
+          "vendor_fault_cases": 364,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "753929",
+          "vendor": "Koshry Abu Hanafy, Katameya",
+          "city": "Cairo",
+          "am_name": "Ahmed Dief",
+          "am_email": "ahmed.daif@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 939,
+          "vendor_net_failed": 23,
+          "failedOrders": 23,
+          "lostGmv": 34692,
+          "failRate": 2.4494,
+          "late_delivery_cases": 75,
+          "missing_items_cases": 10,
+          "order_quality_cases": 1,
+          "vendor_fault_cases": 86,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        }
+      ]
+    },
+    {
+      "cluster": "cairo_east_2",
+      "name": "Cairo East 2",
+      "agent": "cairo_east_2",
+      "target": 0.008,
+      "targetLabel": "0.80%",
+      "allOrders": 22540288,
+      "failedOrders": 5183068445901,
+      "successfulOrders": -5183045905613,
+      "gmv": 0,
+      "lostGmv": 25745577739,
+      "vendorFailRate": 22994685.9859,
+      "partialRefund": 0,
+      "partialRefundOrders": 0,
+      "vendorFaultCases": 814181073787,
+      "deviation": 22994685.1859,
+      "deviationPct": 2874335648.2,
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "riskFactors": {
+        "targetDeviationPts": 40,
+        "vendorFaultPts": 30,
+        "orderVolumePts": 20,
+        "financialPts": 10
+      },
+      "dod": {
+        "failedOrders": -2.1,
+        "lostGmv": -2.8,
+        "failRate": 0.5
+      },
+      "cities": [
+        {
+          "city": "Cairo",
+          "allOrders": 218781,
+          "failedOrders": 2288,
+          "gmv": 0,
+          "lostGmv": 27440925,
+          "vendorFailRate": 1.0456,
+          "partialRefund": 0
+        },
+        {
+          "city": "North Coast",
+          "allOrders": 2682,
+          "failedOrders": 52,
+          "gmv": 0,
+          "lostGmv": 500792,
+          "vendorFailRate": 1.9553,
+          "partialRefund": 0
+        },
+        {
+          "city": "Alexandria",
+          "allOrders": 2815,
+          "failedOrders": 27,
+          "gmv": 0,
+          "lostGmv": 238438,
+          "vendorFailRate": 0.9677,
+          "partialRefund": 0
+        },
+        {
+          "city": "Mansoura",
+          "allOrders": 501,
+          "failedOrders": 5,
+          "gmv": 0,
+          "lostGmv": 44199,
+          "vendorFailRate": 1.0229,
+          "partialRefund": 0
+        },
+        {
+          "city": "Banha",
+          "allOrders": 259,
+          "failedOrders": 3,
+          "gmv": 0,
+          "lostGmv": 7934,
+          "vendorFailRate": 1.015,
+          "partialRefund": 0
+        },
+        {
+          "city": "Suez",
+          "allOrders": 266,
+          "failedOrders": 3,
+          "gmv": 0,
+          "lostGmv": 5313,
+          "vendorFailRate": 1.0042,
+          "partialRefund": 0
+        },
+        {
+          "city": "Zagazig",
+          "allOrders": 85,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 7469,
+          "vendorFailRate": 2.4519,
+          "partialRefund": 0
+        },
+        {
+          "city": "Tanta",
+          "allOrders": 237,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ismailia",
+          "allOrders": 189,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 9639,
+          "vendorFailRate": 0.9213,
+          "partialRefund": 0
+        },
+        {
+          "city": "Damanhour",
+          "allOrders": 96,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 6869,
+          "vendorFailRate": 1.0851,
+          "partialRefund": 0
+        },
+        {
+          "city": "Hurghada",
+          "allOrders": 202,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Talkha",
+          "allOrders": 49,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Egypt",
+          "allOrders": 14,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "HIGH",
+          "allOrders": 22312229,
+          "failedOrders": 5183068443517,
+          "gmv": 0,
+          "lostGmv": 25717316160,
+          "vendorFailRate": 23229720.5426,
+          "partialRefund": 0
+        },
+        {
+          "city": "Late Delivery",
+          "allOrders": 510,
+          "failedOrders": 1,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Food Inedible",
+          "allOrders": 327,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Wrong Order",
+          "allOrders": 194,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Unavailable Menu item",
+          "allOrders": 189,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (MISSED)",
+          "allOrders": 174,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Uncontactable",
+          "allOrders": 124,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven Closed",
+          "allOrders": 78,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "internet issue",
+          "allOrders": 58,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - don't deliver to this area",
+          "allOrders": 44,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Preparation Delay",
+          "allOrders": 39,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Refuse to Prepare",
+          "allOrders": 35,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Spilt/ damaged Order",
+          "allOrders": 32,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Electricity Issue",
+          "allOrders": 17,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - System/ Device Issue",
+          "allOrders": 13,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (Expired)",
+          "allOrders": 12,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Lack of Delivery Men",
+          "allOrders": 11,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Ignored Special Request",
+          "allOrders": 11,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Content Discrepancy",
+          "allOrders": 8,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor is too busy",
+          "allOrders": 7,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor_id": "684179",
+          "vendor": "Pasta, Badr",
+          "city": "Cairo",
+          "am_name": "Mahmoud Zein",
+          "am_email": "mahmoud.zein@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 202,
+          "vendor_net_failed": 10,
+          "failedOrders": 10,
+          "lostGmv": 44274,
+          "failRate": 4.9505,
+          "late_delivery_cases": 27,
+          "missing_items_cases": 0,
+          "order_quality_cases": 2,
+          "vendor_fault_cases": 29,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "783471",
+          "vendor": "Farooj Abu Al-Abd, Nasr City - Abbas El Akkad",
+          "city": "Cairo",
+          "am_name": "Mahmoud Zein",
+          "am_email": "mahmoud.zein@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 624,
+          "vendor_net_failed": 28,
+          "failedOrders": 28,
+          "lostGmv": 39290,
+          "failRate": 4.4872,
+          "late_delivery_cases": 180,
+          "missing_items_cases": 5,
+          "order_quality_cases": 6,
+          "vendor_fault_cases": 191,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "783498",
+          "vendor": "Farooj Abu Al-Abd, El Rehab City 1",
+          "city": "Cairo",
+          "am_name": "Mahmoud Zein",
+          "am_email": "mahmoud.zein@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 906,
+          "vendor_net_failed": 44,
+          "failedOrders": 44,
+          "lostGmv": 79873,
+          "failRate": 4.8565,
+          "late_delivery_cases": 417,
+          "missing_items_cases": 10,
+          "order_quality_cases": 12,
+          "vendor_fault_cases": 439,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "795097",
+          "vendor": "Farooj Abu Al-Abd, 6th of October - 2nd District",
+          "city": "Cairo",
+          "am_name": "Mahmoud Zein",
+          "am_email": "mahmoud.zein@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 720,
+          "vendor_net_failed": 34,
+          "failedOrders": 34,
+          "lostGmv": 116417,
+          "failRate": 4.7222,
+          "late_delivery_cases": 227,
+          "missing_items_cases": 13,
+          "order_quality_cases": 11,
+          "vendor_fault_cases": 251,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "720603",
+          "vendor": "Thebes Pastry, Nasr City - Hassan El Ma'moun",
+          "city": "Cairo",
+          "am_name": "Suzanne Khayal",
+          "am_email": "suzanne.khayal@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 620,
+          "vendor_net_failed": 23,
+          "failedOrders": 23,
+          "lostGmv": 25718,
+          "failRate": 3.7097,
+          "late_delivery_cases": 0,
+          "missing_items_cases": 7,
+          "order_quality_cases": 6,
+          "vendor_fault_cases": 13,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        }
+      ]
+    },
+    {
+      "cluster": "cairo_west",
+      "name": "Cairo West",
+      "agent": "cairo_west",
+      "target": 0.008,
+      "targetLabel": "0.80%",
+      "allOrders": 11646652,
+      "failedOrders": 1319525707182,
+      "successfulOrders": -1319514060530,
+      "gmv": 0,
+      "lostGmv": 6716379525,
+      "vendorFailRate": 11329656.8592,
+      "partialRefund": 0,
+      "partialRefundOrders": 0,
+      "vendorFaultCases": 186148160004,
+      "deviation": 11329656.0592,
+      "deviationPct": 1416207007.4,
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "riskFactors": {
+        "targetDeviationPts": 40,
+        "vendorFaultPts": 30,
+        "orderVolumePts": 20,
+        "financialPts": 10
+      },
+      "dod": {
+        "failedOrders": -2.5,
+        "lostGmv": -1.8,
+        "failRate": 2.8
+      },
+      "cities": [
+        {
+          "city": "Cairo",
+          "allOrders": 234362,
+          "failedOrders": 2165,
+          "gmv": 0,
+          "lostGmv": 12621883,
+          "vendorFailRate": 0.9239,
+          "partialRefund": 0
+        },
+        {
+          "city": "North Coast",
+          "allOrders": 1956,
+          "failedOrders": 21,
+          "gmv": 0,
+          "lostGmv": 308840,
+          "vendorFailRate": 1.0678,
+          "partialRefund": 0
+        },
+        {
+          "city": "Alexandria",
+          "allOrders": 1526,
+          "failedOrders": 17,
+          "gmv": 0,
+          "lostGmv": 212703,
+          "vendorFailRate": 1.0985,
+          "partialRefund": 0
+        },
+        {
+          "city": "Tanta",
+          "allOrders": 326,
+          "failedOrders": 7,
+          "gmv": 0,
+          "lostGmv": 18315,
+          "vendorFailRate": 2.1698,
+          "partialRefund": 0
+        },
+        {
+          "city": "Hurghada",
+          "allOrders": 129,
+          "failedOrders": 2,
+          "gmv": 0,
+          "lostGmv": 3644,
+          "vendorFailRate": 1.4467,
+          "partialRefund": 0
+        },
+        {
+          "city": "Shebeen El Koom",
+          "allOrders": 67,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Egypt",
+          "allOrders": 14,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Suez",
+          "allOrders": 0,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "HIGH",
+          "allOrders": 11406387,
+          "failedOrders": 1319525704970,
+          "gmv": 0,
+          "lostGmv": 6703214141,
+          "vendorFailRate": 11568305.5903,
+          "partialRefund": 0
+        },
+        {
+          "city": "Food Inedible",
+          "allOrders": 413,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Late Delivery",
+          "allOrders": 383,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Wrong Order",
+          "allOrders": 235,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (MISSED)",
+          "allOrders": 191,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Unavailable Menu item",
+          "allOrders": 172,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Uncontactable",
+          "allOrders": 112,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven Closed",
+          "allOrders": 91,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Preparation Delay",
+          "allOrders": 70,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "internet issue",
+          "allOrders": 66,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - don't deliver to this area",
+          "allOrders": 47,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Vendor Refuse to Prepare",
+          "allOrders": 35,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Spilt/ damaged Order",
+          "allOrders": 20,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Failing to Punch Order (Expired)",
+          "allOrders": 17,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - System/ Device Issue",
+          "allOrders": 9,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Lack of Delivery Men",
+          "allOrders": 8,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Content Discrepancy",
+          "allOrders": 8,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        },
+        {
+          "city": "Ven - Ignored Special Request",
+          "allOrders": 8,
+          "failedOrders": 0,
+          "gmv": 0,
+          "lostGmv": 0,
+          "vendorFailRate": 0.1,
+          "partialRefund": 0
+        }
+      ],
+      "topOffenders": [
+        {
+          "vendor_id": "722571",
+          "vendor": "Chicken Ranch, El Sheikh Zayed - Waslet Dahshur Rd",
+          "city": "Cairo",
+          "am_name": "Seif Sayed",
+          "am_email": "syoussry@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 469,
+          "vendor_net_failed": 25,
+          "failedOrders": 25,
+          "lostGmv": 109814,
+          "failRate": 5.3305,
+          "late_delivery_cases": 87,
+          "missing_items_cases": 33,
+          "order_quality_cases": 32,
+          "vendor_fault_cases": 152,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "778545",
+          "vendor": "5abzino, Hadayek El Ahram Gates",
+          "city": "Cairo",
+          "am_name": "Hadeer Abdelrahman",
+          "am_email": "hadeer.fathy@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 498,
+          "vendor_net_failed": 21,
+          "failedOrders": 21,
+          "lostGmv": 29458,
+          "failRate": 4.2169,
+          "late_delivery_cases": 77,
+          "missing_items_cases": 2,
+          "order_quality_cases": 13,
+          "vendor_fault_cases": 92,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "800584",
+          "vendor": "INDIA KITCHEN, El Sheikh Zayed - El Hay 10",
+          "city": "Cairo",
+          "am_name": "Ali Sayed",
+          "am_email": "ali.thabet@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 323,
+          "vendor_net_failed": 11,
+          "failedOrders": 11,
+          "lostGmv": 55721,
+          "failRate": 3.4056,
+          "late_delivery_cases": 53,
+          "missing_items_cases": 7,
+          "order_quality_cases": 2,
+          "vendor_fault_cases": 62,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "771001",
+          "vendor": "Choco House, El Hosary, 6th of October",
+          "city": "Cairo",
+          "am_name": "Seif Sayed",
+          "am_email": "syoussry@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 592,
+          "vendor_net_failed": 14,
+          "failedOrders": 14,
+          "lostGmv": 49264,
+          "failRate": 2.3649,
+          "late_delivery_cases": 94,
+          "missing_items_cases": 2,
+          "order_quality_cases": 1,
+          "vendor_fault_cases": 97,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        },
+        {
+          "vendor_id": "1105407",
+          "vendor": "Mashhoor,  Tagammoa 5 - Hay 1",
+          "city": "Cairo",
+          "am_name": "Hadeer Abdelrahman",
+          "am_email": "hadeer.fathy@talabat.com",
+          "is_key_vip": false,
+          "net_orders": 806,
+          "vendor_net_failed": 18,
+          "failedOrders": 18,
+          "lostGmv": 56767,
+          "failRate": 2.2333,
+          "late_delivery_cases": 112,
+          "missing_items_cases": 26,
+          "order_quality_cases": 2,
+          "vendor_fault_cases": 140,
+          "talabat_reason": "",
+          "partial_refund_lc": 0
+        }
+      ]
+    }
+  ],
+  "keyAccounts": {
+    "target": 0.008,
+    "targetLabel": "0.80%",
+    "topOffenders": [
+      {
+        "vendor_id": "687762",
+        "vendor": "McDonald's, The Gate",
+        "city": "Cairo",
+        "am_name": "Mohamed Ismaiel",
+        "am_email": "mohamed.ismail.3@talabat.com",
+        "is_key_vip": true,
+        "net_orders": 752,
+        "vendor_net_failed": 229,
+        "failedOrders": 229,
+        "lostGmv": 211098,
+        "failRate": 30.4521,
+        "late_delivery_cases": 98,
+        "missing_items_cases": 4,
+        "order_quality_cases": 2,
+        "vendor_fault_cases": 104,
+        "talabat_reason": "",
+        "partial_refund_lc": 0
+      },
+      {
+        "vendor_id": "665424",
+        "vendor": "McDonald\\`s, Chill out Safwa",
+        "city": "Cairo",
+        "am_name": "Mohamed Ismaiel",
+        "am_email": "mohamed.ismail.3@talabat.com",
+        "is_key_vip": true,
+        "net_orders": 598,
+        "vendor_net_failed": 158,
+        "failedOrders": 158,
+        "lostGmv": 142152,
+        "failRate": 26.4214,
+        "late_delivery_cases": 70,
+        "missing_items_cases": 3,
+        "order_quality_cases": 1,
+        "vendor_fault_cases": 74,
+        "talabat_reason": "",
+        "partial_refund_lc": 0
+      },
+      {
+        "vendor_id": "686655",
+        "vendor": "McDonald’s, Mohandiseen",
+        "city": "Cairo",
+        "am_name": "Mohamed Ismaiel",
+        "am_email": "mohamed.ismail.3@talabat.com",
+        "is_key_vip": true,
+        "net_orders": 1791,
+        "vendor_net_failed": 190,
+        "failedOrders": 190,
+        "lostGmv": 305872,
+        "failRate": 10.6086,
+        "late_delivery_cases": 173,
+        "missing_items_cases": 6,
+        "order_quality_cases": 3,
+        "vendor_fault_cases": 182,
+        "talabat_reason": "",
+        "partial_refund_lc": 0
+      },
+      {
+        "vendor_id": "686646",
+        "vendor": "McDonald's, Dokki - Shooting Club",
+        "city": "Cairo",
+        "am_name": "Mohamed Ismaiel",
+        "am_email": "mohamed.ismail.3@talabat.com",
+        "is_key_vip": true,
+        "net_orders": 1730,
+        "vendor_net_failed": 199,
+        "failedOrders": 199,
+        "lostGmv": 243974,
+        "failRate": 11.5029,
+        "late_delivery_cases": 119,
+        "missing_items_cases": 5,
+        "order_quality_cases": 3,
+        "vendor_fault_cases": 127,
+        "talabat_reason": "",
+        "partial_refund_lc": 0
+      },
+      {
+        "vendor_id": "708233",
+        "vendor": "Al Dahan, Tagammoa 5 - 90 St. Companies",
+        "city": "Cairo",
+        "am_name": "Shahd Omar",
+        "am_email": "shahd.afifi@talabat.com",
+        "is_key_vip": true,
+        "net_orders": 5891,
+        "vendor_net_failed": 173,
+        "failedOrders": 173,
+        "lostGmv": 471700,
+        "failRate": 2.9367,
+        "late_delivery_cases": 229,
+        "missing_items_cases": 14,
+        "order_quality_cases": 12,
+        "vendor_fault_cases": 255,
+        "talabat_reason": "",
+        "partial_refund_lc": 0
+      }
+    ]
+  },
+  "segmentTargets": {
+    "TGO": {
+      "target": 0.0065,
+      "targetLabel": "0.65%"
+    },
+    "TMP": {
+      "target": 0.0075,
+      "targetLabel": "0.75%"
+    }
+  },
+  "summary": {
+    "totalAllOrders": 94998513,
+    "totalFailed": 15987880804622,
+    "totalLostGmv": 78706141765,
+    "totalGmv": 0,
+    "totalPartialRefund": 0,
+    "overallFailRate": 16829611.6431,
+    "criticalClusters": 8,
+    "highRiskClusters": 0,
+    "clustersAboveTarget": [
+      "Alex",
+      "Delta",
+      "Canal",
+      "Upper Egypt",
+      "Cairo East 1",
+      "Cairo Central",
+      "Cairo East 2",
+      "Cairo West"
+    ]
+  },
+  "riskRegister": [
+    {
+      "cluster": "Alex",
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "failRate": "10382733.2275%",
+      "target": "0.70%",
+      "deviation": "10382732.53%",
+      "lostGmv": 7202745899,
+      "topOffender": "Genoise, ⁠Louran  Sarai"
+    },
+    {
+      "cluster": "Delta",
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "failRate": "6891471.3064%",
+      "target": "0.72%",
+      "deviation": "6891470.59%",
+      "lostGmv": 4319145886,
+      "topOffender": "istanbul, El Nahas Street"
+    },
+    {
+      "cluster": "Canal",
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "failRate": "1502654.9151%",
+      "target": "0.72%",
+      "deviation": "1502654.20%",
+      "lostGmv": 368981352,
+      "topOffender": "Ebn Qamesh, Al Sharq District"
+    },
+    {
+      "cluster": "Upper Egypt",
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "failRate": "2070373.4756%",
+      "target": "0.78%",
+      "deviation": "2070372.70%",
+      "lostGmv": 437703232,
+      "topOffender": "Dahab Al Sham, Minya"
+    },
+    {
+      "cluster": "Cairo East 1",
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "failRate": "20852164.383%",
+      "target": "0.80%",
+      "deviation": "20852163.58%",
+      "lostGmv": 24692915835,
+      "topOffender": "Crystal, Nasr City - Mostafa El Nahaas"
+    },
+    {
+      "cluster": "Cairo Central",
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "failRate": "18311731.2661%",
+      "target": "0.78%",
+      "deviation": "18311730.49%",
+      "lostGmv": 9222692297,
+      "topOffender": "Vinny's Pizza, Heliopolis - Heliopolis Square"
+    },
+    {
+      "cluster": "Cairo East 2",
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "failRate": "22994685.9859%",
+      "target": "0.80%",
+      "deviation": "22994685.19%",
+      "lostGmv": 25745577739,
+      "topOffender": "Pasta, Badr"
+    },
+    {
+      "cluster": "Cairo West",
+      "riskScore": 100,
+      "riskLevel": "critical",
+      "failRate": "11329656.8592%",
+      "target": "0.80%",
+      "deviation": "11329656.06%",
+      "lostGmv": 6716379525,
+      "topOffender": "Chicken Ranch, El Sheikh Zayed - Waslet Dahshur Rd"
+    }
+  ]
+}
